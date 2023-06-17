@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/06/17/hello-world/"/>
+  <link rel="canonical" href="http://example.com/2023/06/18/appium常见用法/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,21 +34,22 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Hello World - Noir的主页</title>
-  <meta name="keywords" content="测试,编程">
-  <meta desc name="description" content="欢迎访问Noir的主页 - Noir - Noir的主页">
+  <title>appium常见用法 - Noir</title>
+  <meta name="keywords" content="自动化,appium,测试,编程">
+  <meta desc name="description" content="欢迎访问Noir的主页 - Noir - Noir">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/06/17/hello-world/index.html">
-<meta property="og:site_name" content="Noir的主页">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:title" content="appium常见用法">
+<meta property="og:url" content="http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/index.html">
+<meta property="og:site_name" content="Noir">
+<meta property="og:description" content="基本代码(启动代码) 准备工作 123456781. 打开模拟器或者连接真机2. 打开 appium 并启动服务器3. 获取被测 app 的包名和界面名Windows:adb shell dumpsys window windows | findstr mFocusedAppadb shell dumpsys window | findstr mCurrentFocus  com.android.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-06-17T07:50:07.325Z">
-<meta property="article:modified_time" content="2023-06-17T07:49:34.501Z">
+<meta property="article:published_time" content="2023-06-17T18:24:53.101Z">
+<meta property="article:modified_time" content="2023-06-17T18:25:48.707Z">
 <meta property="article:author" content="Noir">
-<meta property="article:tag" content="测试,编程">
+<meta property="article:tag" content="自动化">
+<meta property="article:tag" content="appium">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -716,6 +717,122 @@ button {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   border-bottom: 2px solid var(--color-site-inner);
+}
+.cover-wrapper.dock .menu,
+.cover-wrapper.featured .menu,
+.cover-wrapper.focus .menu {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+.cover-wrapper.dock .menu .list-h a,
+.cover-wrapper.featured .menu .list-h a,
+.cover-wrapper.focus .menu .list-h a {
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  line-height: 24px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-bottom: none;
+  text-align: center;
+  align-content: flex-end;
+  color: rgba(68,68,68,0.7);
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 500px) {
+  .cover-wrapper.dock .menu .list-h a,
+  .cover-wrapper.featured .menu .list-h a,
+  .cover-wrapper.focus .menu .list-h a {
+    padding: 12px 8px;
+  }
+}
+.cover-wrapper.dock .menu .list-h a i,
+.cover-wrapper.featured .menu .list-h a i,
+.cover-wrapper.focus .menu .list-h a i {
+  margin: 8px;
+}
+.cover-wrapper.dock .menu .list-h a p,
+.cover-wrapper.featured .menu .list-h a p,
+.cover-wrapper.focus .menu .list-h a p {
+  font-size: 0.875rem;
+}
+.cover-wrapper.dock .menu .list-h a.active,
+.cover-wrapper.featured .menu .list-h a.active,
+.cover-wrapper.focus .menu .list-h a.active {
+  background: var(--color-card);
+  backdrop-filter: none;
+}
+.cover-wrapper.dock .menu .list-h a.active i,
+.cover-wrapper.featured .menu .list-h a.active i,
+.cover-wrapper.focus .menu .list-h a.active i,
+.cover-wrapper.dock .menu .list-h a.active i+p,
+.cover-wrapper.featured .menu .list-h a.active i+p,
+.cover-wrapper.focus .menu .list-h a.active i+p {
+  color: #3dd9b6;
+}
+.cover-wrapper.dock .menu .list-h a.active img+p,
+.cover-wrapper.featured .menu .list-h a.active img+p,
+.cover-wrapper.focus .menu .list-h a.active img+p {
+  color: var(--color-text);
+}
+.cover-wrapper.dock .menu .list-h a:hover,
+.cover-wrapper.featured .menu .list-h a:hover,
+.cover-wrapper.focus .menu .list-h a:hover {
+  background: var(--color-card);
+}
+.cover-wrapper.dock .top {
+  margin-bottom: 48px;
+}
+.cover-wrapper.dock .menu {
+  background: rgba(255,255,255,0.5);
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+}
+.cover-wrapper.dock .menu .list-h {
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -khtml-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  margin: 4px;
+}
+.cover-wrapper.dock .menu .list-h a+a {
+  margin-left: 4px;
+}
+@media screen and (max-width: 500px) {
+  .cover-wrapper.dock .menu .list-h {
+    overflow-x: scroll;
+  }
+  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb {
+    background: #3dd9b6;
+    cursor: pointer;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+  }
+  .cover-wrapper.dock .menu .list-h::-webkit-scrollbar-thumb:hover {
+    background: #ff5722;
+  }
+}
+@supports (backdrop-filter: blur(20px)) {
+  .cover-wrapper.dock .menu {
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: saturate(200%) blur(20px);
+  }
 }
 @font-face {
   font-family: 'UbuntuMono';
@@ -1997,7 +2114,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1687023489318),
+    lastupdate: new Date(1687032936150),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2005,7 +2122,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       fancybox_js: 'https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.min.js'
     },
     sidebar: {
-      for_page: ["blogger","category","tagcloud","donate"],
+      for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
       webinfo: {
         lastupd: {
@@ -2013,7 +2130,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           friendlyShow: true
         },
         runtime: {
-          data: "2020/01/01",
+          data: "2023/06/18",
           unit: "天"
         }
       }
@@ -2022,7 +2139,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       message: {"enable":true,"icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"知识共享许可协议","message":"请遵守 CC BY-NC-SA 4.0 协议。","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
       
       aplayer: {
-        id: 6806077982,
+        id: 169341245,
         enable:true
       },
       
@@ -2078,7 +2195,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/Logo-NavBar@3x.png'/>
+            <img no-lazy class='logo' src='https://gcore.jsdelivr.net/gh/ShikiKuro/NoirImage/img/tia.png'/>
           
           
           
@@ -2111,20 +2228,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                target="_blank" rel="noopener" href="https://shikikuro.github.io" title="博客"
+                 title="博客"
                   
                   
-                  
-                    active-action="action-https:shikikurogithubio"
                   >
                   <i class='fa-solid fa-globe fa-fw'></i>博客
                 </a>
                 
-              </li>
-            
-          
-          
-            
+                  <ul class="list-v">
+                    
+                      
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
@@ -2134,14 +2247,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-categories"
                   >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                  分类
                 </a>
                 
               </li>
             
           
-          
-            
+                    
+                      
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
@@ -2151,14 +2264,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-tags"
                   >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                  标签
                 </a>
                 
               </li>
             
           
-          
-            
+                    
+                      
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
@@ -2168,8 +2281,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-archives"
                   >
-                  <i class='fa-solid fa-book fa-fw'></i>归档
+                  归档
                 </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
                 
               </li>
             
@@ -2179,14 +2298,50 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
+                 title="更多"
+                  
+                  
+                  >
+                  <i class='fa-solid fa-bars fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
                 href="/friends/" title="友链"
                   
                   
                   
                     active-action="action-friends"
                   >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                  友链
                 </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  关于
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
                 
               </li>
             
@@ -2232,20 +2387,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                target="_blank" rel="noopener" href="https://shikikuro.github.io" title="博客"
+                 title="博客"
                   
                   
-                  
-                    active-action="action-https:shikikurogithubio"
                   >
                   <i class='fa-solid fa-globe fa-fw'></i>博客
                 </a>
                 
-              </li>
-            
-          
-            
-              
+                  <ul class="list-v">
+                    
+                      
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
@@ -2255,14 +2406,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-categories"
                   >
-                  <i class='fa-solid fa-folder-open fa-fw'></i>分类
+                  分类
                 </a>
                 
               </li>
             
           
-            
-              
+                    
+                      
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
@@ -2272,14 +2423,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-tags"
                   >
-                  <i class='fa-solid fa-tags fa-fw'></i>标签
+                  标签
                 </a>
                 
               </li>
             
           
-            
-              
+                    
+                      
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
@@ -2289,8 +2440,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                   
                     active-action="action-archives"
                   >
-                  <i class='fa-solid fa-book fa-fw'></i>归档
+                  归档
                 </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
                 
               </li>
             
@@ -2300,14 +2457,50 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
+                 title="更多"
+                  
+                  
+                  >
+                  <i class='fa-solid fa-bars fa-fw'></i>更多
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
                 href="/friends/" title="友链"
                   
                   
                   
                     active-action="action-friends"
                   >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
+                  友链
                 </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  关于
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
                 
               </li>
             
@@ -2335,12 +2528,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/17/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/18/appium常见用法/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Noir的主页">
+    <meta itemprop="name" content="Noir">
   </span>
   <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="Noir的主页">
+    <meta itemprop="name" content="Noir">
     <meta itemprop="description" content="欢迎访问Noir的主页">
   </span>
   
@@ -2356,7 +2549,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Hello World
+        appium常见用法
       </h1>
       <div class='new-meta-box'>
         
@@ -2373,15 +2566,29 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  
+  
+  
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/">自动化测试</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" itemprop="url"><span itemprop="name">自动化测试</span></a>
+      </span>
+    
+  </div>
+  
+
 
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-06-17T15:50:07+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-06-18T02:24:53+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2023年6月17日</p>
+    <p>发布于：2023年6月18日</p>
   </a>
 </div>
 
@@ -2404,20 +2611,227 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <h2 id="基本代码-启动代码"><a href="#基本代码-启动代码" class="headerlink" title="基本代码(启动代码)"></a>基本代码(启动代码)</h2><ul>
+<li><p>准备工作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 打开模拟器或者连接真机</span><br><span class="line">2. 打开 appium 并启动服务器</span><br><span class="line">3. 获取被测 app 的包名和界面名</span><br><span class="line"></span><br><span class="line">Windows:</span><br><span class="line">adb shell dumpsys window windows | findstr mFocusedApp</span><br><span class="line">adb shell dumpsys window | findstr mCurrentFocus  </span><br><span class="line">com.android.settings/.Settings</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>代码</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> appium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line">desired_capabilities = &#123;</span><br><span class="line">    <span class="string">&quot;platformName&quot;</span>: <span class="string">&quot;Android&quot;</span>,  <span class="comment"># 手机的平台 不区分大小写</span></span><br><span class="line">    <span class="string">&quot;platformVersion&quot;</span>: <span class="string">&quot;7&quot;</span>,  <span class="comment"># 版本, 写大版本即可,比如 6.2.1 可以写在 6.2  6</span></span><br><span class="line">    <span class="string">&quot;deviceName&quot;</span>: <span class="string">&quot;emulator-5554&quot;</span>,  <span class="comment"># 手机的名字,随便写一个字符串,不能不写</span></span><br><span class="line">    <span class="string">&quot;appPackage&quot;</span>: <span class="string">&quot;com.android.settings&quot;</span>,  <span class="comment"># 打开应用的包名</span></span><br><span class="line">    <span class="string">&quot;appActivity&quot;</span>: <span class="string">&quot;.Settings&quot;</span>  <span class="comment"># 界面名（也叫启动名）</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># 获取驱动   http://127.0.0.1:4723/wd/hub 连接appium服务，</span></span><br><span class="line"><span class="comment"># python和appium通信使用http协议</span></span><br><span class="line">driver = webdriver.Remote(<span class="string">&#x27;http://127.0.0.1:4723/wd/hub&#x27;</span>, desired_capabilities)</span><br><span class="line">time.sleep(<span class="number">5</span>)</span><br><span class="line"><span class="comment"># 退出驱动</span></span><br><span class="line">driver.quit()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意：如果版本号写错，会有提示版本</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h4 id="noReset参数"><a href="#noReset参数" class="headerlink" title="noReset参数"></a>noReset参数</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">打开app，如果重置了，下次再次打开此app，会和新安装的app一样（没有缓存，重新输入密码，提示获取权限，引导页）</span><br><span class="line"></span><br><span class="line">desired_capabilities = &#123;</span><br><span class="line">    &quot;platformName&quot;: &quot;Android&quot;,  # 平台 不区分大小写</span><br><span class="line">    &quot;platformVersion&quot;: &quot;7&quot;,  # 版本, 写大版本即可,比如 6.0 可以写在 6</span><br><span class="line">    &quot;deviceName&quot;: &quot;emulator-5554&quot;,  # 手机的名字,随便写一个字符串,不能不写</span><br><span class="line">    &quot;appPackage&quot;: &quot;com.tpshop.malls&quot;,  # 打开应用的包名</span><br><span class="line">    &quot;appActivity&quot;: &quot;.SPMainActivity&quot;,  # 界面名</span><br><span class="line">    &quot;noReset&quot;: True</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&quot;noReset&quot;: True</span><br><span class="line">打开app，不重置；如果不传递此参数，打开app默认会重置应用。</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="app-的基本操作"><a href="#app-的基本操作" class="headerlink" title="app 的基本操作"></a>app 的基本操作</h2><h4 id="应用跳转"><a href="#应用跳转" class="headerlink" title="应用跳转"></a>应用跳转</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># appium是支持跨应用的，同一个session可以打开多个 app</span><br><span class="line"># 使用场景：当需要打开其它app时，可以使用此方法</span><br><span class="line"></span><br><span class="line">driver.start_activity(appPackage, appActivity)</span><br><span class="line">- appPackage  包名</span><br><span class="line">- appActivity  界面名</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h4 id="获取包名和界面名"><a href="#获取包名和界面名" class="headerlink" title="获取包名和界面名"></a>获取包名和界面名</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 获取包名 driver.current_package</span><br><span class="line"># 获取界面名 driver.current_activity  使用场景：获取界面名，用于断言</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h4 id="关闭驱动和app"><a href="#关闭驱动和app" class="headerlink" title="关闭驱动和app"></a>关闭驱动和app</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># driver.close_app()，关闭的是desired_capabilities中的app</span><br><span class="line"># 关闭驱动 driver.quit() 关闭了session会话</span><br></pre></td></tr></table></figure>
 
+<p>扩展：关闭指定app</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">扩展：</span><br><span class="line"># 指定app关闭，使用 driver.terminate_app(app的id)</span><br><span class="line"># app的id 就是 包名</span><br><span class="line"># close_app() 只能关闭desired_capabilities指定的app， 在将来会被舍弃</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装卸载判断是否安装"><a href="#安装卸载判断是否安装" class="headerlink" title="安装卸载判断是否安装"></a>安装卸载判断是否安装</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 安装app，app_path  为安装文件完整路径名(写绝对路径) </span><br><span class="line">driver.install_app(app_path)</span><br><span class="line"></span><br><span class="line"># 卸载app，app_id为app包名 </span><br><span class="line">driver.remove_app(app_id)</span><br><span class="line"></span><br><span class="line"># 判断app是否安装，app_id为app包名 </span><br><span class="line">driver.is_app_installed(app_id)</span><br></pre></td></tr></table></figure>
+
+<p><strong>路径解决办法</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">windows 的路径问题解决：</span><br><span class="line">1. 在路径前边的字符串前加上 r&quot;&quot; , 不会进行转义        r&quot;D:\apks\TPShop.apk&quot;</span><br><span class="line">2. 将 Windows 路径为： \  改为 linux路径： /       &quot;D:/apks/TPShop.apk&quot;</span><br><span class="line">3. 将 \  改为 \\                                 &quot;D:\\apks\\TPShop.apk&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="将应用-置于后台"><a href="#将应用-置于后台" class="headerlink" title="将应用 置于后台"></a>将应用 置于后台</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 将当前应用置于后台多少秒, 时间到了之后,会自动切换到前台</span><br><span class="line"># 使用场景：手机银行类app，应用置于后台一段时间，再切换到前台，需要重新进行身份认证</span><br><span class="line"></span><br><span class="line"># 语法：</span><br><span class="line">driver.background_app(seconds)  </span><br></pre></td></tr></table></figure>
+
+<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668705410399.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668705410399.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1668705410399"></p>
+<h3 id="x3D-x3D-2-2元素定位-x3D-x3D"><a href="#x3D-x3D-2-2元素定位-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;2.2元素定位&#x3D;&#x3D;"></a>&#x3D;&#x3D;2.2元素定位&#x3D;&#x3D;</h3><h4 id="定位单个元素"><a href="#定位单个元素" class="headerlink" title="定位单个元素"></a>定位单个元素</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">元素定位工具: 使用 SDK 中的 ui 工具</span><br><span class="line"></span><br><span class="line"># xpath语法回顾</span><br><span class="line">//*[@属性名=&#x27;属性值&#x27;]</span><br><span class="line">//*[contains(@属性名, &#x27;属性值&#x27;)]</span><br></pre></td></tr></table></figure>
+
+<h4 id="定位单个元素-1"><a href="#定位单个元素-1" class="headerlink" title="定位单个元素"></a>定位单个元素</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">元素定位工具: 使用 SDK 中的 ui 工具</span><br><span class="line"></span><br><span class="line"># xpath语法回顾</span><br><span class="line">//*[@属性名=&#x27;属性值&#x27;]</span><br><span class="line">//*[contains(@属性名, &#x27;属性值&#x27;)]</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\AppData\Roaming\Typora\typora-user-images\image-20230323234759313.png" class="lazyload" data-srcset="C:\Users\noirp\AppData\Roaming\Typora\typora-user-images\image-20230323234759313.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230323234759313"></p>
+<h4 id="元素定位-定位一组元素"><a href="#元素定位-定位一组元素" class="headerlink" title="元素定位-定位一组元素"></a>元素定位-定位一组元素</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 通过另外一种写法来定位</span><br><span class="line">driver.find_elements()   # 得到的是 列表, 如果没有找到,返回的也是空列表</span><br><span class="line"></span><br><span class="line">#注意： appium 只能定位到页面展示的元素</span><br></pre></td></tr></table></figure>
+
+<h3 id="x3D-x3D-元素操作-x3D-x3D"><a href="#x3D-x3D-元素操作-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;元素操作&#x3D;&#x3D;"></a>&#x3D;&#x3D;元素操作&#x3D;&#x3D;</h3><h4 id="2-3-1点击-x2F-输入-x2F-清空"><a href="#2-3-1点击-x2F-输入-x2F-清空" class="headerlink" title="2.3.1点击&#x2F;输入&#x2F;清空"></a>2.3.1点击&#x2F;输入&#x2F;清空</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">点击、</span><br><span class="line">el.click()</span><br><span class="line">输入、</span><br><span class="line">el.send_keys(内容)</span><br><span class="line">清空</span><br><span class="line">el.clear()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">补充：</span><br><span class="line">1.默认不能输入中文(Windows),想要输入中文, 需要在启动参数中添加如下内容</span><br><span class="line">   unicodeKeyboard 和  resetKeyboard 两个键值对, 值都是 True</span><br><span class="line">desired_capabilities&#123;</span><br><span class="line">    &quot;unicodeKeyboard&quot;: True,</span><br><span class="line">    &quot;resetKeyboard&quot;: True</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">2. appium-python-client send_keys() 会将输入框中的内容进行清空后，再输入</span><br></pre></td></tr></table></figure>
+
+<h4 id="获取元素文本、位置、大小"><a href="#获取元素文本、位置、大小" class="headerlink" title="获取元素文本、位置、大小**"></a>获取元素文本、位置、大小**</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 获取文本</span><br><span class="line">el.text </span><br><span class="line">2. 位置</span><br><span class="line">el.location</span><br><span class="line">3. 大小</span><br><span class="line">el.size</span><br></pre></td></tr></table></figure>
+
+<h4 id="获取元素属性"><a href="#获取元素属性" class="headerlink" title="获取元素属性"></a>获取元素属性</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">4. 属性</span><br><span class="line">el.get_attribute(属性名 )</span><br><span class="line">-	ID: resourceId</span><br><span class="line">-	content-desc: content-desc</span><br><span class="line">-	获取 class: className</span><br><span class="line">-   获取 text ： text/name</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line"> 老版本appium</span><br><span class="line"> 获取name属性，当content-desc为空时，获取的是text属性，当content-desc不为空时，返回是 content-desc</span><br><span class="line"> 当前版本1.20</span><br><span class="line"> 如何想获取content-desc直接传入 content-desc</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<h3 id="滑动和拖拽"><a href="#滑动和拖拽" class="headerlink" title="滑动和拖拽"></a>滑动和拖拽</h3><h4 id="x3D-x3D-swipe滑动-x3D-x3D"><a href="#x3D-x3D-swipe滑动-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;swipe滑动&#x3D;&#x3D;"></a>&#x3D;&#x3D;swipe滑动&#x3D;&#x3D;</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">driver.swipe(start_x, start_y, end_x, end_y, duration=0)</span><br><span class="line">start_x: 起点X轴坐标 </span><br><span class="line">start_y: 起点Y轴坐标 </span><br><span class="line">end_x: 终点X轴坐标 </span><br><span class="line">end_y: 终点Y轴坐标</span><br><span class="line">duration: 滑动这个操作一共持续的时间长度，单位:ms, </span><br><span class="line">时间越短，惯性越大，如果不需要惯性，设置5000左右。如果需要惯性-设置200ms</span><br><span class="line">练习：打开手机《设置》应用，完成下面的步骤:</span><br><span class="line">①.模拟手指从（500, 1600），滑动到（500, 500）的位置。</span><br></pre></td></tr></table></figure>
+
+<h4 id="scroll-滑动"><a href="#scroll-滑动" class="headerlink" title="scroll 滑动"></a>scroll 滑动</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">从一个元素滑动到另一个元素，直到页面自动停止</span><br><span class="line">driver.scroll(origin_el, destination_el, duration) </span><br><span class="line">origin_el: 开始元素</span><br><span class="line">destination_el: 结束元素</span><br><span class="line">duration: 滑动时间</span><br><span class="line"></span><br><span class="line">滑动时间：</span><br><span class="line">时间越短，惯性越大</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line">从 显示 滑动到 WLAN</span><br></pre></td></tr></table></figure>
+
+<h4 id="drag-and-drop"><a href="#drag-and-drop" class="headerlink" title="drag_and_drop"></a>drag_and_drop</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">从一个元素拖拽到另一个元素, 无惯性(精确滑动)</span><br><span class="line">driver.drag_and_drop(开始元素, 结束元素)</span><br><span class="line">注意：没有惯性，精准的滑动</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line">从 显示 滑动到 WLAN</span><br></pre></td></tr></table></figure>
+
+<h4 id="滑动方式选择"><a href="#滑动方式选择" class="headerlink" title="滑动方式选择"></a>滑动方式选择</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 是通过坐标滑动还是通过元素滑动</span><br><span class="line">* 是否需要惯性</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>通过坐标滑动<ul>
+<li><strong>不需要惯性</strong><ul>
+<li><strong>swipe，持续时间duration设置的长一些（4000-5000ms）</strong></li>
+</ul>
+</li>
+<li>需要惯性<ul>
+<li>swipe，持续时间duration设置短一些(100-200ms)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>通过元素滑动<ul>
+<li><strong>不需要惯性</strong><ul>
+<li>scroll + duration设置长一些（4000-5000ms）</li>
+<li>drag_and_drop</li>
+</ul>
+</li>
+<li>需要惯性<ul>
+<li>scroll+duration设置的短一些(100-200ms)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="web-editor"><a href="#web-editor" class="headerlink" title="web-editor"></a>web-editor</h3><hr>
+<p>有一些面试会提到，市面上有些人会使用这个工具</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">pip install weditor==0.6.3</span><br><span class="line"># 启动</span><br><span class="line">weditor</span><br></pre></td></tr></table></figure>
+
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384686931.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384686931.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667384686931"></p>
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384726482.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384726482.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667384726482"></p>
+<p>注意：运行代码前，需要关闭weditor</p>
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384793385.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384793385.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667384793385"></p>
+<p>如果未手动停止，则报如下错误</p>
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667385026831.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667385026831.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667385026831"></p>
+<h2 id="appium自带查询元素信息"><a href="#appium自带查询元素信息" class="headerlink" title="appium自带查询元素信息"></a>appium自带查询元素信息</h2><p>1.启动appium服务器</p>
+<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668753212772.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668753212772.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1668753212772"></p>
+<p>2.创建New Session Window</p>
+<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668753278658.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668753278658.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1668753278658"></p>
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\image-20220612175640905.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\image-20220612175640905.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220612175640905"></p>
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256012580.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256012580.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673256012580"></p>
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1666547597252.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1666547597252.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1666547597252"></p>
+<h2 id="5-真机调试"><a href="#5-真机调试" class="headerlink" title="5.真机调试"></a>5.真机调试</h2><h4 id="华为"><a href="#华为" class="headerlink" title="华为"></a>华为</h4><ul>
+<li><p>安装手机助手</p>
+<ul>
+<li>手机连入计算机，会提示安装</li>
+<li>使用360软件-搜索手机助手</li>
+</ul>
+</li>
+<li><p>根据手机助手进行连接</p>
+<ul>
+<li><p>开启开发者模式</p>
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256938473.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256938473.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673256938473"></p>
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256987093.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256987093.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673256987093"></p>
+</li>
+<li><p>开启adb 和 usb调试模式</p>
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673257297072.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673257297072.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673257297072"></p>
+</li>
+</ul>
+</li>
+<li><p>安装手机助手进行调试(和手机品牌有关)</p>
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667382205885.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667382205885.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667382205885"></p>
+</li>
+<li><p>查看是否连接成功</p>
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667382272018.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667382272018.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667382272018"></p>
+</li>
+</ul>
+<h2 id="x3D-x3D-手势操作-x3D-x3D"><a href="#x3D-x3D-手势操作-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;手势操作&#x3D;&#x3D;"></a>&#x3D;&#x3D;手势操作&#x3D;&#x3D;</h2><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">移动端的手势操作 类似 web 端的鼠标操作</span><br><span class="line"></span><br><span class="line">1. 创建TouchAction对象 </span><br><span class="line">touch_action = TouchAction(driver)</span><br><span class="line">2. 调用高级手势对象提供所想执行的手势方法 </span><br><span class="line">touch_action.手势方法</span><br><span class="line">3. 执行手势 touch_action.perform()</span><br><span class="line"></span><br><span class="line">-----</span><br><span class="line">另外一种写法</span><br><span class="line">TouchAction(driver).手势方法.perform()</span><br></pre></td></tr></table></figure>
+
+<h3 id="轻敲-tap"><a href="#轻敲-tap" class="headerlink" title="轻敲 tap"></a>轻敲 tap</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">轻敲的结果类似 点击</span><br><span class="line">tap(el, x, y)</span><br><span class="line">- el: 元素对象</span><br><span class="line">- x: 点击 x 坐标</span><br><span class="line">- y: 点击 y 坐标</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line">1.元素对象 和 坐标 任选其一,不用两个都选</span><br><span class="line">2.如果通过 坐标进行点击，页面打开需要时间，带点击前需要手动等待 time.sleep()</span><br></pre></td></tr></table></figure>
+
+<h3 id="按下-和-抬起"><a href="#按下-和-抬起" class="headerlink" title="按下 和 抬起"></a>按下 和 抬起</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1. 按下</span><br><span class="line">press(el=None,x=None,y=None)</span><br><span class="line">2. 抬起</span><br><span class="line">release()</span><br><span class="line"></span><br><span class="line">模拟 轻敲 (按下马上抬起)</span><br><span class="line">press(el=None,x=None,y=None).release()</span><br><span class="line"></span><br><span class="line">模拟 长按(按下不抬起)</span><br><span class="line">press(el=None,x=None,y=None)</span><br></pre></td></tr></table></figure>
+
+<h3 id="长按"><a href="#长按" class="headerlink" title="长按"></a>长按</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">long_press(el, x, y, duration=1000)</span><br><span class="line">- el: 元素对象</span><br><span class="line">- x, y: 坐标</span><br><span class="line">- duration: 长按的时间,单位时间是毫秒</span><br></pre></td></tr></table></figure>
+
+<h3 id="思考时间"><a href="#思考时间" class="headerlink" title="思考时间"></a>思考时间</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wait(ms)  # ms 毫秒, 暂停多长时间</span><br><span class="line">使用按下和抬起  组合思考时间，实现长按</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过  press  release  wait 模拟长按3秒</span></span><br><span class="line">driver.find_element_by_xpath(<span class="string">&quot;//*[@text=&#x27;WLAN&#x27;]&quot;</span>).click()</span><br><span class="line">time.sleep(<span class="number">2</span>)</span><br><span class="line">TouchAction(driver).press(x=<span class="number">280</span>, y=<span class="number">490</span>).wait(<span class="number">3000</span>).release().perform()</span><br></pre></td></tr></table></figure>
+
+<h3 id="移动-move-to"><a href="#移动-move-to" class="headerlink" title="移动 move_to"></a>移动 move_to</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ove_to(el, x, y)</span><br><span class="line"></span><br><span class="line"># 实际场景</span><br><span class="line">1. 想移动,需要先按下</span><br><span class="line">2. 移动完成后, 需要抬起</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>一个app 一般 只有一个启动页，一般是首页</p>
+</li>
+<li><p><strong>滑动操作</strong>实际是使用了<strong>手势操作-TouchAction</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># swipe 代码</span><br><span class="line">def swipe(self: T, start_x: int, start_y: int, end_x: int, end_y: int, duration: int = 0) -&gt; T:</span><br><span class="line">        action = TouchAction(self)</span><br><span class="line">        action.press(x=start_x, y=start_y).wait(ms=duration).move_to(x=end_x, y=end_y).release()</span><br><span class="line">        action.perform()</span><br><span class="line">        return self</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="x3D-x3D-手机操作-x3D-x3D"><a href="#x3D-x3D-手机操作-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;手机操作&#x3D;&#x3D;"></a>&#x3D;&#x3D;手机操作&#x3D;&#x3D;</h2><h3 id="获取屏幕分辨率和截图"><a href="#获取屏幕分辨率和截图" class="headerlink" title="获取屏幕分辨率和截图"></a>获取屏幕分辨率和截图</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">获取手机分辨率: driver.get_window_size() ---&gt; 字典  &#123;&#x27;width&#x27;: 1440, &#x27;height&#x27;: 2392&#125;</span><br><span class="line"></span><br><span class="line">截图: get_screenshot_as_file(filename)  </span><br><span class="line">time.strftime(&#x27;%Y%m%d-%H%M%S&#x27;) 给文件名添加后缀</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取和设置网络状态"><a href="#获取和设置网络状态" class="headerlink" title="获取和设置网络状态"></a>获取和设置网络状态</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 获取网络状态</span><br><span class="line">driver.network_connection </span><br><span class="line"></span><br><span class="line">2. 设置网络状态</span><br><span class="line">driver.set_network_connection(connection_type)</span><br><span class="line">- connection_type: 网络类型(0, 1, 2, 4, 6)</span><br><span class="line"></span><br><span class="line">@property 装饰器，可以将 实例方法作为属性来使用</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取和设置网络状态-1"><a href="#获取和设置网络状态-1" class="headerlink" title="获取和设置网络状态"></a>获取和设置网络状态</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 获取网络状态</span><br><span class="line">driver.network_connection </span><br><span class="line"></span><br><span class="line">2. 设置网络状态</span><br><span class="line">driver.set_network_connection(connection_type)</span><br><span class="line">- connection_type: 网络类型(0, 1, 2, 4, 6)</span><br><span class="line"></span><br><span class="line">@property 装饰器，可以将 实例方法作为属性来使用</span><br></pre></td></tr></table></figure>
+
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\day07.assets\image-20220615163524582.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\day07.assets\image-20220615163524582.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220615163524582"></p>
+<h3 id="发送键到设备-按键操作"><a href="#发送键到设备-按键操作" class="headerlink" title="发送键到设备(按键操作)"></a>发送键到设备(按键操作)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">driver.press_keycode(keycode)</span><br><span class="line"></span><br><span class="line">常用：</span><br><span class="line">Home 键(返回主页)	3</span><br><span class="line">返回键				  4</span><br><span class="line">音量增加键			24</span><br><span class="line">音量减少键			25</span><br><span class="line">回车键 			  66</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line"># 1.音量大小未显示时，按 音量加和音量减 只会唤醒 音量大小调整界面</span><br><span class="line"># 2.按键过快，会产生无效按键操作</span><br><span class="line"></span><br><span class="line">keycode查询</span><br><span class="line">https://blog.csdn.net/feizhixuan46789/article/details/16801429</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="x3D-x3D-通知栏的操作-x3D-x3D"><a href="#x3D-x3D-通知栏的操作-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;通知栏的操作&#x3D;&#x3D;"></a>&#x3D;&#x3D;通知栏的操作&#x3D;&#x3D;</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">打开通知栏: driver.open_notifications()</span><br><span class="line"></span><br><span class="line">appium官方并没有为我们提供关闭通知的api，那么 现实生活中怎么关闭，就怎样操作就行，比如，</span><br><span class="line">1.手指从下往 上滑动</span><br><span class="line">2.按返回键</span><br></pre></td></tr></table></figure>
+
+<h2 id="x3D-x3D-获取-toast-信息-x3D-x3D"><a href="#x3D-x3D-获取-toast-信息-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;获取 toast 信息&#x3D;&#x3D;"></a>&#x3D;&#x3D;获取 toast 信息&#x3D;&#x3D;</h2><h3 id="toast操作"><a href="#toast操作" class="headerlink" title="toast操作"></a>toast操作</h3><ol>
+<li><p>介绍： 操作过程中弹出的立即消失的弹出框， 本质上它也是页面的一个元素。</p>
+</li>
+<li><p>如何获取toast：建议使用xpath查询，因为使用工具很难定位到元素。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">driver.find_element(By.XPATH, <span class="string">&quot;//*[contains(@text, &#x27;toast中的部分文本内容&#x27;)]&quot;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用显示等待查找元素： 隐式等待的下一次找元素的频率，不适合这种一闪而过的toast</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">element = WebDriverWait(driver, <span class="number">30</span>, <span class="number">0.1</span>).until(<span class="keyword">lambda</span> x: x.find_element(By.XPATH, <span class="string">&quot;//*[contains(@text,&#x27;再次点击&#x27;)]&quot;</span>))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>补充说明</p>
+<ul>
+<li>新版本的appium软件，支持Uiautomator2 因此不需要安装特殊环境</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">低版本的 appium(&lt;=1.13) 需要在启动参数中添加如下内容:</span><br><span class="line">desired_caps[&#x27;automationName&#x27;] = &#x27;Uiautomator2&#x27;</span><br><span class="line">高版本默认使用的就是 </span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="封装方法-获取toast"><a href="#封装方法-获取toast" class="headerlink" title="封装方法-获取toast"></a>封装方法-获取toast</h3><ul>
+<li><p>获取toast封装获取toast文本内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 提供要获取toast部分文本，判断toast是否存在，如果存在，则返回文本内容，如果没有找到，则抛出异常</span><br><span class="line">文本未找到</span><br><span class="line"></span><br><span class="line">from selenium.webdriver.common.by import By</span><br><span class="line">from selenium.webdriver.support.wait import WebDriverWait</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def get_toast(driver, content):</span><br><span class="line">    &quot;&quot;&quot;根据部分toast，获取完整toast信息&quot;&quot;&quot;</span><br><span class="line">    el_xpath = f&quot;//*[contains(@text, &#x27;&#123;content&#125;&#x27;)]&quot;</span><br><span class="line">    el = WebDriverWait(driver, 10, 0.5).\</span><br><span class="line">        until(lambda x: x.find_element(By.XPATH, el_xpath))</span><br><span class="line">    return el.text</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="webview"><a href="#webview" class="headerlink" title="webview"></a>webview</h2><h3 id="App分类"><a href="#App分类" class="headerlink" title="App分类"></a>App分类</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Native App  原生app, </span><br><span class="line">Web App  使用浏览器打开的应用，页面是用HTML实现的</span><br><span class="line">Hybrid App  混合应用, 在原生 app 中嵌套了 HTML 网页</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>手机中HTML页面如何操作</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">webview 的作用是嵌套 HTML 页面.</span><br><span class="line">嵌套的 HTML 页面,不能直接使用移动端的元素定位,要使用 web 端的元素定位,就需要 web 端的 driver(Chrome)</span><br></pre></td></tr></table></figure>
+
+<h3 id="x3D-x3D-环境准备-x3D-x3D"><a href="#x3D-x3D-环境准备-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;环境准备&#x3D;&#x3D;"></a>&#x3D;&#x3D;环境准备&#x3D;&#x3D;</h3><h5 id="1-查看应用浏览器的版本。"><a href="#1-查看应用浏览器的版本。" class="headerlink" title="1.查看应用浏览器的版本。"></a>1.查看应用浏览器的版本。</h5><ul>
+<li><p>方式一：在应用-&gt;显示系统进程-&gt;找到Android system webview版本。</p>
+<ul>
+<li><p>不同手机模拟器和真机略有不同，推荐方式二</p>
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336372197.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336372197.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336372197"></p>
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336458665.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336458665.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336458665"></p>
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336539344.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336539344.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336539344"></p>
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336572976.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336572976.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336572976"></p>
+</li>
+</ul>
+</li>
+<li><p>方式二：使用命令，在dos命令行中输入命令，在手机中查看</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell am start -a android.intent.action.VIEW -d https://liulanmi.com/labs/core.html</span><br></pre></td></tr></table></figure>
+
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336637249.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336637249.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336637249"></p>
+<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336678859.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336678859.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336678859"></p>
+</li>
+</ul>
+<h5 id="2-下载对应的版本的浏览器内核"><a href="#2-下载对应的版本的浏览器内核" class="headerlink" title="2.下载对应的版本的浏览器内核"></a>2.下载对应的版本的浏览器内核</h5><blockquote>
+<p>下载地址： <a target="_blank" rel="noopener" href="http://npm.taobao.org/mirrors/chromedriver/">http://npm.taobao.org/mirrors/chromedriver/</a></p>
+</blockquote>
+<h5 id="3-根据手机浏览器版本在上面页面中找到对应的版本"><a href="#3-根据手机浏览器版本在上面页面中找到对应的版本" class="headerlink" title="3.根据手机浏览器版本在上面页面中找到对应的版本"></a>3.根据手机浏览器版本在上面页面中找到对应的版本</h5><blockquote>
+<p><a target="_blank" rel="noopener" href="https://cdn.npmmirror.com/binaries/chromedriver/2.42/notes.txt">https://cdn.npmmirror.com/binaries/chromedriver/2.42/notes.txt</a></p>
+</blockquote>
+<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336999029.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336999029.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336999029"></p>
+<h5 id="4-解压放到固定目录。"><a href="#4-解压放到固定目录。" class="headerlink" title="4.解压放到固定目录。"></a>4.解压放到固定目录。</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 将下载好的手机浏览器版本对应的驱动 chromedriver放置到没有中文的目录，建议不要放在path中</span><br><span class="line">D:\tools\app_tools\chrome\chromedriver.exe</span><br></pre></td></tr></table></figure>
+
+<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337453726.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337453726.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673337453726"></p>
+<h5 id="5-程序配置”Chromdriver-Binary-Path”目录"><a href="#5-程序配置”Chromdriver-Binary-Path”目录" class="headerlink" title="5.程序配置”Chromdriver Binary Path”目录"></a>5.程序配置”Chromdriver Binary Path”目录</h5><ul>
+<li>打开 Appium-Server Desktop 程序配置”Chromdriver Binary Path”目录为第三部中的全路径。 </li>
+<li>点击 “Start Server”开启Appium Server Desktop</li>
+</ul>
+<p>	</p>
+<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337421210.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337421210.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673337421210"></p>
+<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337549051.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337549051.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673337549051"></p>
+<h3 id="x3D-x3D-webview-元素定位-x3D-x3D"><a href="#x3D-x3D-webview-元素定位-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;webview  元素定位&#x3D;&#x3D;"></a>&#x3D;&#x3D;webview  元素定位&#x3D;&#x3D;</h3><h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ol>
+<li>浏览器本身是native的应用。 使用之前的native元素定位、交互即可</li>
+<li>网页部分的内容是HTML页面， 和native部分使用了不同的<strong>上下文</strong>。 做完native部分的交互(地址输入、回车访问)之后。 需要切换到HTML页面。代码如下：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在 原生应用和 webview 之间进行切换</span></span><br><span class="line">driver.switch_to.context(<span class="string">&quot;&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>切换完成后使用web页面自动化的方式定位元素、进行操作即可。</li>
+<li>注意：如果模拟器上的浏览器为chrome， web页面的定位只能使用CSS、XPATH定位， 其他不支持。</li>
+</ol>
+<h3 id="x3D-x3D-方法API-x3D-x3D"><a href="#x3D-x3D-方法API-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;方法API&#x3D;&#x3D;"></a>&#x3D;&#x3D;方法API&#x3D;&#x3D;</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># 语法:获取所有的上下文,得到是列表</span><br><span class="line">driver.contexts   </span><br><span class="line">[&#x27;NATIVE_APP&#x27;, &#x27;WEBVIEW_com.android.browser&#x27;]</span><br><span class="line"></span><br><span class="line"># 获取当前的上下文对象</span><br><span class="line">driver.context    </span><br><span class="line"></span><br><span class="line"># 切换到指定的上下文对象</span><br><span class="line">driver.switch_to.context(上下文对象)  </span><br><span class="line"></span><br><span class="line"># 备注：操作原生页面，需要切换到原生上下文，如果操作webview 需要切换到webview的上下文</span><br><span class="line"></span><br><span class="line"># 注意：</span><br><span class="line"># 部分版本的浏览器驱动存在问题原因会导致如下报错</span><br><span class="line">selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: invalid locator</span><br><span class="line"> (Session info: chrome=86.0.4240.198)</span><br><span class="line"></span><br><span class="line">请在 desired_capabilities添加如下两个参数</span><br><span class="line">&quot;chromeOptions&quot;: &#123;&#x27;w3c&#x27;: False&#125;</span><br><span class="line"></span><br><span class="line">Chrome和ChromeDriver组合默认在w3c模式下运行,只有手动指定 ChromeDriver运行模式为非w3c模式，才能规避这个bug</span><br></pre></td></tr></table></figure>
+
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
   </div>
   
   
@@ -2441,10 +2855,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-17T15:49:34+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-18T02:25:48+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年6月17日</p>
+    <p>更新于：2023年6月18日</p>
   </a>
 </div>
 
@@ -2452,6 +2866,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>自动化</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/appium/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>appium</p></a></div>
+  <span hidden itemprop="keywords">自动化 appium</span>
+  
+
 
         
       
@@ -2463,7 +2884,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/06/17/hello-world/&title=Hello World - Noir的主页&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/&title=appium常见用法 - Noir&summary="
           
           >
           
@@ -2475,7 +2896,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/06/17/hello-world/&title=Hello World - Noir的主页&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/&title=appium常见用法 - Noir&summary="
           
           >
           
@@ -2487,7 +2908,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/06/17/hello-world/&title=Hello World - Noir的主页&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/&title=appium常见用法 - Noir&summary="
           
           >
           
@@ -2520,12 +2941,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/06/17/selenium%E5%B8%B8%E8%A7%81%E4%BA%A4%E4%BA%92/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>selenium常见交互</p>
-          <p class='content'>selenium常见交互&#x3D;&#x3D;点击+输入+清空&#x3D;&#x3D;
-1234561. 元素点击element.click()2. 输入element.send_keys(内...</p>
-        </a>
       
+        <a class='next' href='/2023/06/17/selenium%E5%B8%B8%E8%A7%81%E4%BA%A4%E4%BA%92/'>
+          <p class='title'>selenium常见用法<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>selenium常见用法点击+输入+清空1234561. 元素点击element.click()2. 输入element.send_keys(内容)3. 清除element.clear()
+
+大...</p>
+        </a>
       
     </div>
   
@@ -2543,7 +2965,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/06/17/hello-world/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2585,7 +3007,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BB%A3%E7%A0%81-%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81"><span class="toc-text">基本代码(启动代码)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#noReset%E5%8F%82%E6%95%B0"><span class="toc-text">noReset参数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#app-%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-text">app 的基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E8%B7%B3%E8%BD%AC"><span class="toc-text">应用跳转</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%8C%85%E5%90%8D%E5%92%8C%E7%95%8C%E9%9D%A2%E5%90%8D"><span class="toc-text">获取包名和界面名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E9%A9%B1%E5%8A%A8%E5%92%8Capp"><span class="toc-text">关闭驱动和app</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%8D%B8%E8%BD%BD%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85"><span class="toc-text">安装卸载判断是否安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%86%E5%BA%94%E7%94%A8-%E7%BD%AE%E4%BA%8E%E5%90%8E%E5%8F%B0"><span class="toc-text">将应用 置于后台</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x3D-x3D-2-2%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;2.2元素定位&#x3D;&#x3D;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%BD%8D%E5%8D%95%E4%B8%AA%E5%85%83%E7%B4%A0"><span class="toc-text">定位单个元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%BD%8D%E5%8D%95%E4%B8%AA%E5%85%83%E7%B4%A0-1"><span class="toc-text">定位单个元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-%E5%AE%9A%E4%BD%8D%E4%B8%80%E7%BB%84%E5%85%83%E7%B4%A0"><span class="toc-text">元素定位-定位一组元素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x3D-x3D-%E5%85%83%E7%B4%A0%E6%93%8D%E4%BD%9C-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;元素操作&#x3D;&#x3D;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1%E7%82%B9%E5%87%BB-x2F-%E8%BE%93%E5%85%A5-x2F-%E6%B8%85%E7%A9%BA"><span class="toc-text">2.3.1点击&#x2F;输入&#x2F;清空</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0%E6%96%87%E6%9C%AC%E3%80%81%E4%BD%8D%E7%BD%AE%E3%80%81%E5%A4%A7%E5%B0%8F"><span class="toc-text">获取元素文本、位置、大小**</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7"><span class="toc-text">获取元素属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BB%91%E5%8A%A8%E5%92%8C%E6%8B%96%E6%8B%BD"><span class="toc-text">滑动和拖拽</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#x3D-x3D-swipe%E6%BB%91%E5%8A%A8-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;swipe滑动&#x3D;&#x3D;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#scroll-%E6%BB%91%E5%8A%A8"><span class="toc-text">scroll 滑动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#drag-and-drop"><span class="toc-text">drag_and_drop</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%BB%91%E5%8A%A8%E6%96%B9%E5%BC%8F%E9%80%89%E6%8B%A9"><span class="toc-text">滑动方式选择</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#web-editor"><span class="toc-text">web-editor</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#appium%E8%87%AA%E5%B8%A6%E6%9F%A5%E8%AF%A2%E5%85%83%E7%B4%A0%E4%BF%A1%E6%81%AF"><span class="toc-text">appium自带查询元素信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95"><span class="toc-text">5.真机调试</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%8E%E4%B8%BA"><span class="toc-text">华为</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#x3D-x3D-%E6%89%8B%E5%8A%BF%E6%93%8D%E4%BD%9C-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;手势操作&#x3D;&#x3D;</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%BB%E6%95%B2-tap"><span class="toc-text">轻敲 tap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%89%E4%B8%8B-%E5%92%8C-%E6%8A%AC%E8%B5%B7"><span class="toc-text">按下 和 抬起</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%95%BF%E6%8C%89"><span class="toc-text">长按</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%9D%E8%80%83%E6%97%B6%E9%97%B4"><span class="toc-text">思考时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8-move-to"><span class="toc-text">移动 move_to</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#x3D-x3D-%E6%89%8B%E6%9C%BA%E6%93%8D%E4%BD%9C-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;手机操作&#x3D;&#x3D;</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87%E5%92%8C%E6%88%AA%E5%9B%BE"><span class="toc-text">获取屏幕分辨率和截图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%92%8C%E8%AE%BE%E7%BD%AE%E7%BD%91%E7%BB%9C%E7%8A%B6%E6%80%81"><span class="toc-text">获取和设置网络状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%92%8C%E8%AE%BE%E7%BD%AE%E7%BD%91%E7%BB%9C%E7%8A%B6%E6%80%81-1"><span class="toc-text">获取和设置网络状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E9%80%81%E9%94%AE%E5%88%B0%E8%AE%BE%E5%A4%87-%E6%8C%89%E9%94%AE%E6%93%8D%E4%BD%9C"><span class="toc-text">发送键到设备(按键操作)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x3D-x3D-%E9%80%9A%E7%9F%A5%E6%A0%8F%E7%9A%84%E6%93%8D%E4%BD%9C-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;通知栏的操作&#x3D;&#x3D;</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#x3D-x3D-%E8%8E%B7%E5%8F%96-toast-%E4%BF%A1%E6%81%AF-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;获取 toast 信息&#x3D;&#x3D;</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#toast%E6%93%8D%E4%BD%9C"><span class="toc-text">toast操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%E6%96%B9%E6%B3%95-%E8%8E%B7%E5%8F%96toast"><span class="toc-text">封装方法-获取toast</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webview"><span class="toc-text">webview</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#App%E5%88%86%E7%B1%BB"><span class="toc-text">App分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x3D-x3D-%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;环境准备&#x3D;&#x3D;</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%9F%A5%E7%9C%8B%E5%BA%94%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E7%89%88%E6%9C%AC%E3%80%82"><span class="toc-text">1.查看应用浏览器的版本。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E4%B8%8B%E8%BD%BD%E5%AF%B9%E5%BA%94%E7%9A%84%E7%89%88%E6%9C%AC%E7%9A%84%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8"><span class="toc-text">2.下载对应的版本的浏览器内核</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E6%A0%B9%E6%8D%AE%E6%89%8B%E6%9C%BA%E6%B5%8F%E8%A7%88%E5%99%A8%E7%89%88%E6%9C%AC%E5%9C%A8%E4%B8%8A%E9%9D%A2%E9%A1%B5%E9%9D%A2%E4%B8%AD%E6%89%BE%E5%88%B0%E5%AF%B9%E5%BA%94%E7%9A%84%E7%89%88%E6%9C%AC"><span class="toc-text">3.根据手机浏览器版本在上面页面中找到对应的版本</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E8%A7%A3%E5%8E%8B%E6%94%BE%E5%88%B0%E5%9B%BA%E5%AE%9A%E7%9B%AE%E5%BD%95%E3%80%82"><span class="toc-text">4.解压放到固定目录。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE%E2%80%9DChromdriver-Binary-Path%E2%80%9D%E7%9B%AE%E5%BD%95"><span class="toc-text">5.程序配置”Chromdriver Binary Path”目录</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x3D-x3D-webview-%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;webview  元素定位&#x3D;&#x3D;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-text">思路</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x3D-x3D-%E6%96%B9%E6%B3%95API-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;方法API&#x3D;&#x3D;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"></span></a></li></ol></li></ol>
   </div>
 </section>
 
@@ -2607,38 +3029,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <br><br>
     
       
-        <div class="aplayer-container">
-          
-
-  
-    
-      <meting-js
-        theme='#1BCDFC'
-        autoplay='false'
-        volume='0.5'
-        loop='all'
-        order='list'
-        fixed='true'
-        list-max-height='320px'
-        server='netease'
-        type='playlist'
-        id='6806077982'
-        list-folded='true'>
-      </meting-js>
-    
-  
-
-
-        </div>
-      
-    
-      
         <br>
         <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
           
             
-              <a href="/atom.xml"
-                class="social fas fa-rss flat-btn"
+              <a href="/"
+                class="social fa-solid fa-house flat-btn"
                 target="_blank"
                 rel="external nofollow noopener noreferrer" itemprop="url">
                 
@@ -2676,19 +3072,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
-</div>
-      
-    
-      
-        本站使用
-        <a href="https://github.com/volantis-x/hexo-theme-volantis/#6.0.0-alpha.1" target="_blank" class="codename">Volantis</a>
-        作为主题
-      
-    
-      
         <div class='copyright'>
-        <p><a href="/">Copyright © 2017-2021 XXX</a></p>
+        <p>恭喜你到达了世界的尽头~</p>
 
         </div>
       
@@ -2835,7 +3220,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               Metings.forEach((item, index) => {
                 const aplayerItem = item.aplayer; if(!aplayerItem) return;
                 const rightAplayerCheck = 'true' === 'true'
-                  && item.meta.id === '6806077982';
+                  && item.meta.id === '169341245';
                 if(rightAplayerCheck && typeof RightMenuAplayer !="undefined") RightMenuAplayer.checkAPlayer();
                 if(aplayerItem.events.events.play.every(item => {return item.name !== 'messagePlay'})) {
                   aplayerItem.on('play', function messagePlay() {
@@ -2904,7 +3289,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   function p_giscus() {
     const HEAD = check_giscus();
     if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"}},pdata.commentConfig)
+    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"},"repo":"ShikiKuro/ShikiKuro.github.io","repo-id":"R_kgDOJwjEFg","category":"Announcements","category-id":"DIC_kwDOJwjEFs4CXSQu","mapping":"pathname","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN"},pdata.commentConfig)
     const script = document.createElement('script');
     script.setAttribute('src', 'https://giscus.app/client.js');
     Object.keys(cfg).forEach(k=>{
@@ -3202,7 +3587,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Noir的主页","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"欢迎访问Noir的主页"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Noir的主页"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/06/17/hello-world/","name":"Hello World"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Noir的主页","url":"http://example.com/","keywords":"测试,编程","description":"欢迎访问Noir的主页","author":{"@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"欢迎访问Noir的主页"},"publisher":{"@type":"Organization","name":"Noir的主页","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hello World","description":"欢迎访问Noir的主页","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/06/17/hello-world/"},"author":{"@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Noir的主页","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/06/17/hello-world/","wordCount":0,"datePublished":"2023-06-17T07:50:07.325Z","dateModified":"2023-06-17T07:49:34.501Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Noir","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"欢迎访问Noir的主页"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Noir"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/自动化测试/","name":"自动化测试"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/06/18/appium常见用法/","name":"appium常见用法"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Noir","url":"http://example.com/","keywords":"测试,编程","description":"欢迎访问Noir的主页","author":{"@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"欢迎访问Noir的主页"},"publisher":{"@type":"Organization","name":"Noir","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"appium常见用法","description":"欢迎访问Noir的主页","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/"},"author":{"@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Noir","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/","wordCount":0,"datePublished":"2023-06-17T18:24:53.101Z","dateModified":"2023-06-17T18:25:48.707Z","articleSection":"自动化测试","keywords":"自动化,appium","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
