@@ -1,4 +1,4 @@
-#RightDownBtn {
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>#RightDownBtn {
     position: fixed;
     left: 1.875rem;
     bottom: 1.875rem;
