@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/06/18/appium常见用法/"/>
+  <link rel="canonical" href="http://example.com/2023/06/26/mysql-查询/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -37,22 +37,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>appium常见用法 - Noir's Blog</title>
-  <meta name="keywords" content="自动化,appium,测试,编程">
+  <title>MySQL-查询 - Noir's Blog</title>
+  <meta name="keywords" content="MySQL,测试,编程">
   <meta desc name="description" content="Noir的博客 - Noir - Noir's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="appium常见用法">
-<meta property="og:url" content="http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/index.html">
+<meta property="og:title" content="MySQL-查询">
+<meta property="og:url" content="http://example.com/2023/06/26/MySQL-%E6%9F%A5%E8%AF%A2/index.html">
 <meta property="og:site_name" content="Noir&#39;s Blog">
-<meta property="og:description" content="基本代码(启动代码) 准备工作 123456781. 打开模拟器或者连接真机2. 打开 appium 并启动服务器3. 获取被测 app 的包名和界面名Windows:adb shell dumpsys window windows | findstr mFocusedAppadb shell dumpsys window | findstr mCurrentFocus  com.android.">
+<meta property="og:description" content="select的语法格式12345678910SELECT&amp;#123;* | &lt;字段列名&gt;&amp;#125;[FROM &lt;表 1&gt;, &lt;表 2&gt;…[WHERE &lt;表达式&gt;[GROUP BY &lt;group by definition&gt;[HAVING &lt;expression&gt; [&amp;#123;&lt;operator&gt; &lt;exp">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-06-17T18:24:53.101Z">
-<meta property="article:modified_time" content="2023-06-19T11:21:31.561Z">
+<meta property="article:published_time" content="2023-06-25T17:35:50.158Z">
+<meta property="article:modified_time" content="2023-06-25T18:47:04.084Z">
 <meta property="article:author" content="Noir">
-<meta property="article:tag" content="自动化">
-<meta property="article:tag" content="appium">
+<meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2796,7 +2795,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/18/appium常见用法/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/26/MySQL-查询/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Noir's Blog">
   </span>
@@ -2817,7 +2816,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        appium常见用法
+        MySQL-查询
       </h1>
       <div class='new-meta-box'>
         
@@ -2839,10 +2838,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/">自动化测试</a>
+    <a class="category-link" href="/categories/MySQL/">MySQL</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/" itemprop="url"><span itemprop="name">自动化测试</span></a>
+        <a href="/categories/MySQL/" itemprop="url"><span itemprop="name">MySQL</span></a>
       </span>
     
   </div>
@@ -2853,10 +2852,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-06-18T02:24:53+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-06-26T01:35:50+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2023年6月18日</p>
+    <p>发布于：2023年6月26日</p>
   </a>
 </div>
 
@@ -2879,227 +2878,700 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="基本代码-启动代码"><a href="#基本代码-启动代码" class="headerlink" title="基本代码(启动代码)"></a>基本代码(启动代码)</h2><ul>
-<li><p>准备工作</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 打开模拟器或者连接真机</span><br><span class="line">2. 打开 appium 并启动服务器</span><br><span class="line">3. 获取被测 app 的包名和界面名</span><br><span class="line"></span><br><span class="line">Windows:</span><br><span class="line">adb shell dumpsys window windows | findstr mFocusedApp</span><br><span class="line">adb shell dumpsys window | findstr mCurrentFocus  </span><br><span class="line">com.android.settings/.Settings</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>代码</p>
-</li>
+    <h2 id="select的语法格式"><a href="#select的语法格式" class="headerlink" title="select的语法格式"></a>select的语法格式</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">&#123;* | &lt;字段列名&gt;&#125;</span><br><span class="line">[</span><br><span class="line">FROM &lt;表 1&gt;, &lt;表 2&gt;…</span><br><span class="line">[WHERE &lt;表达式&gt;</span><br><span class="line">[GROUP BY &lt;group by definition&gt;</span><br><span class="line">[HAVING &lt;expression&gt; [&#123;&lt;operator&gt; &lt;expression&gt;&#125;…]]</span><br><span class="line">[ORDER BY &lt;order by definition&gt;]</span><br><span class="line">[LIMIT[&lt;offset&gt;,] &lt;row count&gt;]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>例:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from 数据表名;</span><br></pre></td></tr></table></figure>
+
+<h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><ul>
+<li>* 通配符，代表<strong>查询所有字段</strong></li>
+<li>使用 * 时，只能按照数据表中字段的顺序进行排列，不能自定义字段排序</li>
+<li><strong>建议：</strong>不知道所需查询的列名称时，才用 * ，否则获取不需要的列数据会<strong>降低查询</strong>和所使用应用程序的<strong>效率</strong></li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> appium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line">desired_capabilities = &#123;</span><br><span class="line">    <span class="string">&quot;platformName&quot;</span>: <span class="string">&quot;Android&quot;</span>,  <span class="comment"># 手机的平台 不区分大小写</span></span><br><span class="line">    <span class="string">&quot;platformVersion&quot;</span>: <span class="string">&quot;7&quot;</span>,  <span class="comment"># 版本, 写大版本即可,比如 6.2.1 可以写在 6.2  6</span></span><br><span class="line">    <span class="string">&quot;deviceName&quot;</span>: <span class="string">&quot;emulator-5554&quot;</span>,  <span class="comment"># 手机的名字,随便写一个字符串,不能不写</span></span><br><span class="line">    <span class="string">&quot;appPackage&quot;</span>: <span class="string">&quot;com.android.settings&quot;</span>,  <span class="comment"># 打开应用的包名</span></span><br><span class="line">    <span class="string">&quot;appActivity&quot;</span>: <span class="string">&quot;.Settings&quot;</span>  <span class="comment"># 界面名（也叫启动名）</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># 获取驱动   http://127.0.0.1:4723/wd/hub 连接appium服务，</span></span><br><span class="line"><span class="comment"># python和appium通信使用http协议</span></span><br><span class="line">driver = webdriver.Remote(<span class="string">&#x27;http://127.0.0.1:4723/wd/hub&#x27;</span>, desired_capabilities)</span><br><span class="line">time.sleep(<span class="number">5</span>)</span><br><span class="line"><span class="comment"># 退出驱动</span></span><br><span class="line">driver.quit()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意：如果版本号写错，会有提示版本</span></span><br></pre></td></tr></table></figure>
+<h3 id="查询表的指定字段"><a href="#查询表的指定字段" class="headerlink" title="查询表的指定字段"></a>查询表的指定字段</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select id,username,sex,department from 数据表名;</span><br></pre></td></tr></table></figure>
 
-<h4 id="noReset参数"><a href="#noReset参数" class="headerlink" title="noReset参数"></a>noReset参数</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">打开app，如果重置了，下次再次打开此app，会和新安装的app一样（没有缓存，重新输入密码，提示获取权限，引导页）</span><br><span class="line"></span><br><span class="line">desired_capabilities = &#123;</span><br><span class="line">    &quot;platformName&quot;: &quot;Android&quot;,  # 平台 不区分大小写</span><br><span class="line">    &quot;platformVersion&quot;: &quot;7&quot;,  # 版本, 写大版本即可,比如 6.0 可以写在 6</span><br><span class="line">    &quot;deviceName&quot;: &quot;emulator-5554&quot;,  # 手机的名字,随便写一个字符串,不能不写</span><br><span class="line">    &quot;appPackage&quot;: &quot;com.tpshop.malls&quot;,  # 打开应用的包名</span><br><span class="line">    &quot;appActivity&quot;: &quot;.SPMainActivity&quot;,  # 界面名</span><br><span class="line">    &quot;noReset&quot;: True</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&quot;noReset&quot;: True</span><br><span class="line">打开app，不重置；如果不传递此参数，打开app默认会重置应用。</span><br></pre></td></tr></table></figure>
-
-<h2 id="app-的基本操作"><a href="#app-的基本操作" class="headerlink" title="app 的基本操作"></a>app 的基本操作</h2><h4 id="应用跳转"><a href="#应用跳转" class="headerlink" title="应用跳转"></a>应用跳转</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># appium是支持跨应用的，同一个session可以打开多个 app</span><br><span class="line"># 使用场景：当需要打开其它app时，可以使用此方法</span><br><span class="line"></span><br><span class="line">driver.start_activity(appPackage, appActivity)</span><br><span class="line">- appPackage  包名</span><br><span class="line">- appActivity  界面名</span><br></pre></td></tr></table></figure>
-
-<h4 id="获取包名和界面名"><a href="#获取包名和界面名" class="headerlink" title="获取包名和界面名"></a>获取包名和界面名</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 获取包名 driver.current_package</span><br><span class="line"># 获取界面名 driver.current_activity  使用场景：获取界面名，用于断言</span><br></pre></td></tr></table></figure>
-
-<h4 id="关闭驱动和app"><a href="#关闭驱动和app" class="headerlink" title="关闭驱动和app"></a>关闭驱动和app</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># driver.close_app()，关闭的是desired_capabilities中的app</span><br><span class="line"># 关闭驱动 driver.quit() 关闭了session会话</span><br></pre></td></tr></table></figure>
-
-<p>扩展：关闭指定app</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">扩展：</span><br><span class="line"># 指定app关闭，使用 driver.terminate_app(app的id)</span><br><span class="line"># app的id 就是 包名</span><br><span class="line"># close_app() 只能关闭desired_capabilities指定的app， 在将来会被舍弃</span><br></pre></td></tr></table></figure>
-
-<h4 id="安装卸载判断是否安装"><a href="#安装卸载判断是否安装" class="headerlink" title="安装卸载判断是否安装"></a>安装卸载判断是否安装</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 安装app，app_path  为安装文件完整路径名(写绝对路径) </span><br><span class="line">driver.install_app(app_path)</span><br><span class="line"></span><br><span class="line"># 卸载app，app_id为app包名 </span><br><span class="line">driver.remove_app(app_id)</span><br><span class="line"></span><br><span class="line"># 判断app是否安装，app_id为app包名 </span><br><span class="line">driver.is_app_installed(app_id)</span><br></pre></td></tr></table></figure>
-
-<p><strong>路径解决办法</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">windows 的路径问题解决：</span><br><span class="line">1. 在路径前边的字符串前加上 r&quot;&quot; , 不会进行转义        r&quot;D:\apks\TPShop.apk&quot;</span><br><span class="line">2. 将 Windows 路径为： \  改为 linux路径： /       &quot;D:/apks/TPShop.apk&quot;</span><br><span class="line">3. 将 \  改为 \\                                 &quot;D:\\apks\\TPShop.apk&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="将应用-置于后台"><a href="#将应用-置于后台" class="headerlink" title="将应用 置于后台"></a>将应用 置于后台</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 将当前应用置于后台多少秒, 时间到了之后,会自动切换到前台</span><br><span class="line"># 使用场景：手机银行类app，应用置于后台一段时间，再切换到前台，需要重新进行身份认证</span><br><span class="line"></span><br><span class="line"># 语法：</span><br><span class="line">driver.background_app(seconds)  </span><br></pre></td></tr></table></figure>
-
-<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668705410399.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668705410399.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1668705410399"></p>
-<h3 id="x3D-x3D-2-2元素定位-x3D-x3D"><a href="#x3D-x3D-2-2元素定位-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;2.2元素定位&#x3D;&#x3D;"></a>&#x3D;&#x3D;2.2元素定位&#x3D;&#x3D;</h3><h4 id="定位单个元素"><a href="#定位单个元素" class="headerlink" title="定位单个元素"></a>定位单个元素</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">元素定位工具: 使用 SDK 中的 ui 工具</span><br><span class="line"></span><br><span class="line"># xpath语法回顾</span><br><span class="line">//*[@属性名=&#x27;属性值&#x27;]</span><br><span class="line">//*[contains(@属性名, &#x27;属性值&#x27;)]</span><br></pre></td></tr></table></figure>
-
-<h4 id="定位单个元素-1"><a href="#定位单个元素-1" class="headerlink" title="定位单个元素"></a>定位单个元素</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">元素定位工具: 使用 SDK 中的 ui 工具</span><br><span class="line"></span><br><span class="line"># xpath语法回顾</span><br><span class="line">//*[@属性名=&#x27;属性值&#x27;]</span><br><span class="line">//*[contains(@属性名, &#x27;属性值&#x27;)]</span><br></pre></td></tr></table></figure>
-
-<p><img src="C:\Users\noirp\AppData\Roaming\Typora\typora-user-images\image-20230323234759313.png" class="lazyload" data-srcset="C:\Users\noirp\AppData\Roaming\Typora\typora-user-images\image-20230323234759313.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230323234759313"></p>
-<h4 id="元素定位-定位一组元素"><a href="#元素定位-定位一组元素" class="headerlink" title="元素定位-定位一组元素"></a>元素定位-定位一组元素</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 通过另外一种写法来定位</span><br><span class="line">driver.find_elements()   # 得到的是 列表, 如果没有找到,返回的也是空列表</span><br><span class="line"></span><br><span class="line">#注意： appium 只能定位到页面展示的元素</span><br></pre></td></tr></table></figure>
-
-<h3 id="x3D-x3D-元素操作-x3D-x3D"><a href="#x3D-x3D-元素操作-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;元素操作&#x3D;&#x3D;"></a>&#x3D;&#x3D;元素操作&#x3D;&#x3D;</h3><h4 id="2-3-1点击-x2F-输入-x2F-清空"><a href="#2-3-1点击-x2F-输入-x2F-清空" class="headerlink" title="2.3.1点击&#x2F;输入&#x2F;清空"></a>2.3.1点击&#x2F;输入&#x2F;清空</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">点击、</span><br><span class="line">el.click()</span><br><span class="line">输入、</span><br><span class="line">el.send_keys(内容)</span><br><span class="line">清空</span><br><span class="line">el.clear()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">补充：</span><br><span class="line">1.默认不能输入中文(Windows),想要输入中文, 需要在启动参数中添加如下内容</span><br><span class="line">   unicodeKeyboard 和  resetKeyboard 两个键值对, 值都是 True</span><br><span class="line">desired_capabilities&#123;</span><br><span class="line">    &quot;unicodeKeyboard&quot;: True,</span><br><span class="line">    &quot;resetKeyboard&quot;: True</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">2. appium-python-client send_keys() 会将输入框中的内容进行清空后，再输入</span><br></pre></td></tr></table></figure>
-
-<h4 id="获取元素文本、位置、大小"><a href="#获取元素文本、位置、大小" class="headerlink" title="获取元素文本、位置、大小**"></a>获取元素文本、位置、大小**</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 获取文本</span><br><span class="line">el.text </span><br><span class="line">2. 位置</span><br><span class="line">el.location</span><br><span class="line">3. 大小</span><br><span class="line">el.size</span><br></pre></td></tr></table></figure>
-
-<h4 id="获取元素属性"><a href="#获取元素属性" class="headerlink" title="获取元素属性"></a>获取元素属性</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">4. 属性</span><br><span class="line">el.get_attribute(属性名 )</span><br><span class="line">-	ID: resourceId</span><br><span class="line">-	content-desc: content-desc</span><br><span class="line">-	获取 class: className</span><br><span class="line">-   获取 text ： text/name</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line"> 老版本appium</span><br><span class="line"> 获取name属性，当content-desc为空时，获取的是text属性，当content-desc不为空时，返回是 content-desc</span><br><span class="line"> 当前版本1.20</span><br><span class="line"> 如何想获取content-desc直接传入 content-desc</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
-
-<h3 id="滑动和拖拽"><a href="#滑动和拖拽" class="headerlink" title="滑动和拖拽"></a>滑动和拖拽</h3><h4 id="x3D-x3D-swipe滑动-x3D-x3D"><a href="#x3D-x3D-swipe滑动-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;swipe滑动&#x3D;&#x3D;"></a>&#x3D;&#x3D;swipe滑动&#x3D;&#x3D;</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">driver.swipe(start_x, start_y, end_x, end_y, duration=0)</span><br><span class="line">start_x: 起点X轴坐标 </span><br><span class="line">start_y: 起点Y轴坐标 </span><br><span class="line">end_x: 终点X轴坐标 </span><br><span class="line">end_y: 终点Y轴坐标</span><br><span class="line">duration: 滑动这个操作一共持续的时间长度，单位:ms, </span><br><span class="line">时间越短，惯性越大，如果不需要惯性，设置5000左右。如果需要惯性-设置200ms</span><br><span class="line">练习：打开手机《设置》应用，完成下面的步骤:</span><br><span class="line">①.模拟手指从（500, 1600），滑动到（500, 500）的位置。</span><br></pre></td></tr></table></figure>
-
-<h4 id="scroll-滑动"><a href="#scroll-滑动" class="headerlink" title="scroll 滑动"></a>scroll 滑动</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">从一个元素滑动到另一个元素，直到页面自动停止</span><br><span class="line">driver.scroll(origin_el, destination_el, duration) </span><br><span class="line">origin_el: 开始元素</span><br><span class="line">destination_el: 结束元素</span><br><span class="line">duration: 滑动时间</span><br><span class="line"></span><br><span class="line">滑动时间：</span><br><span class="line">时间越短，惯性越大</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line">从 显示 滑动到 WLAN</span><br></pre></td></tr></table></figure>
-
-<h4 id="drag-and-drop"><a href="#drag-and-drop" class="headerlink" title="drag_and_drop"></a>drag_and_drop</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">从一个元素拖拽到另一个元素, 无惯性(精确滑动)</span><br><span class="line">driver.drag_and_drop(开始元素, 结束元素)</span><br><span class="line">注意：没有惯性，精准的滑动</span><br><span class="line"></span><br><span class="line">案例：</span><br><span class="line">从 显示 滑动到 WLAN</span><br></pre></td></tr></table></figure>
-
-<h4 id="滑动方式选择"><a href="#滑动方式选择" class="headerlink" title="滑动方式选择"></a>滑动方式选择</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 是通过坐标滑动还是通过元素滑动</span><br><span class="line">* 是否需要惯性</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>通过坐标滑动<ul>
-<li><strong>不需要惯性</strong><ul>
-<li><strong>swipe，持续时间duration设置的长一些（4000-5000ms）</strong></li>
+<h4 id="知识点-1"><a href="#知识点-1" class="headerlink" title="知识点"></a>知识点</h4><ul>
+<li>可以指定表的所有字段，然后更改字段顺序， 这种查询所有字段的写法比较灵活</li>
+<li>也可以只指定某几个字段，多个字段用 , 隔开</li>
 </ul>
-</li>
-<li>需要惯性<ul>
-<li>swipe，持续时间duration设置短一些(100-200ms)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>通过元素滑动<ul>
-<li><strong>不需要惯性</strong><ul>
-<li>scroll + duration设置长一些（4000-5000ms）</li>
-<li>drag_and_drop</li>
-</ul>
-</li>
-<li>需要惯性<ul>
-<li>scroll+duration设置的短一些(100-200ms)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="web-editor"><a href="#web-editor" class="headerlink" title="web-editor"></a>web-editor</h3><hr>
-<p>有一些面试会提到，市面上有些人会使用这个工具</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">pip install weditor==0.6.3</span><br><span class="line"># 启动</span><br><span class="line">weditor</span><br></pre></td></tr></table></figure>
-
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384686931.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384686931.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667384686931"></p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384726482.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384726482.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667384726482"></p>
-<p>注意：运行代码前，需要关闭weditor</p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384793385.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384793385.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667384793385"></p>
-<p>如果未手动停止，则报如下错误</p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667385026831.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667385026831.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667385026831"></p>
-<h2 id="appium自带查询元素信息"><a href="#appium自带查询元素信息" class="headerlink" title="appium自带查询元素信息"></a>appium自带查询元素信息</h2><p>1.启动appium服务器</p>
-<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668753212772.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668753212772.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1668753212772"></p>
-<p>2.创建New Session Window</p>
-<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668753278658.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668753278658.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1668753278658"></p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\image-20220612175640905.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\image-20220612175640905.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220612175640905"></p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256012580.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256012580.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673256012580"></p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1666547597252.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1666547597252.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1666547597252"></p>
-<h2 id="5-真机调试"><a href="#5-真机调试" class="headerlink" title="5.真机调试"></a>5.真机调试</h2><h4 id="华为"><a href="#华为" class="headerlink" title="华为"></a>华为</h4><ul>
-<li><p>安装手机助手</p>
-<ul>
-<li>手机连入计算机，会提示安装</li>
-<li>使用360软件-搜索手机助手</li>
-</ul>
-</li>
-<li><p>根据手机助手进行连接</p>
-<ul>
-<li><p>开启开发者模式</p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256938473.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256938473.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673256938473"></p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256987093.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256987093.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673256987093"></p>
-</li>
-<li><p>开启adb 和 usb调试模式</p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673257297072.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673257297072.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673257297072"></p>
-</li>
-</ul>
-</li>
-<li><p>安装手机助手进行调试(和手机品牌有关)</p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667382205885.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667382205885.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667382205885"></p>
-</li>
-<li><p>查看是否连接成功</p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667382272018.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667382272018.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667382272018"></p>
-</li>
-</ul>
-<h2 id="x3D-x3D-手势操作-x3D-x3D"><a href="#x3D-x3D-手势操作-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;手势操作&#x3D;&#x3D;"></a>&#x3D;&#x3D;手势操作&#x3D;&#x3D;</h2><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">移动端的手势操作 类似 web 端的鼠标操作</span><br><span class="line"></span><br><span class="line">1. 创建TouchAction对象 </span><br><span class="line">touch_action = TouchAction(driver)</span><br><span class="line">2. 调用高级手势对象提供所想执行的手势方法 </span><br><span class="line">touch_action.手势方法</span><br><span class="line">3. 执行手势 touch_action.perform()</span><br><span class="line"></span><br><span class="line">-----</span><br><span class="line">另外一种写法</span><br><span class="line">TouchAction(driver).手势方法.perform()</span><br></pre></td></tr></table></figure>
-
-<h3 id="轻敲-tap"><a href="#轻敲-tap" class="headerlink" title="轻敲 tap"></a>轻敲 tap</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">轻敲的结果类似 点击</span><br><span class="line">tap(el, x, y)</span><br><span class="line">- el: 元素对象</span><br><span class="line">- x: 点击 x 坐标</span><br><span class="line">- y: 点击 y 坐标</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line">1.元素对象 和 坐标 任选其一,不用两个都选</span><br><span class="line">2.如果通过 坐标进行点击，页面打开需要时间，带点击前需要手动等待 time.sleep()</span><br></pre></td></tr></table></figure>
-
-<h3 id="按下-和-抬起"><a href="#按下-和-抬起" class="headerlink" title="按下 和 抬起"></a>按下 和 抬起</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1. 按下</span><br><span class="line">press(el=None,x=None,y=None)</span><br><span class="line">2. 抬起</span><br><span class="line">release()</span><br><span class="line"></span><br><span class="line">模拟 轻敲 (按下马上抬起)</span><br><span class="line">press(el=None,x=None,y=None).release()</span><br><span class="line"></span><br><span class="line">模拟 长按(按下不抬起)</span><br><span class="line">press(el=None,x=None,y=None)</span><br></pre></td></tr></table></figure>
-
-<h3 id="长按"><a href="#长按" class="headerlink" title="长按"></a>长按</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">long_press(el, x, y, duration=1000)</span><br><span class="line">- el: 元素对象</span><br><span class="line">- x, y: 坐标</span><br><span class="line">- duration: 长按的时间,单位时间是毫秒</span><br></pre></td></tr></table></figure>
-
-<h3 id="思考时间"><a href="#思考时间" class="headerlink" title="思考时间"></a>思考时间</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wait(ms)  # ms 毫秒, 暂停多长时间</span><br><span class="line">使用按下和抬起  组合思考时间，实现长按</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过  press  release  wait 模拟长按3秒</span></span><br><span class="line">driver.find_element_by_xpath(<span class="string">&quot;//*[@text=&#x27;WLAN&#x27;]&quot;</span>).click()</span><br><span class="line">time.sleep(<span class="number">2</span>)</span><br><span class="line">TouchAction(driver).press(x=<span class="number">280</span>, y=<span class="number">490</span>).wait(<span class="number">3000</span>).release().perform()</span><br></pre></td></tr></table></figure>
-
-<h3 id="移动-move-to"><a href="#移动-move-to" class="headerlink" title="移动 move_to"></a>移动 move_to</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ove_to(el, x, y)</span><br><span class="line"></span><br><span class="line"># 实际场景</span><br><span class="line">1. 想移动,需要先按下</span><br><span class="line">2. 移动完成后, 需要抬起</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>一个app 一般 只有一个启动页，一般是首页</p>
-</li>
-<li><p><strong>滑动操作</strong>实际是使用了<strong>手势操作-TouchAction</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># swipe 代码</span><br><span class="line">def swipe(self: T, start_x: int, start_y: int, end_x: int, end_y: int, duration: int = 0) -&gt; T:</span><br><span class="line">        action = TouchAction(self)</span><br><span class="line">        action.press(x=start_x, y=start_y).wait(ms=duration).move_to(x=end_x, y=end_y).release()</span><br><span class="line">        action.perform()</span><br><span class="line">        return self</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="x3D-x3D-手机操作-x3D-x3D"><a href="#x3D-x3D-手机操作-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;手机操作&#x3D;&#x3D;"></a>&#x3D;&#x3D;手机操作&#x3D;&#x3D;</h2><h3 id="获取屏幕分辨率和截图"><a href="#获取屏幕分辨率和截图" class="headerlink" title="获取屏幕分辨率和截图"></a>获取屏幕分辨率和截图</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">获取手机分辨率: driver.get_window_size() ---&gt; 字典  &#123;&#x27;width&#x27;: 1440, &#x27;height&#x27;: 2392&#125;</span><br><span class="line"></span><br><span class="line">截图: get_screenshot_as_file(filename)  </span><br><span class="line">time.strftime(&#x27;%Y%m%d-%H%M%S&#x27;) 给文件名添加后缀</span><br></pre></td></tr></table></figure>
-
-<h3 id="获取和设置网络状态"><a href="#获取和设置网络状态" class="headerlink" title="获取和设置网络状态"></a>获取和设置网络状态</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 获取网络状态</span><br><span class="line">driver.network_connection </span><br><span class="line"></span><br><span class="line">2. 设置网络状态</span><br><span class="line">driver.set_network_connection(connection_type)</span><br><span class="line">- connection_type: 网络类型(0, 1, 2, 4, 6)</span><br><span class="line"></span><br><span class="line">@property 装饰器，可以将 实例方法作为属性来使用</span><br></pre></td></tr></table></figure>
-
-<h3 id="获取和设置网络状态-1"><a href="#获取和设置网络状态-1" class="headerlink" title="获取和设置网络状态"></a>获取和设置网络状态</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 获取网络状态</span><br><span class="line">driver.network_connection </span><br><span class="line"></span><br><span class="line">2. 设置网络状态</span><br><span class="line">driver.set_network_connection(connection_type)</span><br><span class="line">- connection_type: 网络类型(0, 1, 2, 4, 6)</span><br><span class="line"></span><br><span class="line">@property 装饰器，可以将 实例方法作为属性来使用</span><br></pre></td></tr></table></figure>
-
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\day07.assets\image-20220615163524582.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\day07.assets\image-20220615163524582.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220615163524582"></p>
-<h3 id="发送键到设备-按键操作"><a href="#发送键到设备-按键操作" class="headerlink" title="发送键到设备(按键操作)"></a>发送键到设备(按键操作)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">driver.press_keycode(keycode)</span><br><span class="line"></span><br><span class="line">常用：</span><br><span class="line">Home 键(返回主页)	3</span><br><span class="line">返回键				  4</span><br><span class="line">音量增加键			24</span><br><span class="line">音量减少键			25</span><br><span class="line">回车键 			  66</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line"># 1.音量大小未显示时，按 音量加和音量减 只会唤醒 音量大小调整界面</span><br><span class="line"># 2.按键过快，会产生无效按键操作</span><br><span class="line"></span><br><span class="line">keycode查询</span><br><span class="line">https://blog.csdn.net/feizhixuan46789/article/details/16801429</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="x3D-x3D-通知栏的操作-x3D-x3D"><a href="#x3D-x3D-通知栏的操作-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;通知栏的操作&#x3D;&#x3D;"></a>&#x3D;&#x3D;通知栏的操作&#x3D;&#x3D;</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">打开通知栏: driver.open_notifications()</span><br><span class="line"></span><br><span class="line">appium官方并没有为我们提供关闭通知的api，那么 现实生活中怎么关闭，就怎样操作就行，比如，</span><br><span class="line">1.手指从下往 上滑动</span><br><span class="line">2.按返回键</span><br></pre></td></tr></table></figure>
-
-<h2 id="x3D-x3D-获取-toast-信息-x3D-x3D"><a href="#x3D-x3D-获取-toast-信息-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;获取 toast 信息&#x3D;&#x3D;"></a>&#x3D;&#x3D;获取 toast 信息&#x3D;&#x3D;</h2><h3 id="toast操作"><a href="#toast操作" class="headerlink" title="toast操作"></a>toast操作</h3><ol>
-<li><p>介绍： 操作过程中弹出的立即消失的弹出框， 本质上它也是页面的一个元素。</p>
-</li>
-<li><p>如何获取toast：建议使用xpath查询，因为使用工具很难定位到元素。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">driver.find_element(By.XPATH, <span class="string">&quot;//*[contains(@text, &#x27;toast中的部分文本内容&#x27;)]&quot;</span>)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用显示等待查找元素： 隐式等待的下一次找元素的频率，不适合这种一闪而过的toast</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">element = WebDriverWait(driver, <span class="number">30</span>, <span class="number">0.1</span>).until(<span class="keyword">lambda</span> x: x.find_element(By.XPATH, <span class="string">&quot;//*[contains(@text,&#x27;再次点击&#x27;)]&quot;</span>))</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>补充说明</p>
-<ul>
-<li>新版本的appium软件，支持Uiautomator2 因此不需要安装特殊环境</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">低版本的 appium(&lt;=1.13) 需要在启动参数中添加如下内容:</span><br><span class="line">desired_caps[&#x27;automationName&#x27;] = &#x27;Uiautomator2&#x27;</span><br><span class="line">高版本默认使用的就是 </span><br></pre></td></tr></table></figure></li>
+<h2 id="常见关键字的执行顺序"><a href="#常见关键字的执行顺序" class="headerlink" title="常见关键字的执行顺序"></a>常见关键字的执行顺序</h2><ol>
+<li>from</li>
+<li>on</li>
+<li>join</li>
+<li>where</li>
+<li>group by</li>
+<li>having</li>
+<li>select</li>
+<li>distinct</li>
+<li>order by</li>
+<li>limit</li>
 </ol>
-<h3 id="封装方法-获取toast"><a href="#封装方法-获取toast" class="headerlink" title="封装方法-获取toast"></a>封装方法-获取toast</h3><ul>
-<li><p>获取toast封装获取toast文本内容</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># 提供要获取toast部分文本，判断toast是否存在，如果存在，则返回文本内容，如果没有找到，则抛出异常</span><br><span class="line">文本未找到</span><br><span class="line"></span><br><span class="line">from selenium.webdriver.common.by import By</span><br><span class="line">from selenium.webdriver.support.wait import WebDriverWait</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def get_toast(driver, content):</span><br><span class="line">    &quot;&quot;&quot;根据部分toast，获取完整toast信息&quot;&quot;&quot;</span><br><span class="line">    el_xpath = f&quot;//*[contains(@text, &#x27;&#123;content&#125;&#x27;)]&quot;</span><br><span class="line">    el = WebDriverWait(driver, 10, 0.5).\</span><br><span class="line">        until(lambda x: x.find_element(By.XPATH, el_xpath))</span><br><span class="line">    return el.text</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<h2 id="distinct-去重"><a href="#distinct-去重" class="headerlink" title="distinct - 去重"></a>distinct - 去重</h2><h4 id="distinct特别注意"><a href="#distinct特别注意" class="headerlink" title="distinct特别注意"></a>distinct特别注意</h4><p>当使用distinct的时候，只会返回指定的字段，其他字段都不会返回，所以查询语句就变成去重查询语句</p>
+<p><strong>常见使用场景：</strong></p>
+<ul>
+<li>查看去重字段有哪几种值<strong>【返回值】</strong></li>
+<li>查看去重字段有多少个值<strong>【返回数量】</strong></li>
 </ul>
-<h2 id="webview"><a href="#webview" class="headerlink" title="webview"></a>webview</h2><h3 id="App分类"><a href="#App分类" class="headerlink" title="App分类"></a>App分类</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Native App  原生app, </span><br><span class="line">Web App  使用浏览器打开的应用，页面是用HTML实现的</span><br><span class="line">Hybrid App  混合应用, 在原生 app 中嵌套了 HTML 网页</span><br></pre></td></tr></table></figure>
+<h4 id="distinct的语法格式"><a href="#distinct的语法格式" class="headerlink" title="distinct的语法格式"></a>distinct的语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT DISTINCT &lt;字段名&gt;,&lt;字段名&gt;, FROM &lt;表名&gt;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="知识点-2"><a href="#知识点-2" class="headerlink" title="知识点"></a>知识点</h4><ul>
+<li>distinct只能在select语句中使用</li>
+<li>distinct必须在所有字段前面</li>
+<li>如果有多个字段需要去重，则会对多个字段进行组合去重，<strong>即所有字段的数据重复才会被去重</strong></li>
+</ul>
+<h4 id="单个字段去重"><a href="#单个字段去重" class="headerlink" title="单个字段去重"></a>单个字段去重</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select distinct age from &lt;表名&gt;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="多个字段去重"><a href="#多个字段去重" class="headerlink" title="多个字段去重"></a>多个字段去重</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select distinct sex,age from &lt;表名&gt;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="查看去重字段有多少种值"><a href="#查看去重字段有多少种值" class="headerlink" title="查看去重字段有多少种值"></a>查看去重字段有多少种值</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select count(distinct age) from &lt;表名&gt;; </span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>手机中HTML页面如何操作</li>
+<li>可以给字段 or 数据表取别名</li>
+<li><strong>取别名的好处就是：</strong>如果数据表太长或者字段名太长，查询结果显示就不够优雅，而且取别名还能中文命名，何乐而不为</li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">webview 的作用是嵌套 HTML 页面.</span><br><span class="line">嵌套的 HTML 页面,不能直接使用移动端的元素定位,要使用 web 端的元素定位,就需要 web 端的 driver(Chrome)</span><br></pre></td></tr></table></figure>
+<h4 id="特别注意"><a href="#特别注意" class="headerlink" title="特别注意"></a>特别注意</h4><p>表名取的别名不能和其他表名相同，字段名取的别名不能和其他字段名相同</p>
+<h2 id="as-取别名"><a href="#as-取别名" class="headerlink" title="as - 取别名"></a>as - 取别名</h2><h4 id="语法格式"><a href="#语法格式" class="headerlink" title="语法格式"></a>语法格式</h4><p><strong>谨记：</strong>as是可以忽略不写的哦</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;表名&gt; [AS] &lt;别名&gt; </span><br><span class="line">&lt;字段名&gt; [AS] &lt;别名&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="x3D-x3D-环境准备-x3D-x3D"><a href="#x3D-x3D-环境准备-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;环境准备&#x3D;&#x3D;"></a>&#x3D;&#x3D;环境准备&#x3D;&#x3D;</h3><h5 id="1-查看应用浏览器的版本。"><a href="#1-查看应用浏览器的版本。" class="headerlink" title="1.查看应用浏览器的版本。"></a>1.查看应用浏览器的版本。</h5><ul>
-<li><p>方式一：在应用-&gt;显示系统进程-&gt;找到Android system webview版本。</p>
+
+
+<h2 id="limit-限制查询结果条数"><a href="#limit-限制查询结果条数" class="headerlink" title="limit - 限制查询结果条数"></a>limit - 限制查询结果条数</h2><h4 id="三种用法"><a href="#三种用法" class="headerlink" title="三种用法"></a>三种用法</h4><ol>
+<li>指定初始位置</li>
+<li>不指定初始位置</li>
+<li>结合offset使用</li>
+</ol>
+<h4 id="limit指定初始位置"><a href="#limit指定初始位置" class="headerlink" title="limit指定初始位置"></a>limit指定初始位置</h4><h4 id="语法格式-1"><a href="#语法格式-1" class="headerlink" title="语法格式"></a>语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LIMIT 初始位置，记录数</span><br></pre></td></tr></table></figure>
+
+<h4 id="知识点-3"><a href="#知识点-3" class="headerlink" title="知识点"></a>知识点</h4><ul>
+<li>初始位置从0开始</li>
+<li>初始位置和记录数都必须为正整数</li>
+</ul>
+<h3 id="从第3条记录开始，一共返回两条记录"><a href="#从第3条记录开始，一共返回两条记录" class="headerlink" title="从第3条记录开始，一共返回两条记录"></a>从第3条记录开始，一共返回两条记录</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest limit 2,2;</span><br></pre></td></tr></table></figure>
+
+<h4 id="limit不指定初始位置的"><a href="#limit不指定初始位置的" class="headerlink" title="limit不指定初始位置的"></a>limit不指定初始位置的</h4><h4 id="语法格式-2"><a href="#语法格式-2" class="headerlink" title="语法格式"></a>语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LIMIT 记录数</span><br></pre></td></tr></table></figure>
+
+<h4 id="知识点-4"><a href="#知识点-4" class="headerlink" title="知识点"></a>知识点</h4><ul>
+<li>记录数 &gt; 表里总记录数的话，就返回所有记录</li>
+<li>默认初始位置就是第1条记录</li>
+</ul>
+<h4 id="一共返回五条记录"><a href="#一共返回五条记录" class="headerlink" title="一共返回五条记录"></a>一共返回五条记录</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest limit 5;</span><br></pre></td></tr></table></figure>
+
+<h4 id="imit-offset组合使用的"><a href="#imit-offset组合使用的" class="headerlink" title="imit + offset组合使用的"></a>imit + offset组合使用的</h4><h4 id="语法格式-3"><a href="#语法格式-3" class="headerlink" title="语法格式"></a>语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LIMIT 记录数 offset 初始位置</span><br></pre></td></tr></table></figure>
+
+<h4 id="知识点-5"><a href="#知识点-5" class="headerlink" title="知识点"></a>知识点</h4><ul>
+<li>和 limit 初始位置, 记录数 用法一样，只是多了个offset，参数位置换了下而已</li>
+</ul>
+<h4 id="从第2条记录开始，一共返回五条记录"><a href="#从第2条记录开始，一共返回五条记录" class="headerlink" title="从第2条记录开始，一共返回五条记录"></a>从第2条记录开始，一共返回五条记录</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest limit 5 offset 1;</span><br></pre></td></tr></table></figure>
+
+<h2 id="order-by-对查询结果进行排序"><a href="#order-by-对查询结果进行排序" class="headerlink" title="order by - 对查询结果进行排序"></a>order by - 对查询结果进行排序</h2><h4 id="语法格式-4"><a href="#语法格式-4" class="headerlink" title="语法格式"></a>语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ORDER BY &lt;字段名&gt; [,&lt;字段名&gt;...] [ASC | DESC]</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li><p>不同手机模拟器和真机略有不同，推荐方式二</p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336372197.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336372197.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336372197"></p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336458665.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336458665.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336458665"></p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336539344.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336539344.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336539344"></p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336572976.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336572976.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336572976"></p>
-</li>
+<li>ASC：升序排序，默认值</li>
+<li>DESC：降序排序</li>
 </ul>
-</li>
-<li><p>方式二：使用命令，在dos命令行中输入命令，在手机中查看</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell am start -a android.intent.action.VIEW -d https://liulanmi.com/labs/core.html</span><br></pre></td></tr></table></figure>
+<h4 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h4><ul>
+<li>order by关键字后可以跟子查询（后面展开讲）</li>
+<li>如果字段值是<strong>NULL</strong>，则当<strong>最小值</strong>处理</li>
+<li>如果指定多个字段排序，则按照字段的顺序<strong>从左往右</strong>依次排序</li>
+</ul>
+<h3 id="单字段排序"><a href="#单字段排序" class="headerlink" title="单字段排序"></a>单字段排序</h3><h4 id="根据id倒序排序"><a href="#根据id倒序排序" class="headerlink" title="根据id倒序排序"></a>根据id倒序排序</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest order by id desc;</span><br></pre></td></tr></table></figure>
 
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336637249.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336637249.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336637249"></p>
-<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336678859.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336678859.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336678859"></p>
-</li>
-</ul>
-<h5 id="2-下载对应的版本的浏览器内核"><a href="#2-下载对应的版本的浏览器内核" class="headerlink" title="2.下载对应的版本的浏览器内核"></a>2.下载对应的版本的浏览器内核</h5><blockquote>
-<p>下载地址： <a target="_blank" rel="noopener" href="http://npm.taobao.org/mirrors/chromedriver/">http://npm.taobao.org/mirrors/chromedriver/</a></p>
-</blockquote>
-<h5 id="3-根据手机浏览器版本在上面页面中找到对应的版本"><a href="#3-根据手机浏览器版本在上面页面中找到对应的版本" class="headerlink" title="3.根据手机浏览器版本在上面页面中找到对应的版本"></a>3.根据手机浏览器版本在上面页面中找到对应的版本</h5><blockquote>
-<p><a target="_blank" rel="noopener" href="https://cdn.npmmirror.com/binaries/chromedriver/2.42/notes.txt">https://cdn.npmmirror.com/binaries/chromedriver/2.42/notes.txt</a></p>
-</blockquote>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336999029.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336999029.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336999029"></p>
-<h5 id="4-解压放到固定目录。"><a href="#4-解压放到固定目录。" class="headerlink" title="4.解压放到固定目录。"></a>4.解压放到固定目录。</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 将下载好的手机浏览器版本对应的驱动 chromedriver放置到没有中文的目录，建议不要放在path中</span><br><span class="line">D:\tools\app_tools\chrome\chromedriver.exe</span><br></pre></td></tr></table></figure>
+<h3 id="多字段排序"><a href="#多字段排序" class="headerlink" title="多字段排序"></a>多字段排序</h3><h4 id="先根据sex倒序排序，然后根据height升序排序"><a href="#先根据sex倒序排序，然后根据height升序排序" class="headerlink" title="先根据sex倒序排序，然后根据height升序排序"></a>先根据sex倒序排序，然后根据height升序排序</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest order by sex desc, height asc;</span><br></pre></td></tr></table></figure>
 
-<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337453726.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337453726.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673337453726"></p>
-<h5 id="5-程序配置”Chromdriver-Binary-Path”目录"><a href="#5-程序配置”Chromdriver-Binary-Path”目录" class="headerlink" title="5.程序配置”Chromdriver Binary Path”目录"></a>5.程序配置”Chromdriver Binary Path”目录</h5><ul>
-<li>打开 Appium-Server Desktop 程序配置”Chromdriver Binary Path”目录为第三部中的全路径。 </li>
-<li>点击 “Start Server”开启Appium Server Desktop</li>
+<h4 id="知识点-6"><a href="#知识点-6" class="headerlink" title="知识点"></a>知识点</h4><ul>
+<li>对多个字段排序时，只有第一个排序字段有相同的值，才会对第二个字段进行排序，以此类推</li>
+<li>如果第一个排序字段的所有数据都是唯一的，将不会对第二个排序字段进行排序，以此类推</li>
+<li>按字母（A-Z进行排序，大小写不敏感）</li>
 </ul>
-<p>	</p>
-<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337421210.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337421210.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673337421210"></p>
-<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337549051.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337549051.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673337549051"></p>
-<h3 id="x3D-x3D-webview-元素定位-x3D-x3D"><a href="#x3D-x3D-webview-元素定位-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;webview  元素定位&#x3D;&#x3D;"></a>&#x3D;&#x3D;webview  元素定位&#x3D;&#x3D;</h3><h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ol>
-<li>浏览器本身是native的应用。 使用之前的native元素定位、交互即可</li>
-<li>网页部分的内容是HTML页面， 和native部分使用了不同的<strong>上下文</strong>。 做完native部分的交互(地址输入、回车访问)之后。 需要切换到HTML页面。代码如下：</li>
+<h2 id="where-条件查询"><a href="#where-条件查询" class="headerlink" title="where - 条件查询"></a>where - 条件查询</h2><h4 id="语法格式-5"><a href="#语法格式-5" class="headerlink" title="语法格式"></a>语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WHERE 查询条件</span><br></pre></td></tr></table></figure>
+
+<h4 id="五种查询条件"><a href="#五种查询条件" class="headerlink" title="五种查询条件"></a>五种查询条件</h4><ol>
+<li>比较运算符、逻辑运算符</li>
+<li>between and 关键字</li>
+<li>is null 关键字</li>
+<li>in、exist 关键字</li>
+<li>like 关键字</li>
 </ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在 原生应用和 webview 之间进行切换</span></span><br><span class="line">driver.switch_to.context(<span class="string">&quot;&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="有哪些比较运算法？"><a href="#有哪些比较运算法？" class="headerlink" title="有哪些比较运算法？"></a>有哪些比较运算法？</h4><ul>
+<li>&#x3D;：等于</li>
+<li>&lt;&#x3D;&gt;：安全等于</li>
+<li>!&#x3D;、&lt;&gt;：不等于</li>
+<li>&lt;、&gt;、&lt;&#x3D;、&gt;&#x3D;：小于、大于、小于等于、大于等于</li>
+</ul>
+<h4 id="有哪些逻辑运算符？"><a href="#有哪些逻辑运算符？" class="headerlink" title="有哪些逻辑运算符？"></a>有哪些逻辑运算符？</h4><ul>
+<li>and、&amp;&amp;：所有查询条件均满足才会被查询出来</li>
+<li>or、||：满足任意一个查询条件就会被查询出来</li>
+<li>xor：满足其中一个条件，并且不满足另一个条件时，才会被查询出来</li>
+</ul>
+<h4 id="单一条件的查询"><a href="#单一条件的查询" class="headerlink" title="单一条件的查询"></a>单一条件的查询</h4><p>一般单一条件查询用的就是比较运算符</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest where id = 1;</span><br><span class="line">select * from yyTest where id != 1;</span><br><span class="line">select * from yyTest where height &gt; 170;</span><br><span class="line">select * from yyTest where height &gt;= 175;</span><br><span class="line">select * from yyTest where age &lt; 20;</span><br><span class="line">select * from yyTest where age &lt;= 20;</span><br></pre></td></tr></table></figure>
 
-<ol start="3">
-<li>切换完成后使用web页面自动化的方式定位元素、进行操作即可。</li>
-<li>注意：如果模拟器上的浏览器为chrome， web页面的定位只能使用CSS、XPATH定位， 其他不支持。</li>
+<h4 id="多条件的查询"><a href="#多条件的查询" class="headerlink" title="多条件的查询"></a>多条件的查询</h4><p>多条件的查询都需要使用逻辑运算符，下面的栗子比较简单不展开描述</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest where sex = 1 and height &gt;175;</span><br><span class="line">select * from yyTest where sex = 1 &amp;&amp; height &gt;175;</span><br><span class="line">select * from yyTest where height &lt; 165 or height &gt;175;</span><br><span class="line">select * from yyTest where height &lt; 165 || height &gt;175;</span><br></pre></td></tr></table></figure>
+
+<p>查询 age 小于 21，并且 height 小于 165 的学生信息和 age 大于 21，并且 height 小于等于 165 的记录</p>
+<ul>
+<li>满足age&lt; 21 但 不满足height &gt;&#x3D;165</li>
+<li>不满足age&lt;121 但 满足height &gt;&#x3D;165</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest where age &lt; 21 xor height &gt;= 165;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="like-模糊查询"><a href="#like-模糊查询" class="headerlink" title="like - 模糊查询"></a>like - 模糊查询</h2><h4 id="语法格式-6"><a href="#语法格式-6" class="headerlink" title="语法格式"></a>语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LIKE  &#x27;字符串&#x27;</span><br><span class="line">NOT LIKE  &#x27;字符串&#x27;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>NOT：取反，不满足指定字符串时匹配</p>
+</li>
+<li><p>字符串：可以是精确的字符串，也可以是包含通配符的字符串</p>
+</li>
+<li><p>LIKE支持 % 和 _ 两个通配符</p>
+</li>
+<li><p>is null是一个关键字来的，用于判断字段的值是否为空值（NULL）</p>
+</li>
+<li><p>空值 ≠ 0，也 ≠ 空字符串””</p>
+</li>
+</ul>
+<h4 id="通配符查询的"><a href="#通配符查询的" class="headerlink" title="% 通配符查询的"></a>% 通配符查询的</h4><ul>
+<li>% 应该是最常用的通配符了，它<strong>代表任意长度的字符串，包括0</strong></li>
+<li><strong>比如：</strong> a%b 表示以字母 a 开头，以字母 b 结尾的任意长度的字符串；该字符串可以代表 ab、acb、accb、accrb 等字符串</li>
+</ul>
+<p>查询username字段包含test的记录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest where username like &quot;%test%&quot;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="查询username字段开头不为test且department字段等于seewo的记录"><a href="#查询username字段开头不为test且department字段等于seewo的记录" class="headerlink" title="查询username字段开头不为test且department字段等于seewo的记录"></a>查询username字段开头不为test且department字段等于seewo的记录</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest where username not like &quot;test%&quot; and department = &quot;seewo&quot;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="知识点-7"><a href="#知识点-7" class="headerlink" title="知识点"></a>知识点</h4><p>匹配的字符串必须加单引号或双引号 like “%test%” </p>
+<h4 id="通配符查询的-1"><a href="#通配符查询的-1" class="headerlink" title="_ 通配符查询的"></a>_ 通配符查询的</h4><ul>
+<li>_ 只能代表单个字符，字符的长度不能等于0，即字符长度必须等于1；相对于 % 来说， _ 肯定没这么常用</li>
+<li><strong>比如：</strong> a_b 可以代表 acb、adb、aub 等字符串</li>
+</ul>
+<h4 id="查询username字段test开头且后面只跟一个字符结尾的记录"><a href="#查询username字段test开头且后面只跟一个字符结尾的记录" class="headerlink" title="查询username字段test开头且后面只跟一个字符结尾的记录"></a>查询username字段test开头且后面只跟一个字符结尾的记录</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest where username like &quot;test_&quot;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="like-区分大小写"><a href="#like-区分大小写" class="headerlink" title="like 区分大小写"></a>like 区分大小写</h4><ul>
+<li>默认情况下，like匹配的字符串<strong>是不区分大小写</strong>的； like “test1” 和 like “TEST1” 匹配的结果是一样的</li>
+<li>如果需要区分大小写，需要加入 binary 关键字</li>
+</ul>
+<h4 id="不会返回任何记录，test1和test2不会被匹配到"><a href="#不会返回任何记录，test1和test2不会被匹配到" class="headerlink" title="不会返回任何记录，test1和test2不会被匹配到"></a>不会返回任何记录，test1和test2不会被匹配到</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest where username like binary &quot;TEST_&quot;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用转义符的"><a href="#使用转义符的" class="headerlink" title="使用转义符的"></a>使用转义符的</h4><ul>
+<li>如果查询的字符串包含%，可以使用 \ 转义符</li>
+<li><strong>实际场景：</strong>搜索功能，搜索框只输入%看是否返回所有记录，如果是的话证明没有做转义可以提个优化项哦！</li>
+</ul>
+<h4 id="转义符-通配符联合使用的"><a href="#转义符-通配符联合使用的" class="headerlink" title="转义符+通配符联合使用的"></a>转义符+通配符联合使用的</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest where username like &quot;%\%&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用通配符的注意点"><a href="#使用通配符的注意点" class="headerlink" title="使用通配符的注意点"></a>使用通配符的注意点</h4><ul>
+<li><strong>注意大小写：</strong>不加binary关键字的话，大小写是不敏感的</li>
+<li><strong>注意头部、尾部多余的空格：</strong> “ test% “ 是不会匹配到“test1”的</li>
+<li><strong>注意NULL：</strong>通配符是不能匹配到字段为NULL的记录的</li>
+<li><strong>不要过度使用通配符：</strong>因为Mysql对通配符的处理速度会比其他操作<strong>花费更长的时间</strong></li>
+<li><strong>在确定使用通配符后：</strong>除非绝对有必要，否则<strong>不要把它们用在字符串的开始处，</strong>把通配符置于搜索模式的开始处，搜索起来是最慢的。</li>
+</ul>
+<h2 id="is-null-空值查询"><a href="#is-null-空值查询" class="headerlink" title="is null - 空值查询"></a>is null - 空值查询</h2><h4 id="语法格式-7"><a href="#语法格式-7" class="headerlink" title="语法格式"></a>语法格式</h4><p><strong>两种写法：</strong></p>
+<ol>
+<li>字段值为空</li>
+<li>字段值不为空</li>
 </ol>
-<h3 id="x3D-x3D-方法API-x3D-x3D"><a href="#x3D-x3D-方法API-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;方法API&#x3D;&#x3D;"></a>&#x3D;&#x3D;方法API&#x3D;&#x3D;</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># 语法:获取所有的上下文,得到是列表</span><br><span class="line">driver.contexts   </span><br><span class="line">[&#x27;NATIVE_APP&#x27;, &#x27;WEBVIEW_com.android.browser&#x27;]</span><br><span class="line"></span><br><span class="line"># 获取当前的上下文对象</span><br><span class="line">driver.context    </span><br><span class="line"></span><br><span class="line"># 切换到指定的上下文对象</span><br><span class="line">driver.switch_to.context(上下文对象)  </span><br><span class="line"></span><br><span class="line"># 备注：操作原生页面，需要切换到原生上下文，如果操作webview 需要切换到webview的上下文</span><br><span class="line"></span><br><span class="line"># 注意：</span><br><span class="line"># 部分版本的浏览器驱动存在问题原因会导致如下报错</span><br><span class="line">selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: invalid locator</span><br><span class="line"> (Session info: chrome=86.0.4240.198)</span><br><span class="line"></span><br><span class="line">请在 desired_capabilities添加如下两个参数</span><br><span class="line">&quot;chromeOptions&quot;: &#123;&#x27;w3c&#x27;: False&#125;</span><br><span class="line"></span><br><span class="line">Chrome和ChromeDriver组合默认在w3c模式下运行,只有手动指定 ChromeDriver运行模式为非w3c模式，才能规避这个bug</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">IS NULL</span><br><span class="line">IS NOT NULL</span><br></pre></td></tr></table></figure>
 
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
+<h4 id="空值查询的"><a href="#空值查询的" class="headerlink" title="空值查询的"></a>空值查询的</h4><h4 id="查询sex字段为空的记录"><a href="#查询sex字段为空的记录" class="headerlink" title="查询sex字段为空的记录"></a>查询sex字段为空的记录</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest where sex is null;</span><br></pre></td></tr></table></figure>
+
+<h4 id="查询sex字段不为空的记录"><a href="#查询sex字段不为空的记录" class="headerlink" title="查询sex字段不为空的记录"></a>查询sex字段不为空的记录</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest where sex is not null;</span><br></pre></td></tr></table></figure>
+
+<h4 id="知识点-8"><a href="#知识点-8" class="headerlink" title="知识点"></a>知识点</h4><ul>
+<li>is null 是一个整体，不能用  &#x3D; null 替代</li>
+<li>is not null 同理，不能用 !&#x3D; null 或 &lt;&gt; 替代</li>
+</ul>
+<h2 id="between-and-范围查询"><a href="#between-and-范围查询" class="headerlink" title="between and - 范围查询"></a>between and - 范围查询</h2><h4 id="语法格式-8"><a href="#语法格式-8" class="headerlink" title="语法格式"></a>语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">BETWEEN 取值1 AND 取值2</span><br><span class="line">NOT BETWEEN 取值1 AND 取值2</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>取值1：范围的起始值</li>
+<li>取指2：范围的终止值</li>
+<li>NOT：取反，不在取值范围内的值将被返回</li>
+</ul>
+<h4 id="例一：查询年龄在19-21之间的记录"><a href="#例一：查询年龄在19-21之间的记录" class="headerlink" title="例一：查询年龄在19-21之间的记录"></a>例一：查询年龄在19-21之间的记录</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest where age between 19 and 21;</span><br></pre></td></tr></table></figure>
+
+<h4 id="例二：查询年龄不在19-21之间的记录"><a href="#例二：查询年龄不在19-21之间的记录" class="headerlink" title="例二：查询年龄不在19-21之间的记录"></a>例二：查询年龄不在19-21之间的记录</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest where age not between 19 and 21;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="group-by-分组查询"><a href="#group-by-分组查询" class="headerlink" title="group by - 分组查询"></a>group by - 分组查询</h2><ul>
+<li>group by 关键字可以根据一个或多个字段对查询结果进行分组</li>
+<li>group by 一般都会<strong>结合Mysql聚合函数</strong>来使用</li>
+<li>如果需要指定条件来过滤分组后的结果集，需要结合 having 关键字；<strong>原因：</strong>where不能与聚合函数联合使用 <strong>并且</strong> where 是在 group by 之前执行的</li>
+</ul>
+<h4 id="语法格式-9"><a href="#语法格式-9" class="headerlink" title="语法格式"></a>语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GROUP BY  &lt;字段名&gt;[,&lt;字段名&gt;,&lt;字段名&gt;]</span><br></pre></td></tr></table></figure>
+
+<h4 id="group-by-单字段分组"><a href="#group-by-单字段分组" class="headerlink" title="group by 单字段分组"></a>group by 单字段分组</h4><p>对sex单个字段进行分组查询</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest group by sex;</span><br></pre></td></tr></table></figure>
+
+<h4 id="知识点-9"><a href="#知识点-9" class="headerlink" title="知识点"></a>知识点</h4><p>分组之后，只会返回组内第一条数据；</p>
+<h4 id="group-by-多字段分组"><a href="#group-by-多字段分组" class="headerlink" title="group by 多字段分组"></a>group by 多字段分组</h4><p>先按照age进行分组，然后再在每个组内按department分组</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from yyTest group by age,department;</span><br></pre></td></tr></table></figure>
+
+<h4 id="知识点-10"><a href="#知识点-10" class="headerlink" title="知识点"></a>知识点</h4><ul>
+<li>多个字段分组查询时，先按照第一个字段分组，如果第一个字段<strong>有相同值</strong>，则<strong>把分组结果再按第二个字段进行分组</strong>，以此类推</li>
+<li>如果第一个字段<strong>每个值都是唯一的</strong>，则不会按照第二个字段再进行分组了，具体原理可看下图</li>
+</ul>
+<h4 id="group-by-group-concat"><a href="#group-by-group-concat" class="headerlink" title="group by + group_concat()"></a>group by + group_concat()</h4><p>group_concat()可以将分组后每个组内的值都显示出来</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select department,group_concat(username) as &quot;部门员工名字&quot; from yyTest group by department;</span><br></pre></td></tr></table></figure>
+
+<h4 id="group-by-聚合函数的"><a href="#group-by-聚合函数的" class="headerlink" title="group by +聚合函数的"></a>group by +聚合函数的</h4><h4 id="有什么聚合函数？"><a href="#有什么聚合函数？" class="headerlink" title="有什么聚合函数？"></a>有什么聚合函数？</h4><ul>
+<li>count()：统计记录的条数</li>
+<li>sum()：字段值的总和</li>
+<li>max()：字段值的最大值</li>
+<li>min()：字段值的最小值</li>
+<li>avg()：字段值的平均值</li>
+</ul>
+<h4 id="具体的"><a href="#具体的" class="headerlink" title="具体的"></a>具体的</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># count统计条数</span><br><span class="line">select count(*) from yyTest group by department;</span><br><span class="line"></span><br><span class="line"># sum总和</span><br><span class="line">select sum(age) from yyTest group by department;</span><br><span class="line"></span><br><span class="line"># max最大值</span><br><span class="line">select max(age) from yyTest group by department;</span><br><span class="line"></span><br><span class="line"># min最小值</span><br><span class="line">select min(age) from yyTest group by department;</span><br><span class="line"></span><br><span class="line"># 平均值</span><br><span class="line">select avg(age) from yyTest group by department;</span><br></pre></td></tr></table></figure>
+
+<h2 id="group-by-with-rollup"><a href="#group-by-with-rollup" class="headerlink" title="group by + with rollup"></a>group by + with rollup</h2><p>with rollup用来在所有记录的最后加上一条记录，显示上面所有记录每个字段的总和（不懂的直接看图）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select GROUP_CONCAT(username) from yyTest group by department with rollup;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626022534860.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626022534860.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626022534860"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select sum(age) from yyTest group by department with rollup;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626022549204.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626022549204.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626022549204"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select count(*) from yyTest group by department with rollup ;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626022600497.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626022600497.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626022600497"></p>
+<h2 id="having-条件查询"><a href="#having-条件查询" class="headerlink" title="having - 条件查询"></a>having - 条件查询</h2><ul>
+<li>having关键字对group by分组后的数据进行过滤</li>
+<li>having支持where的所有操作符和语法</li>
+</ul>
+<h4 id="where-和-having-的一些差异性"><a href="#where-和-having-的一些差异性" class="headerlink" title="where 和 having 的一些差异性"></a>where 和 having 的一些差异性</h4><table>
+<thead>
+<tr>
+<th>where</th>
+<th>having</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>不可以</strong>使用聚合函数</td>
+<td><strong>可以</strong>使用聚合函数</td>
+</tr>
+<tr>
+<td>数据 group by <strong>前</strong>过滤</td>
+<td>数据 group by <strong>后</strong>过滤</td>
+</tr>
+<tr>
+<td>查询条件中<strong>不可以</strong>使用字段别名</td>
+<td>查询条件中<strong>可以</strong>使用字段别名</td>
+</tr>
+<tr>
+<td>用于过滤数据行</td>
+<td>用于过滤分组后的结果集</td>
+</tr>
+<tr>
+<td>根据数据表的字段直接过滤</td>
+<td>根据已查询出的字段进行过滤</td>
+</tr>
+</tbody></table>
+<h4 id="语法格式-10"><a href="#语法格式-10" class="headerlink" title="语法格式"></a>语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HAVING &lt;查询条件&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="having-单独使用的"><a href="#having-单独使用的" class="headerlink" title="having 单独使用的"></a>having 单独使用的</h2><p>根据age分组，将分组后的结果过滤出departmen为seewo的分组记录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select *,GROUP_CONCAT(username) from yyTest group by age having department = &quot;seewo</span><br></pre></td></tr></table></figure>
+
+<h4 id="having-where"><a href="#having-where" class="headerlink" title="having + where"></a>having + where</h4><ol>
+<li>先查询sex &#x3D; 1的所有记录</li>
+<li>将查询的记录按照department分组</li>
+<li>然后过滤出department&#x3D;seewo的分组</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select *,GROUP_CONCAT(username) from yyTest where sex = &quot;1&quot; group by department having department = &quot;seewo&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="having-where-聚合函数"><a href="#having-where-聚合函数" class="headerlink" title="having + where + 聚合函数"></a>having + where + 聚合函数</h4><ol>
+<li>sex &#x3D; 1的所有记录</li>
+<li>将查询的记录按照department分组</li>
+<li>然后过滤出max(date) &gt; “2020-05-08”的分组</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select *,GROUP_CONCAT(date) from yyTest where sex = &quot;1&quot; group by department having max(date) &gt; &quot;2020-05-08&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a><strong>多表查询</strong></h2><ul>
+<li><strong>cross join：交叉连接</strong></li>
+<li><strong>inner join：内连接</strong></li>
+<li><strong>left join：左外连接</strong></li>
+<li><strong>right join：右外连接</strong></li>
+<li><strong>union、union all：全连接</strong></li>
+</ul>
+<h4 id="多表查询的区别"><a href="#多表查询的区别" class="headerlink" title="多表查询的区别"></a>多表查询的区别</h4><table>
+<thead>
+<tr>
+<th>查询类型</th>
+<th>简述</th>
+<th>图表</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>inner join</td>
+<td>获取两个表中字段相互匹配关系的记录即两表记录都不为null才会返回</td>
+<td><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202005/1896874-20200513175954941-707449422.png"><img src="https://img2020.cnblogs.com/blog/1896874/202005/1896874-20200513175954941-707449422.png" class="lazyload" data-srcset="https://img2020.cnblogs.com/blog/1896874/202005/1896874-20200513175954941-707449422.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></td>
+</tr>
+<tr>
+<td>left join</td>
+<td>获取左表所有记录右表为空的字段补null</td>
+<td><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202005/1896874-20200513175957875-353635663.png"><img src="https://img2020.cnblogs.com/blog/1896874/202005/1896874-20200513175957875-353635663.png" class="lazyload" data-srcset="https://img2020.cnblogs.com/blog/1896874/202005/1896874-20200513175957875-353635663.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></td>
+</tr>
+<tr>
+<td>right join</td>
+<td>获取右表所有记录左表为空的字段补null</td>
+<td><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202005/1896874-20200513180000980-1468076483.png"><img src="https://img2020.cnblogs.com/blog/1896874/202005/1896874-20200513180000980-1468076483.png" class="lazyload" data-srcset="https://img2020.cnblogs.com/blog/1896874/202005/1896874-20200513180000980-1468076483.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></td>
+</tr>
+<tr>
+<td>union</td>
+<td>获取左右表所有记录</td>
+<td><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202005/1896874-20200513180007127-928116718.png"><img src="https://img2020.cnblogs.com/blog/1896874/202005/1896874-20200513180007127-928116718.png" class="lazyload" data-srcset="https://img2020.cnblogs.com/blog/1896874/202005/1896874-20200513180007127-928116718.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></td>
+</tr>
+<tr>
+<td>cross join</td>
+<td>两张表的笛卡尔积</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>利用<strong>条件表达式</strong>来消除交叉连接（cross join）的多余数据行</li>
+<li>inner join通过 on 来设置条件表达式，如果没有加on的话，inner join和cross join是相同的</li>
+<li>cross join … on 和  inner join … on 其实效果也是一样的<strong>（但在标准sql中，cross join是不支持on的，只是Mysql支持）</strong></li>
+</ul>
+<h2 id="inner-join-内连接"><a href="#inner-join-内连接" class="headerlink" title="inner join - 内连接"></a>inner join - 内连接</h2><h4 id="语法格式-11"><a href="#语法格式-11" class="headerlink" title="语法格式"></a>语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT &lt;字段名&gt; FROM &lt;表1&gt; INNER JOIN &lt;表2&gt; [ON子句]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>inner join 可以连接 ≥ 两个的表</li>
+<li>inner join 也可以使用 where 来指定连接条件，但是 inner join … on 是官方标准写法，而且 where 可能会影响查询性能</li>
+<li>inner join 也可以只写 join 不加 inner</li>
+</ul>
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023119397.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023119397.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626023119397"></p>
+<h4 id="标准内连接：查询每个员工的部门详细信息"><a href="#标准内连接：查询每个员工的部门详细信息" class="headerlink" title="标准内连接：查询每个员工的部门详细信息"></a>标准内连接：查询每个员工的部门详细信息</h4><p>两张表相连</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from emp as a inner join dept as b on a.dept_id = b.id;</span><br><span class="line">select * from emp as a join dept as b on a.dept_id = b.id;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023132184.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023132184.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626023132184"></p>
+<h4 id="注意点-1"><a href="#注意点-1" class="headerlink" title="注意点"></a>注意点</h4><p>可以看到<strong>emp表id&#x3D;7、9的数据</strong>是没有返回的，<strong>dept表id&#x3D;4</strong>的数据也是没有返回的，这就是inner join的特性：只有两张表相互匹配到的数据才会返回<strong>（满足查询条件的数据）</strong>，简单理解就是：<strong>取交集</strong></p>
+<h4 id="特殊内连接，自连接：查询有leader的员工以及leader信息"><a href="#特殊内连接，自连接：查询有leader的员工以及leader信息" class="headerlink" title="特殊内连接，自连接：查询有leader的员工以及leader信息"></a>特殊内连接，自连接：查询有leader的员工以及leader信息</h4><p><strong>自连接：</strong>同一张表相连</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp as a inner join emp as b on a.leader = b.id;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023149426.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023149426.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626023149426"></p>
+<h4 id="特殊内连接，不等值连接"><a href="#特殊内连接，不等值连接" class="headerlink" title="特殊内连接，不等值连接"></a>特殊内连接，不等值连接</h4><p><strong>不等值连接：</strong>查询条件的逻辑运算符是大于或小于</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp as a inner join dept as b on a.dept_id &gt; b.id;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023101711.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023101711.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626023101711"></p>
+<h4 id="知识点-11"><a href="#知识点-11" class="headerlink" title="知识点"></a>知识点</h4><ul>
+<li><p>在多表查询的时候，字段名都需要通过表名指定 表名.字段名 </p>
+</li>
+<li><p>如果表名太长可以用给表起别名，这样就变成 别名.字段名 ，如上面的 a 、 b 就是别名， a.dept_id 、 b.id </p>
+</li>
+<li><p>外连接分为<strong>两种</strong>：left join、right join</p>
+</li>
+<li><p>外连接显示的内容要比内连接多，是<strong>对内连接的补充</strong></p>
+</li>
+<li><p>left join的<strong>主表</strong>是左表，<strong>从表</strong>是右表</p>
+</li>
+<li><p>right join的<strong>主表</strong>是右表，<strong>从表</strong>是左表</p>
+</li>
+<li><p>外连接会返回<strong>主表的所有数据</strong>，无论在从表是否有与之匹配的数据，若从表没有匹配的数据则默认为空值（NULL）</p>
+</li>
+<li><p>外连接只返回从表匹配上的数据</p>
+</li>
+<li><p><strong>重点：</strong>在使用外连接时，要分清查询的结果，是需要显示左表的全部记录，还是右表的全部记录</p>
+</li>
+</ul>
+<h2 id="left-join、right-join-左连接、右连接"><a href="#left-join、right-join-左连接、右连接" class="headerlink" title="left join、right join - 左连接、右连接"></a>left join、right join - 左连接、右连接</h2><h4 id="语法格式-12"><a href="#语法格式-12" class="headerlink" title="语法格式"></a>语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT &lt;字段名&gt; FROM &lt;表1&gt; LEFT OUTER JOIN &lt;表2&gt; &lt;ON子句&gt;</span><br><span class="line">SELECT &lt;字段名&gt; FROM &lt;表1&gt; RIGHT OUTER JOIN &lt;表2&gt; &lt;ON子句&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="语法格式说明"><a href="#语法格式说明" class="headerlink" title="语法格式说明"></a>语法格式说明</h4><ul>
+<li>outer可以省略，只写 left join 、 right join </li>
+<li>on是设置左连接的连接条件，<strong>不能省略</strong></li>
+</ul>
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023306192.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023306192.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626023306192"></p>
+<h4 id="left-join-例子"><a href="#left-join-例子" class="headerlink" title="left join 例子"></a>left join 例子</h4><h4 id="SQL分析"><a href="#SQL分析" class="headerlink" title="SQL分析"></a>SQL分析</h4><ul>
+<li>主表：emp</li>
+<li>从表：dept</li>
+<li>根据 emp 表的员工 dept_id 和 dept 表的部门 id 进行匹配</li>
+<li>因为 emp 是主表，所以最后两条记录的 <strong>dept_id 在 dept 表没有匹配到 id</strong>，但是仍然会查询出来，然后将<strong>右表</strong>的数据置为NULL</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp as a left join dept as b on a.dept_id = b.id;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023341102.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023341102.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626023341102"></p>
+<h4 id="left-join-where-例子"><a href="#left-join-where-例子" class="headerlink" title="left join + where 例子"></a>left join + where 例子</h4><h4 id="SQL分析-1"><a href="#SQL分析-1" class="headerlink" title="SQL分析"></a>SQL分析</h4><ul>
+<li>主表：emp</li>
+<li>从表：dept</li>
+<li>若不看where，前面的查询结果和上面的栗子一样</li>
+<li><strong>where的作用：</strong>将上面的查询结果集进行过滤，最终只返回 id 是 NULL的记录</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp as a left join dept as b on a.dept_id = b.id where b.id is null;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023356986.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023356986.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626023356986"></p>
+<h4 id="知识点-12"><a href="#知识点-12" class="headerlink" title="知识点"></a>知识点</h4><ul>
+<li>如果外连接中有 where 关键字，on是为了关联两张表，而where是将外连接查询的结果集进行条件筛选</li>
+<li>所以<strong>执行顺序</strong>是：on -》 join -》 where</li>
+<li><strong>on：</strong>筛选两张表可以进行连接数据</li>
+<li><strong>join：</strong>将筛选后的数据连接起来</li>
+<li><strong>where：</strong>将连接后的数据结果集再次条件筛选</li>
+</ul>
+<h4 id="right-join-例子"><a href="#right-join-例子" class="headerlink" title="right join 例子"></a>right join 例子</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp as a right join dept as b on a.dept_id = b.id;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023415141.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023415141.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626023415141"></p>
+<h4 id="SQL分析-2"><a href="#SQL分析-2" class="headerlink" title="SQL分析"></a>SQL分析</h4><ul>
+<li><p>主表：dept</p>
+</li>
+<li><p>从表：emp</p>
+</li>
+<li><p>根据 dept 表的 id 和 emp 表的 dept_id 进行匹配</p>
+</li>
+<li><p>因为 dept 是主表，所以最后两条记录的 <strong>id 在 emp 表没有匹配到 dept_id</strong>，但是仍然会查询出来，然后将<strong>左表</strong>的数据置为NULL</p>
+</li>
+<li><p>其实Mysql并没有全连接，Oracle才有全连接（full join）</p>
+</li>
+<li><p>但是在MySQL中，union关键字可以达到同样的效果，所以这里也要介绍下union</p>
+</li>
+</ul>
+<h2 id="union-全连接"><a href="#union-全连接" class="headerlink" title="union - 全连接"></a>union - 全连接</h2><h4 id="语法格式-13"><a href="#语法格式-13" class="headerlink" title="语法格式"></a>语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[sql1]</span><br><span class="line">UNION [ALL | DISTINCT]</span><br><span class="line">[sql2]</span><br><span class="line">UNION [ALL | DISTINCT]</span><br><span class="line">[sql3]</span><br><span class="line">....</span><br></pre></td></tr></table></figure>
+
+<h4 id="语法格式说明-1"><a href="#语法格式说明-1" class="headerlink" title="语法格式说明"></a>语法格式说明</h4><ul>
+<li>sql1、sql2、sql3：平时写的查询 sql，可以连接很多条 sql</li>
+<li>ALL：可选参数，返回所有结果集，<strong>包含重复数据</strong></li>
+<li>distinct：可选参数，<strong>删除结果集中重复的数据（默认只写 union 也会删除重复数据，所以不加也没事）</strong></li>
+</ul>
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023500501.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023500501.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626023500501"></p>
+<h4 id="union-all-例子"><a href="#union-all-例子" class="headerlink" title="union all 例子"></a>union all 例子</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from emp as a left join dept as b on a.dept_id = b.id</span><br><span class="line">union all</span><br><span class="line">select * from emp as a right join dept as b on a.dept_id = b.id;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023515498.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023515498.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626023515498"></p>
+<p>蓝色圈子：第一条 sql 的查询结果</p>
+<p>红色圈子：第二条 sql 的查询结果</p>
+<h4 id="union-例子"><a href="#union-例子" class="headerlink" title="union 例子"></a>union 例子</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from emp as a left join dept as b on a.dept_id = b.id</span><br><span class="line">union</span><br><span class="line">select * from emp as a right join dept as b on a.dept_id = b.id;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023538502.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023538502.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626023538502"></p>
+<p><strong>上图是去重之后的结果，而没有去重的结果可以看union all 的例子或者下图</strong></p>
+<p><strong>红色圈住的部分就是重复的数据，union 会进行去重，只保留一份数据</strong></p>
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023550692.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023550692.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626023550692"></p>
+<h4 id="知识点（重点）"><a href="#知识点（重点）" class="headerlink" title="知识点（重点）"></a>知识点（重点）</h4><ul>
+<li>使用 union 连接的多条sql，每个 sql 查询出来的结果集的字段名称要一致<strong>【只需要名称一致即可，顺序可以不同，但建议相同】</strong>，可以看看下面的栗子</li>
+<li>最终 union 连接查询的结果集的字段顺序会<strong>以第一个 sql 查出来结果集的字段顺序为基准</strong></li>
+</ul>
+<h4 id="union-连接的两条-sql-，各自指定的字段顺序不相同的例子"><a href="#union-连接的两条-sql-，各自指定的字段顺序不相同的例子" class="headerlink" title="union 连接的两条 sql ，各自指定的字段顺序不相同的例子"></a>union 连接的两条 sql ，各自指定的字段顺序不相同的例子</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select name,id,leader,is_enable,dept_id from emp where dept_id = 1</span><br><span class="line">union</span><br><span class="line">select *  from emp where leader = 0</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023601834.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023601834.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626023601834"></p>
+<p>从上图可以看出，第二条 sql 查出来的字段顺序和最终结果集字段顺序明显不一样，导致数据错乱的问题</p>
+<p><strong>所以！！union 连接的每条 sql 指定的字段顺序最好一致！！</strong></p>
+<p>**所以！！*<em>union 连接的*<em>每条 sql 指定的字段顺序最好一致！！</em></em></p>
+<p><em><strong>*所以！！**union 连接的**每条 sql 指定的字段顺序最好一致！！*</strong></em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where dept_id = 1</span><br><span class="line">union</span><br><span class="line">select id,name,dept_id,leader,is_enable   from emp where leader = 0</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023613012.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023613012.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626023613012"></p>
+<ul>
+<li>子查询在我们查询方法中是比较常用的，通过子查询可以实现<strong>多表查询</strong></li>
+<li>子查询是指：将一个查询语句<strong>嵌套在</strong>另一个查询语句中</li>
+<li>子查询可以在select、update、delete语句中使用，还可以进行<strong>多层嵌套</strong></li>
+</ul>
+<h2 id="子查询"><a href="#子查询" class="headerlink" title="子查询"></a>子查询</h2><h4 id="语法格式-14"><a href="#语法格式-14" class="headerlink" title="语法格式"></a>语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WHERE &lt;表达式&gt; &lt;操作符&gt; (子查询)</span><br></pre></td></tr></table></figure>
+
+<h4 id="语法格式说明-2"><a href="#语法格式说明-2" class="headerlink" title="语法格式说明"></a>语法格式说明</h4><ul>
+<li>操作符可以是比较运算符、in、not in、exists、not exists</li>
+<li>not 当然就是取反啦</li>
+</ul>
+<h4 id="in-和-exists的一个比较"><a href="#in-和-exists的一个比较" class="headerlink" title="in 和 exists的一个比较"></a>in 和 exists的一个比较</h4><table>
+<thead>
+<tr>
+<th>in</th>
+<th>exists</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>当表达式与子查询返回的结果集中的某个值相等时，返回 TRUE，否则返回 FALSE；</td>
+<td>用于判断子查询的结果集是否为空，若子查询的结果集不为空，返回 TRUE，否则返回 FALSE；</td>
+</tr>
+<tr>
+<td>适合外表大而内表小的情况</td>
+<td>适合内表大而外表小的情况</td>
+</tr>
+<tr>
+<td>无论哪个表大，用 not exists 都比 not in 速度快</td>
+<td></td>
+</tr>
+<tr>
+<td>1、A是表达式，B是子查询结果集2、若A在B里面，则返回True</td>
+<td></td>
+</tr>
+<tr>
+<td>方便理解，画个图<a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202005/1896874-20200513223902971-1173249560.png"><img src="https://img2020.cnblogs.com/blog/1896874/202005/1896874-20200513223902971-1173249560.png" class="lazyload" data-srcset="https://img2020.cnblogs.com/blog/1896874/202005/1896874-20200513223902971-1173249560.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023908027.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023908027.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626023908027"></p>
+<h4 id="比较运算符的"><a href="#比较运算符的" class="headerlink" title="比较运算符的"></a>比较运算符的</h4><h4 id="查询部门是销售部的员工信息"><a href="#查询部门是销售部的员工信息" class="headerlink" title="查询部门是销售部的员工信息"></a>查询部门<strong>是</strong>销售部的员工信息</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where dept_id = (select id from dept where name = &quot;销售部&quot;)</span><br></pre></td></tr></table></figure>
+
+<h4 id=""><a href="#" class="headerlink" title=""></a><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023944153.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023944153.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626023944153"></h4><h4 id="查询部门不是销售部的员工信息"><a href="#查询部门不是销售部的员工信息" class="headerlink" title="查询部门不是销售部的员工信息"></a>查询部门<strong>不是</strong>销售部的员工信息</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where dept_id &lt;&gt; (select id from dept where name = &quot;销售部&quot;)</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023953701.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626023953701.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626023953701"></p>
+<h2 id="in-的例子"><a href="#in-的例子" class="headerlink" title="in 的例子"></a>in 的例子</h2><h4 id="SQL分析-3"><a href="#SQL分析-3" class="headerlink" title="SQL分析"></a>SQL分析</h4><ul>
+<li>从 dept 表查询部门名字为销售部or财务部的部门 id</li>
+<li>然后从 emp 表查询 depte_id 在上面 id 结果集的记录</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where dept_id in (select id from dept where name = &quot;财务部&quot; or name =&quot;销售部&quot;)</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024011633.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024011633.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626024011633"></p>
+<h5 id="可以看看子查询-sql-的查询结果"><a href="#可以看看子查询-sql-的查询结果" class="headerlink" title="可以看看子查询 sql 的查询结果"></a>可以看看子查询 sql 的查询结果</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select id from dept where name = &quot;财务部&quot; or name =&quot;销售部&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024022194.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024022194.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626024022194"></p>
+<h5 id="最终的-sql-其实是这样的"><a href="#最终的-sql-其实是这样的" class="headerlink" title="最终的 sql 其实是这样的"></a>最终的 sql 其实是这样的</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where dept_id in (1,3)</span><br></pre></td></tr></table></figure>
+
+<h4 id="not-in-的例子"><a href="#not-in-的例子" class="headerlink" title="not in 的例子"></a>not in 的例子</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where dept_id not in (select id from dept where name = &quot;财务部&quot; or name =&quot;销售部&quot;)</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024038587.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024038587.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626024038587"></p>
+<p>其实就是上面结果集的取反</p>
+<h4 id="exists-例子"><a href="#exists-例子" class="headerlink" title="exists 例子"></a>exists 例子</h4><h4 id="SQL分析-4"><a href="#SQL分析-4" class="headerlink" title="SQL分析"></a>SQL分析</h4><ul>
+<li>从 dept 表中查询 id &#x3D; 1 的记录，若有，exists 表达式则返回True</li>
+<li>外层查询语句接收到 True 之后，对 emp 表进行查询，返回所有记录</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where exists(select * from dept where id = 1)</span><br></pre></td></tr></table></figure>
+
+<h5 id="可以看看-exists-表达式里的子查询结果集"><a href="#可以看看-exists-表达式里的子查询结果集" class="headerlink" title="可以看看 exists 表达式里的子查询结果集"></a>可以看看 exists 表达式里的子查询结果集</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from dept where id = 1</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024057799.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024057799.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626024057799"></p>
+<p>可以看到，查询结果集不为空，所以 exists() 返回 true</p>
+<h5 id="最终的-sql-其实是这样的-1"><a href="#最终的-sql-其实是这样的-1" class="headerlink" title="最终的 sql 其实是这样的"></a>最终的 sql 其实是这样的</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where true</span><br></pre></td></tr></table></figure>
+
+<h5 id="exists-其他查询条件"><a href="#exists-其他查询条件" class="headerlink" title="exists + 其他查询条件"></a>exists + 其他查询条件</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where exists (select * from dept where id = 1) and dept_id = 2</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024153136.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024153136.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626024153136"></p>
+<h4 id="知识点-13"><a href="#知识点-13" class="headerlink" title="知识点"></a>知识点</h4><ul>
+<li>子查询的功能其实通过表连接（join）也可以完成</li>
+<li>一般来说，表连接（内连接、外连接等）都可以用子查询查询，但反过来却不一定，有的子查询不能用表连接来替换</li>
+<li>子查询比较灵活，适合作为查询的筛选条件</li>
+<li>表连接更适合查看连接表之后的数据集</li>
+</ul>
+<h2 id="子查询重点"><a href="#子查询重点" class="headerlink" title="子查询重点"></a>子查询重点</h2><h4 id="子查询语句可以嵌套在-sql-语句中任何表达式出现的位置"><a href="#子查询语句可以嵌套在-sql-语句中任何表达式出现的位置" class="headerlink" title="子查询语句可以嵌套在 sql 语句中任何表达式出现的位置"></a>子查询语句可以嵌套在 sql 语句中任何表达式出现的位置</h4><p>查询sql 语句的组成一般是这样</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select &lt;字段&gt; from &lt;表名&gt; where &lt;查询条件&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="字段、表名、查询条件都可以嵌套子查询！"><a href="#字段、表名、查询条件都可以嵌套子查询！" class="headerlink" title="字段、表名、查询条件都可以嵌套子查询！"></a>字段、表名、查询条件<strong>都可以嵌套</strong>子查询！</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">select &lt;子查询&gt; from &lt;表名&gt; where &lt;查询条件&gt;</span><br><span class="line">select &lt;字段&gt; from &lt;子查询&gt; as &lt;别名&gt; where &lt;查询条件&gt;</span><br><span class="line">select &lt;字段&gt; from &lt;表名&gt; where &lt;子查询&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="常见错误写法"><a href="#常见错误写法" class="headerlink" title="常见错误写法"></a>常见错误写法</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from (select * from emp);</span><br></pre></td></tr></table></figure>
+
+<p>这样写是会报错的，因为没有给子查询指定别名</p>
+<p><strong>正确写法</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from (select * from emp) as t;</span><br></pre></td></tr></table></figure>
+
+<h4 id="注意点-2"><a href="#注意点-2" class="headerlink" title="注意点"></a>注意点</h4><p>如果**&lt;表名&gt;嵌套的是子查询<strong>，必须给表指定别名，一般会返回多行多列的结果集，</strong>当做一张新的临时表**</p>
+<h4 id="只出现在子查询中而没有出现在父查询中的表不能包含在输出列中"><a href="#只出现在子查询中而没有出现在父查询中的表不能包含在输出列中" class="headerlink" title="只出现在子查询中而没有出现在父查询中的表不能包含在输出列中"></a>只出现在子查询中而没有出现在父查询中的表不能包含在输出列中</h4><ul>
+<li>多层嵌套子查询的最终结果集<strong>只包含父查询</strong>（最外层的查询）的select 语句中<strong>出现的字段</strong></li>
+<li>子查询的结果集通常会作为其外层查询的<strong>数据源或用于条件判断</strong></li>
+</ul>
+<h2 id="正则查询"><a href="#正则查询" class="headerlink" title="正则查询"></a>正则查询</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;列名&gt; regexp &#x27;正则表达式&#x27;</span><br></pre></td></tr></table></figure>
+
+<h4 id="常用的正则表达式"><a href="#常用的正则表达式" class="headerlink" title="常用的正则表达式"></a>常用的正则表达式</h4><table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+<th align="left">例子</th>
+<th align="left">匹配值示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">^</td>
+<td align="left">匹配文本的开始字符</td>
+<td align="left">‘^b’ 匹配以字母 b 开头的字符串</td>
+<td align="left">book、big、banana、bike</td>
+</tr>
+<tr>
+<td align="left">$</td>
+<td align="left">匹配文本的结束字符</td>
+<td align="left">‘st$’ 匹配以 st 结尾的字符串</td>
+<td align="left">test、resist、persist</td>
+</tr>
+<tr>
+<td align="left">.</td>
+<td align="left">匹配任何单个字符</td>
+<td align="left">‘b.t’ 匹配任何 b 和 t 之间有一个字符</td>
+<td align="left">bit、bat、but、bite</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">匹配零个或多个在它前面的字符</td>
+<td align="left">‘f*n’ 匹配字符 n 前面有任意个字符 f</td>
+<td align="left">fn、fan、faan、abcn</td>
+</tr>
+<tr>
+<td align="left">+</td>
+<td align="left">匹配前面的字符 1 次或多次</td>
+<td align="left">‘ba+’ 匹配以 b 开头，后面至少紧跟一个 a</td>
+<td align="left">ba、bay、bare、battle</td>
+</tr>
+<tr>
+<td align="left">&lt;字符串&gt;</td>
+<td align="left">匹配包含指定字符的文本</td>
+<td align="left">‘fa’ 匹配包含‘fa’的文本</td>
+<td align="left">fan、afa、faad</td>
+</tr>
+<tr>
+<td align="left">[字符集合]</td>
+<td align="left">匹配字符集合中的任何一个字符</td>
+<td align="left">‘[xz]’ 匹配 x 或者 z</td>
+<td align="left">dizzy、zebra、x-ray、extra</td>
+</tr>
+<tr>
+<td align="left">[^]</td>
+<td align="left">匹配不在括号中的任何字符</td>
+<td align="left">‘[^abc]’ 匹配任何不包含 a、b 或 c 的字符串</td>
+<td align="left">desk、fox、f8ke</td>
+</tr>
+<tr>
+<td align="left">字符串{n,}</td>
+<td align="left">匹配前面的字符串至少 n 次</td>
+<td align="left">‘b{2}’ 匹配 2 个或更多的 b</td>
+<td align="left">bbb、bbbb、bbbbbbb</td>
+</tr>
+<tr>
+<td align="left">字符串 {n,m}</td>
+<td align="left">匹配前面的字符串至少 n 次， 至多 m 次</td>
+<td align="left">‘b{2,4}’ 匹配最少 2 个，最多 4 个 b</td>
+<td align="left">bbb、bbbb</td>
+</tr>
+</tbody></table>
+<p> <img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024419754.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024419754.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626024419754"></p>
+<h4 id="例一："><a href="#例一：" class="headerlink" title="例一：^"></a>例一：^</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from product where product_name regexp &#x27;^2018&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024439388.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024439388.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626024439388"></p>
+<h4 id="栗子二："><a href="#栗子二：" class="headerlink" title="栗子二：$"></a>栗子二：$</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from product where product_name regexp &#x27;潮$&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024501376.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024501376.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626024501376"></p>
+<h4 id="例三：-、"><a href="#例三：-、" class="headerlink" title="例三： *、+"></a>例三： *、+</h4><p><strong>po*：</strong>查询 name 字段包含字母 p ，且 p 后面出现字母 o 的记录，而 * 可以表示0个字符，代表不出现</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where name regexp &#x27;po*&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024519133.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024519133.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626024519133"></p>
+<p><strong>po+：</strong>查询 name 字段包含字母 p ，且 p 后面出现字母 o 的记录，但 + 表示至少出现1个字符</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where name regexp &#x27;po+&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024530786.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024530786.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626024530786"></p>
+<h4 id="例四："><a href="#例四：" class="headerlink" title="例四：[]"></a>例四：[]</h4><p>下面两种写法是一样的，用 , 隔开每个字符，可能可读性更高</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where name regexp &#x27;[p,s]&#x27;;</span><br><span class="line">select * from emp where name regexp &#x27;[ps]&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024546614.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024546614.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626024546614"></p>
+<h4 id="栗子五："><a href="#栗子五：" class="headerlink" title="栗子五：[^]"></a>栗子五：[^]</h4><p><strong>注意：</strong>这里的^是取反，不是开头的意思哦！不要混淆</p>
+<p>查询 id &gt;&#x3D;10 且 开头<strong>非</strong>字母 p 的记录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where id &gt;=10 and  name regexp &#x27;^[^p]&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024559644.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024559644.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626024559644"></p>
+<h4 id="为啥中途换表"><a href="#为啥中途换表" class="headerlink" title="为啥中途换表"></a>为啥中途换表</h4><p>因为，我发现正则表达式并不是对所有中文都生效，举个下面的例子</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where name regexp &#x27;[小]&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024620442.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024620442.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626024620442"></p>
+<p>可以看到，name 字段需要匹配到一个【小】才应该被返回，但是除了红框以外的数据都被返回了，有问题有问题….</p>
+<h4 id="那为什么会这样呢？"><a href="#那为什么会这样呢？" class="headerlink" title="那为什么会这样呢？"></a>那为什么会这样呢？</h4><ul>
+<li>原来，是因为 regexp <strong>不支持多字节匹配</strong>，说白了，就是不支持中文编码</li>
+<li>要想查询中文，最好通过 like 关键字进行模糊匹配啦</li>
+</ul>
+<h4 id="当然啦，也不是没有解决办法"><a href="#当然啦，也不是没有解决办法" class="headerlink" title="当然啦，也不是没有解决办法"></a>当然啦，也不是没有解决办法</h4><p>只需要用小括号()把中文括起来就行了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where name regexp &#x27;^(小)&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024636677.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024636677.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626024636677"></p>
+<p>但，这种写法在 [ ] 里面还是不起作用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from emp where name regexp &#x27;[(小)]&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024647720.png" class="lazyload" data-srcset="C:\Users\noirp\Desktop\NoirBlog\Noirblog\source\images\MySQL-查询\image-20230626024647720.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230626024647720"></p>
+<p>所以，<strong>还是推荐用 like 模糊匹配中文字符吧</strong>！而且日常工作中也完全够用啦！</p>
+
   </div>
   
   
@@ -3123,10 +3595,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-19T19:21:31+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-26T02:47:04+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年6月19日</p>
+    <p>更新于：2023年6月26日</p>
   </a>
 </div>
 
@@ -3137,8 +3609,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>自动化</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/appium/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>appium</p></a></div>
-  <span hidden itemprop="keywords">自动化 appium</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MySQL/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>MySQL</p></a></div>
+  <span hidden itemprop="keywords">MySQL</span>
   
 
 
@@ -3152,7 +3624,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/&title=appium常见用法 - Noir's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/06/26/MySQL-%E6%9F%A5%E8%AF%A2/&title=MySQL-查询 - Noir's Blog&summary="
           
           >
           
@@ -3164,7 +3636,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/&title=appium常见用法 - Noir's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/06/26/MySQL-%E6%9F%A5%E8%AF%A2/&title=MySQL-查询 - Noir's Blog&summary="
           
           >
           
@@ -3176,7 +3648,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/&title=appium常见用法 - Noir's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/06/26/MySQL-%E6%9F%A5%E8%AF%A2/&title=MySQL-查询 - Noir's Blog&summary="
           
           >
           
@@ -3209,25 +3681,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/06/26/Linux%E5%91%BD%E4%BB%A4%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Linux常用指令</p>
-          <p class='content'>cd - 切换目录进入上级目录1cd ..
+        <a class='prev' href='/2023/06/26/MySQL-%E5%A2%9E%E5%88%A0%E6%94%B9/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>MySQL-增删改</p>
+          <p class='content'>
+insert 属于DML语句（数据操纵语句）
 
-进入当前目录1cd ~
-
-进入上两级目录1cd ../..
-
-进入当前目录1cd .
-
-进入指定目录,例&#x2F;usr&#x2F;local1c...</p>
+insert … values语法格式12INSERT INTO &lt;表名&gt; [ &lt;列名1&gt; [ , … &lt;列名n&...</p>
         </a>
       
       
-        <a class='next' href='/2023/06/17/selenium%E5%B8%B8%E8%A7%81%E4%BA%A4%E4%BA%92/'>
-          <p class='title'>selenium常见用法<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>selenium常见用法点击+输入+清空1234561. 元素点击element.click()2. 输入element.send_keys(内容)3. 清除element.clear()
+        <a class='next' href='/2023/06/26/MySQL-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/'>
+          <p class='title'>MySQL-增删改查<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>数据库操作
+创建数据库
+查询数据库
+修改数据库
+删除数据库
+选择数据库
 
-大...</p>
+创建数据库语法格式123CREATE DATABASE [IF NOT EXISTS] &lt;数据库名&gt;[[DE...</p>
         </a>
       
     </div>
@@ -3246,7 +3718,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/06/26/MySQL-%E6%9F%A5%E8%AF%A2/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -3288,7 +3760,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BB%A3%E7%A0%81-%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%A0%81"><span class="toc-text">基本代码(启动代码)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#noReset%E5%8F%82%E6%95%B0"><span class="toc-text">noReset参数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#app-%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-text">app 的基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E8%B7%B3%E8%BD%AC"><span class="toc-text">应用跳转</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%8C%85%E5%90%8D%E5%92%8C%E7%95%8C%E9%9D%A2%E5%90%8D"><span class="toc-text">获取包名和界面名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E9%A9%B1%E5%8A%A8%E5%92%8Capp"><span class="toc-text">关闭驱动和app</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%8D%B8%E8%BD%BD%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85"><span class="toc-text">安装卸载判断是否安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%86%E5%BA%94%E7%94%A8-%E7%BD%AE%E4%BA%8E%E5%90%8E%E5%8F%B0"><span class="toc-text">将应用 置于后台</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x3D-x3D-2-2%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;2.2元素定位&#x3D;&#x3D;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%BD%8D%E5%8D%95%E4%B8%AA%E5%85%83%E7%B4%A0"><span class="toc-text">定位单个元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%BD%8D%E5%8D%95%E4%B8%AA%E5%85%83%E7%B4%A0-1"><span class="toc-text">定位单个元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-%E5%AE%9A%E4%BD%8D%E4%B8%80%E7%BB%84%E5%85%83%E7%B4%A0"><span class="toc-text">元素定位-定位一组元素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x3D-x3D-%E5%85%83%E7%B4%A0%E6%93%8D%E4%BD%9C-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;元素操作&#x3D;&#x3D;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-1%E7%82%B9%E5%87%BB-x2F-%E8%BE%93%E5%85%A5-x2F-%E6%B8%85%E7%A9%BA"><span class="toc-text">2.3.1点击&#x2F;输入&#x2F;清空</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0%E6%96%87%E6%9C%AC%E3%80%81%E4%BD%8D%E7%BD%AE%E3%80%81%E5%A4%A7%E5%B0%8F"><span class="toc-text">获取元素文本、位置、大小**</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0%E5%B1%9E%E6%80%A7"><span class="toc-text">获取元素属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BB%91%E5%8A%A8%E5%92%8C%E6%8B%96%E6%8B%BD"><span class="toc-text">滑动和拖拽</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#x3D-x3D-swipe%E6%BB%91%E5%8A%A8-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;swipe滑动&#x3D;&#x3D;</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#scroll-%E6%BB%91%E5%8A%A8"><span class="toc-text">scroll 滑动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#drag-and-drop"><span class="toc-text">drag_and_drop</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%BB%91%E5%8A%A8%E6%96%B9%E5%BC%8F%E9%80%89%E6%8B%A9"><span class="toc-text">滑动方式选择</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#web-editor"><span class="toc-text">web-editor</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#appium%E8%87%AA%E5%B8%A6%E6%9F%A5%E8%AF%A2%E5%85%83%E7%B4%A0%E4%BF%A1%E6%81%AF"><span class="toc-text">appium自带查询元素信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E7%9C%9F%E6%9C%BA%E8%B0%83%E8%AF%95"><span class="toc-text">5.真机调试</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%8E%E4%B8%BA"><span class="toc-text">华为</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#x3D-x3D-%E6%89%8B%E5%8A%BF%E6%93%8D%E4%BD%9C-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;手势操作&#x3D;&#x3D;</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%BB%E6%95%B2-tap"><span class="toc-text">轻敲 tap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%89%E4%B8%8B-%E5%92%8C-%E6%8A%AC%E8%B5%B7"><span class="toc-text">按下 和 抬起</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%95%BF%E6%8C%89"><span class="toc-text">长按</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%9D%E8%80%83%E6%97%B6%E9%97%B4"><span class="toc-text">思考时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8-move-to"><span class="toc-text">移动 move_to</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#x3D-x3D-%E6%89%8B%E6%9C%BA%E6%93%8D%E4%BD%9C-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;手机操作&#x3D;&#x3D;</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%B1%8F%E5%B9%95%E5%88%86%E8%BE%A8%E7%8E%87%E5%92%8C%E6%88%AA%E5%9B%BE"><span class="toc-text">获取屏幕分辨率和截图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%92%8C%E8%AE%BE%E7%BD%AE%E7%BD%91%E7%BB%9C%E7%8A%B6%E6%80%81"><span class="toc-text">获取和设置网络状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%92%8C%E8%AE%BE%E7%BD%AE%E7%BD%91%E7%BB%9C%E7%8A%B6%E6%80%81-1"><span class="toc-text">获取和设置网络状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%91%E9%80%81%E9%94%AE%E5%88%B0%E8%AE%BE%E5%A4%87-%E6%8C%89%E9%94%AE%E6%93%8D%E4%BD%9C"><span class="toc-text">发送键到设备(按键操作)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x3D-x3D-%E9%80%9A%E7%9F%A5%E6%A0%8F%E7%9A%84%E6%93%8D%E4%BD%9C-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;通知栏的操作&#x3D;&#x3D;</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#x3D-x3D-%E8%8E%B7%E5%8F%96-toast-%E4%BF%A1%E6%81%AF-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;获取 toast 信息&#x3D;&#x3D;</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#toast%E6%93%8D%E4%BD%9C"><span class="toc-text">toast操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%E6%96%B9%E6%B3%95-%E8%8E%B7%E5%8F%96toast"><span class="toc-text">封装方法-获取toast</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webview"><span class="toc-text">webview</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#App%E5%88%86%E7%B1%BB"><span class="toc-text">App分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x3D-x3D-%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;环境准备&#x3D;&#x3D;</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%9F%A5%E7%9C%8B%E5%BA%94%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E7%89%88%E6%9C%AC%E3%80%82"><span class="toc-text">1.查看应用浏览器的版本。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E4%B8%8B%E8%BD%BD%E5%AF%B9%E5%BA%94%E7%9A%84%E7%89%88%E6%9C%AC%E7%9A%84%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8"><span class="toc-text">2.下载对应的版本的浏览器内核</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E6%A0%B9%E6%8D%AE%E6%89%8B%E6%9C%BA%E6%B5%8F%E8%A7%88%E5%99%A8%E7%89%88%E6%9C%AC%E5%9C%A8%E4%B8%8A%E9%9D%A2%E9%A1%B5%E9%9D%A2%E4%B8%AD%E6%89%BE%E5%88%B0%E5%AF%B9%E5%BA%94%E7%9A%84%E7%89%88%E6%9C%AC"><span class="toc-text">3.根据手机浏览器版本在上面页面中找到对应的版本</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E8%A7%A3%E5%8E%8B%E6%94%BE%E5%88%B0%E5%9B%BA%E5%AE%9A%E7%9B%AE%E5%BD%95%E3%80%82"><span class="toc-text">4.解压放到固定目录。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E7%A8%8B%E5%BA%8F%E9%85%8D%E7%BD%AE%E2%80%9DChromdriver-Binary-Path%E2%80%9D%E7%9B%AE%E5%BD%95"><span class="toc-text">5.程序配置”Chromdriver Binary Path”目录</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x3D-x3D-webview-%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;webview  元素定位&#x3D;&#x3D;</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-text">思路</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x3D-x3D-%E6%96%B9%E6%B3%95API-x3D-x3D"><span class="toc-text">&#x3D;&#x3D;方法API&#x3D;&#x3D;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"></span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#select%E7%9A%84%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F"><span class="toc-text">select的语法格式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-text">知识点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E8%A1%A8%E7%9A%84%E6%8C%87%E5%AE%9A%E5%AD%97%E6%AE%B5"><span class="toc-text">查询表的指定字段</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-1"><span class="toc-text">知识点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F"><span class="toc-text">常见关键字的执行顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#distinct-%E5%8E%BB%E9%87%8D"><span class="toc-text">distinct - 去重</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#distinct%E7%89%B9%E5%88%AB%E6%B3%A8%E6%84%8F"><span class="toc-text">distinct特别注意</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#distinct%E7%9A%84%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F"><span class="toc-text">distinct的语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-2"><span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E4%B8%AA%E5%AD%97%E6%AE%B5%E5%8E%BB%E9%87%8D"><span class="toc-text">单个字段去重</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E4%B8%AA%E5%AD%97%E6%AE%B5%E5%8E%BB%E9%87%8D"><span class="toc-text">多个字段去重</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%8E%BB%E9%87%8D%E5%AD%97%E6%AE%B5%E6%9C%89%E5%A4%9A%E5%B0%91%E7%A7%8D%E5%80%BC"><span class="toc-text">查看去重字段有多少种值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E5%88%AB%E6%B3%A8%E6%84%8F"><span class="toc-text">特别注意</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#as-%E5%8F%96%E5%88%AB%E5%90%8D"><span class="toc-text">as - 取别名</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F"><span class="toc-text">语法格式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#limit-%E9%99%90%E5%88%B6%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E6%9D%A1%E6%95%B0"><span class="toc-text">limit - 限制查询结果条数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E7%94%A8%E6%B3%95"><span class="toc-text">三种用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#limit%E6%8C%87%E5%AE%9A%E5%88%9D%E5%A7%8B%E4%BD%8D%E7%BD%AE"><span class="toc-text">limit指定初始位置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-1"><span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-3"><span class="toc-text">知识点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E%E7%AC%AC3%E6%9D%A1%E8%AE%B0%E5%BD%95%E5%BC%80%E5%A7%8B%EF%BC%8C%E4%B8%80%E5%85%B1%E8%BF%94%E5%9B%9E%E4%B8%A4%E6%9D%A1%E8%AE%B0%E5%BD%95"><span class="toc-text">从第3条记录开始，一共返回两条记录</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#limit%E4%B8%8D%E6%8C%87%E5%AE%9A%E5%88%9D%E5%A7%8B%E4%BD%8D%E7%BD%AE%E7%9A%84"><span class="toc-text">limit不指定初始位置的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-2"><span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-4"><span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E5%85%B1%E8%BF%94%E5%9B%9E%E4%BA%94%E6%9D%A1%E8%AE%B0%E5%BD%95"><span class="toc-text">一共返回五条记录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#imit-offset%E7%BB%84%E5%90%88%E4%BD%BF%E7%94%A8%E7%9A%84"><span class="toc-text">imit + offset组合使用的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-3"><span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-5"><span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8E%E7%AC%AC2%E6%9D%A1%E8%AE%B0%E5%BD%95%E5%BC%80%E5%A7%8B%EF%BC%8C%E4%B8%80%E5%85%B1%E8%BF%94%E5%9B%9E%E4%BA%94%E6%9D%A1%E8%AE%B0%E5%BD%95"><span class="toc-text">从第2条记录开始，一共返回五条记录</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#order-by-%E5%AF%B9%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F"><span class="toc-text">order by - 对查询结果进行排序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-4"><span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="toc-text">注意点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E5%AD%97%E6%AE%B5%E6%8E%92%E5%BA%8F"><span class="toc-text">单字段排序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AEid%E5%80%92%E5%BA%8F%E6%8E%92%E5%BA%8F"><span class="toc-text">根据id倒序排序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%AD%97%E6%AE%B5%E6%8E%92%E5%BA%8F"><span class="toc-text">多字段排序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%88%E6%A0%B9%E6%8D%AEsex%E5%80%92%E5%BA%8F%E6%8E%92%E5%BA%8F%EF%BC%8C%E7%84%B6%E5%90%8E%E6%A0%B9%E6%8D%AEheight%E5%8D%87%E5%BA%8F%E6%8E%92%E5%BA%8F"><span class="toc-text">先根据sex倒序排序，然后根据height升序排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-6"><span class="toc-text">知识点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#where-%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2"><span class="toc-text">where - 条件查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-5"><span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%94%E7%A7%8D%E6%9F%A5%E8%AF%A2%E6%9D%A1%E4%BB%B6"><span class="toc-text">五种查询条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E5%93%AA%E4%BA%9B%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E6%B3%95%EF%BC%9F"><span class="toc-text">有哪些比较运算法？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E5%93%AA%E4%BA%9B%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%9F"><span class="toc-text">有哪些逻辑运算符？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E4%B8%80%E6%9D%A1%E4%BB%B6%E7%9A%84%E6%9F%A5%E8%AF%A2"><span class="toc-text">单一条件的查询</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E6%9D%A1%E4%BB%B6%E7%9A%84%E6%9F%A5%E8%AF%A2"><span class="toc-text">多条件的查询</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#like-%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2"><span class="toc-text">like - 模糊查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-6"><span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%9A%E9%85%8D%E7%AC%A6%E6%9F%A5%E8%AF%A2%E7%9A%84"><span class="toc-text">% 通配符查询的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2username%E5%AD%97%E6%AE%B5%E5%BC%80%E5%A4%B4%E4%B8%8D%E4%B8%BAtest%E4%B8%94department%E5%AD%97%E6%AE%B5%E7%AD%89%E4%BA%8Eseewo%E7%9A%84%E8%AE%B0%E5%BD%95"><span class="toc-text">查询username字段开头不为test且department字段等于seewo的记录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-7"><span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%9A%E9%85%8D%E7%AC%A6%E6%9F%A5%E8%AF%A2%E7%9A%84-1"><span class="toc-text">_ 通配符查询的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2username%E5%AD%97%E6%AE%B5test%E5%BC%80%E5%A4%B4%E4%B8%94%E5%90%8E%E9%9D%A2%E5%8F%AA%E8%B7%9F%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E7%BB%93%E5%B0%BE%E7%9A%84%E8%AE%B0%E5%BD%95"><span class="toc-text">查询username字段test开头且后面只跟一个字符结尾的记录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#like-%E5%8C%BA%E5%88%86%E5%A4%A7%E5%B0%8F%E5%86%99"><span class="toc-text">like 区分大小写</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8D%E4%BC%9A%E8%BF%94%E5%9B%9E%E4%BB%BB%E4%BD%95%E8%AE%B0%E5%BD%95%EF%BC%8Ctest1%E5%92%8Ctest2%E4%B8%8D%E4%BC%9A%E8%A2%AB%E5%8C%B9%E9%85%8D%E5%88%B0"><span class="toc-text">不会返回任何记录，test1和test2不会被匹配到</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E8%BD%AC%E4%B9%89%E7%AC%A6%E7%9A%84"><span class="toc-text">使用转义符的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E7%AC%A6-%E9%80%9A%E9%85%8D%E7%AC%A6%E8%81%94%E5%90%88%E4%BD%BF%E7%94%A8%E7%9A%84"><span class="toc-text">转义符+通配符联合使用的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E9%80%9A%E9%85%8D%E7%AC%A6%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9"><span class="toc-text">使用通配符的注意点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#is-null-%E7%A9%BA%E5%80%BC%E6%9F%A5%E8%AF%A2"><span class="toc-text">is null - 空值查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-7"><span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A9%BA%E5%80%BC%E6%9F%A5%E8%AF%A2%E7%9A%84"><span class="toc-text">空值查询的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2sex%E5%AD%97%E6%AE%B5%E4%B8%BA%E7%A9%BA%E7%9A%84%E8%AE%B0%E5%BD%95"><span class="toc-text">查询sex字段为空的记录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2sex%E5%AD%97%E6%AE%B5%E4%B8%8D%E4%B8%BA%E7%A9%BA%E7%9A%84%E8%AE%B0%E5%BD%95"><span class="toc-text">查询sex字段不为空的记录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-8"><span class="toc-text">知识点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#between-and-%E8%8C%83%E5%9B%B4%E6%9F%A5%E8%AF%A2"><span class="toc-text">between and - 范围查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-8"><span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E4%B8%80%EF%BC%9A%E6%9F%A5%E8%AF%A2%E5%B9%B4%E9%BE%84%E5%9C%A819-21%E4%B9%8B%E9%97%B4%E7%9A%84%E8%AE%B0%E5%BD%95"><span class="toc-text">例一：查询年龄在19-21之间的记录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E4%BA%8C%EF%BC%9A%E6%9F%A5%E8%AF%A2%E5%B9%B4%E9%BE%84%E4%B8%8D%E5%9C%A819-21%E4%B9%8B%E9%97%B4%E7%9A%84%E8%AE%B0%E5%BD%95"><span class="toc-text">例二：查询年龄不在19-21之间的记录</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#group-by-%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2"><span class="toc-text">group by - 分组查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-9"><span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#group-by-%E5%8D%95%E5%AD%97%E6%AE%B5%E5%88%86%E7%BB%84"><span class="toc-text">group by 单字段分组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-9"><span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#group-by-%E5%A4%9A%E5%AD%97%E6%AE%B5%E5%88%86%E7%BB%84"><span class="toc-text">group by 多字段分组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-10"><span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#group-by-group-concat"><span class="toc-text">group by + group_concat()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#group-by-%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0%E7%9A%84"><span class="toc-text">group by +聚合函数的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%89%E4%BB%80%E4%B9%88%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0%EF%BC%9F"><span class="toc-text">有什么聚合函数？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E7%9A%84"><span class="toc-text">具体的</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#group-by-with-rollup"><span class="toc-text">group by + with rollup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#having-%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2"><span class="toc-text">having - 条件查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#where-%E5%92%8C-having-%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B7%AE%E5%BC%82%E6%80%A7"><span class="toc-text">where 和 having 的一些差异性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-10"><span class="toc-text">语法格式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#having-%E5%8D%95%E7%8B%AC%E4%BD%BF%E7%94%A8%E7%9A%84"><span class="toc-text">having 单独使用的</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#having-where"><span class="toc-text">having + where</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#having-where-%E8%81%9A%E5%90%88%E5%87%BD%E6%95%B0"><span class="toc-text">having + where + 聚合函数</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="toc-text">多表查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">多表查询的区别</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#inner-join-%E5%86%85%E8%BF%9E%E6%8E%A5"><span class="toc-text">inner join - 内连接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-11"><span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E5%86%85%E8%BF%9E%E6%8E%A5%EF%BC%9A%E6%9F%A5%E8%AF%A2%E6%AF%8F%E4%B8%AA%E5%91%98%E5%B7%A5%E7%9A%84%E9%83%A8%E9%97%A8%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF"><span class="toc-text">标准内连接：查询每个员工的部门详细信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E7%82%B9-1"><span class="toc-text">注意点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E5%86%85%E8%BF%9E%E6%8E%A5%EF%BC%8C%E8%87%AA%E8%BF%9E%E6%8E%A5%EF%BC%9A%E6%9F%A5%E8%AF%A2%E6%9C%89leader%E7%9A%84%E5%91%98%E5%B7%A5%E4%BB%A5%E5%8F%8Aleader%E4%BF%A1%E6%81%AF"><span class="toc-text">特殊内连接，自连接：查询有leader的员工以及leader信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E5%86%85%E8%BF%9E%E6%8E%A5%EF%BC%8C%E4%B8%8D%E7%AD%89%E5%80%BC%E8%BF%9E%E6%8E%A5"><span class="toc-text">特殊内连接，不等值连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-11"><span class="toc-text">知识点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#left-join%E3%80%81right-join-%E5%B7%A6%E8%BF%9E%E6%8E%A5%E3%80%81%E5%8F%B3%E8%BF%9E%E6%8E%A5"><span class="toc-text">left join、right join - 左连接、右连接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-12"><span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E"><span class="toc-text">语法格式说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#left-join-%E4%BE%8B%E5%AD%90"><span class="toc-text">left join 例子</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL%E5%88%86%E6%9E%90"><span class="toc-text">SQL分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#left-join-where-%E4%BE%8B%E5%AD%90"><span class="toc-text">left join + where 例子</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL%E5%88%86%E6%9E%90-1"><span class="toc-text">SQL分析</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-12"><span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#right-join-%E4%BE%8B%E5%AD%90"><span class="toc-text">right join 例子</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL%E5%88%86%E6%9E%90-2"><span class="toc-text">SQL分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#union-%E5%85%A8%E8%BF%9E%E6%8E%A5"><span class="toc-text">union - 全连接</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-13"><span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E-1"><span class="toc-text">语法格式说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#union-all-%E4%BE%8B%E5%AD%90"><span class="toc-text">union all 例子</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#union-%E4%BE%8B%E5%AD%90"><span class="toc-text">union 例子</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="toc-text">知识点（重点）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#union-%E8%BF%9E%E6%8E%A5%E7%9A%84%E4%B8%A4%E6%9D%A1-sql-%EF%BC%8C%E5%90%84%E8%87%AA%E6%8C%87%E5%AE%9A%E7%9A%84%E5%AD%97%E6%AE%B5%E9%A1%BA%E5%BA%8F%E4%B8%8D%E7%9B%B8%E5%90%8C%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="toc-text">union 连接的两条 sql ，各自指定的字段顺序不相同的例子</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%90%E6%9F%A5%E8%AF%A2"><span class="toc-text">子查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-14"><span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E-2"><span class="toc-text">语法格式说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#in-%E5%92%8C-exists%E7%9A%84%E4%B8%80%E4%B8%AA%E6%AF%94%E8%BE%83"><span class="toc-text">in 和 exists的一个比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84"><span class="toc-text">比较运算符的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E9%83%A8%E9%97%A8%E6%98%AF%E9%94%80%E5%94%AE%E9%83%A8%E7%9A%84%E5%91%98%E5%B7%A5%E4%BF%A1%E6%81%AF"><span class="toc-text">查询部门是销售部的员工信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link"><span class="toc-text"></span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E9%83%A8%E9%97%A8%E4%B8%8D%E6%98%AF%E9%94%80%E5%94%AE%E9%83%A8%E7%9A%84%E5%91%98%E5%B7%A5%E4%BF%A1%E6%81%AF"><span class="toc-text">查询部门不是销售部的员工信息</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#in-%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="toc-text">in 的例子</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL%E5%88%86%E6%9E%90-3"><span class="toc-text">SQL分析</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AF%E4%BB%A5%E7%9C%8B%E7%9C%8B%E5%AD%90%E6%9F%A5%E8%AF%A2-sql-%E7%9A%84%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C"><span class="toc-text">可以看看子查询 sql 的查询结果</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9C%80%E7%BB%88%E7%9A%84-sql-%E5%85%B6%E5%AE%9E%E6%98%AF%E8%BF%99%E6%A0%B7%E7%9A%84"><span class="toc-text">最终的 sql 其实是这样的</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#not-in-%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="toc-text">not in 的例子</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#exists-%E4%BE%8B%E5%AD%90"><span class="toc-text">exists 例子</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SQL%E5%88%86%E6%9E%90-4"><span class="toc-text">SQL分析</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%AF%E4%BB%A5%E7%9C%8B%E7%9C%8B-exists-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E9%87%8C%E7%9A%84%E5%AD%90%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E9%9B%86"><span class="toc-text">可以看看 exists 表达式里的子查询结果集</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9C%80%E7%BB%88%E7%9A%84-sql-%E5%85%B6%E5%AE%9E%E6%98%AF%E8%BF%99%E6%A0%B7%E7%9A%84-1"><span class="toc-text">最终的 sql 其实是这样的</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#exists-%E5%85%B6%E4%BB%96%E6%9F%A5%E8%AF%A2%E6%9D%A1%E4%BB%B6"><span class="toc-text">exists + 其他查询条件</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9-13"><span class="toc-text">知识点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%90%E6%9F%A5%E8%AF%A2%E9%87%8D%E7%82%B9"><span class="toc-text">子查询重点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%90%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5%E5%8F%AF%E4%BB%A5%E5%B5%8C%E5%A5%97%E5%9C%A8-sql-%E8%AF%AD%E5%8F%A5%E4%B8%AD%E4%BB%BB%E4%BD%95%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%87%BA%E7%8E%B0%E7%9A%84%E4%BD%8D%E7%BD%AE"><span class="toc-text">子查询语句可以嵌套在 sql 语句中任何表达式出现的位置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%97%E6%AE%B5%E3%80%81%E8%A1%A8%E5%90%8D%E3%80%81%E6%9F%A5%E8%AF%A2%E6%9D%A1%E4%BB%B6%E9%83%BD%E5%8F%AF%E4%BB%A5%E5%B5%8C%E5%A5%97%E5%AD%90%E6%9F%A5%E8%AF%A2%EF%BC%81"><span class="toc-text">字段、表名、查询条件都可以嵌套子查询！</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%86%99%E6%B3%95"><span class="toc-text">常见错误写法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E7%82%B9-2"><span class="toc-text">注意点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AA%E5%87%BA%E7%8E%B0%E5%9C%A8%E5%AD%90%E6%9F%A5%E8%AF%A2%E4%B8%AD%E8%80%8C%E6%B2%A1%E6%9C%89%E5%87%BA%E7%8E%B0%E5%9C%A8%E7%88%B6%E6%9F%A5%E8%AF%A2%E4%B8%AD%E7%9A%84%E8%A1%A8%E4%B8%8D%E8%83%BD%E5%8C%85%E5%90%AB%E5%9C%A8%E8%BE%93%E5%87%BA%E5%88%97%E4%B8%AD"><span class="toc-text">只出现在子查询中而没有出现在父查询中的表不能包含在输出列中</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E6%9F%A5%E8%AF%A2"><span class="toc-text">正则查询</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">常用的正则表达式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E4%B8%80%EF%BC%9A"><span class="toc-text">例一：^</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%97%E5%AD%90%E4%BA%8C%EF%BC%9A"><span class="toc-text">栗子二：$</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E4%B8%89%EF%BC%9A-%E3%80%81"><span class="toc-text">例三： *、+</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E5%9B%9B%EF%BC%9A"><span class="toc-text">例四：[]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%97%E5%AD%90%E4%BA%94%EF%BC%9A"><span class="toc-text">栗子五：[^]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E5%95%A5%E4%B8%AD%E9%80%94%E6%8D%A2%E8%A1%A8"><span class="toc-text">为啥中途换表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%82%A3%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E8%BF%99%E6%A0%B7%E5%91%A2%EF%BC%9F"><span class="toc-text">那为什么会这样呢？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BD%93%E7%84%B6%E5%95%A6%EF%BC%8C%E4%B9%9F%E4%B8%8D%E6%98%AF%E6%B2%A1%E6%9C%89%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="toc-text">当然啦，也不是没有解决办法</span></a></li></ol></li></ol></li></ol>
   </div>
 </section>
 
@@ -4404,7 +4876,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Noir's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Noir的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Noir's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/自动化测试/","name":"自动化测试"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/06/18/appium常见用法/","name":"appium常见用法"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Noir's Blog","url":"http://example.com/","keywords":"测试,编程","description":"Noir的博客","author":{"@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Noir的博客"},"publisher":{"@type":"Organization","name":"Noir's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"appium常见用法","description":"Noir的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/"},"author":{"@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Noir's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/","wordCount":0,"datePublished":"2023-06-17T18:24:53.101Z","dateModified":"2023-06-19T11:21:31.561Z","articleSection":"自动化测试","keywords":"自动化,appium","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Noir's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Noir的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Noir's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/MySQL/","name":"MySQL"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/06/26/MySQL-查询/","name":"MySQL-查询"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Noir's Blog","url":"http://example.com/","keywords":"测试,编程","description":"Noir的博客","author":{"@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Noir的博客"},"publisher":{"@type":"Organization","name":"Noir's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"MySQL-查询","description":"Noir的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/06/26/MySQL-%E6%9F%A5%E8%AF%A2/"},"author":{"@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Noir's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/06/26/MySQL-%E6%9F%A5%E8%AF%A2/","wordCount":0,"datePublished":"2023-06-25T17:35:50.158Z","dateModified":"2023-06-25T18:47:04.084Z","articleSection":"MySQL","keywords":"MySQL","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
