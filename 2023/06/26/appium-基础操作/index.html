@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/06/18/appium常见用法/"/>
+  <link rel="canonical" href="http://example.com/2023/06/26/appium-基础操作/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -37,19 +37,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>appium常见用法 - Noir's Blog</title>
+  <title>appium-基础操作 - Noir's Blog</title>
   <meta name="keywords" content="自动化,appium,测试,编程">
   <meta desc name="description" content="Noir的博客 - Noir - Noir's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="appium常见用法">
-<meta property="og:url" content="http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/index.html">
+<meta property="og:title" content="appium-基础操作">
+<meta property="og:url" content="http://example.com/2023/06/26/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="Noir&#39;s Blog">
 <meta property="og:description" content="基本代码(启动代码) 准备工作 123456781. 打开模拟器或者连接真机2. 打开 appium 并启动服务器3. 获取被测 app 的包名和界面名Windows:adb shell dumpsys window windows | findstr mFocusedAppadb shell dumpsys window | findstr mCurrentFocus  com.android.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-06-17T18:24:53.101Z">
-<meta property="article:modified_time" content="2023-06-19T11:21:31.561Z">
+<meta property="article:published_time" content="2023-06-26T08:39:36.877Z">
+<meta property="article:modified_time" content="2023-06-26T08:42:22.393Z">
 <meta property="article:author" content="Noir">
 <meta property="article:tag" content="自动化">
 <meta property="article:tag" content="appium">
@@ -2248,7 +2248,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1687720644512),
+    lastupdate: new Date(1687769061654),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2796,7 +2796,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/18/appium常见用法/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/26/appium-基础操作/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Noir's Blog">
   </span>
@@ -2817,7 +2817,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        appium常见用法
+        appium-基础操作
       </h1>
       <div class='new-meta-box'>
         
@@ -2853,10 +2853,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-06-18T02:24:53+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-06-26T16:39:36+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2023年6月18日</p>
+    <p>发布于：2023年6月26日</p>
   </a>
 </div>
 
@@ -2906,12 +2906,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h4 id="将应用-置于后台"><a href="#将应用-置于后台" class="headerlink" title="将应用 置于后台"></a>将应用 置于后台</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 将当前应用置于后台多少秒, 时间到了之后,会自动切换到前台</span><br><span class="line"># 使用场景：手机银行类app，应用置于后台一段时间，再切换到前台，需要重新进行身份认证</span><br><span class="line"></span><br><span class="line"># 语法：</span><br><span class="line">driver.background_app(seconds)  </span><br></pre></td></tr></table></figure>
 
-<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668705410399.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668705410399.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1668705410399"></p>
+<p> <img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1668705410399-168776894108429.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1668705410399-168776894108429.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1668705410399"></p>
 <h3 id="x3D-x3D-2-2元素定位-x3D-x3D"><a href="#x3D-x3D-2-2元素定位-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;2.2元素定位&#x3D;&#x3D;"></a>&#x3D;&#x3D;2.2元素定位&#x3D;&#x3D;</h3><h4 id="定位单个元素"><a href="#定位单个元素" class="headerlink" title="定位单个元素"></a>定位单个元素</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">元素定位工具: 使用 SDK 中的 ui 工具</span><br><span class="line"></span><br><span class="line"># xpath语法回顾</span><br><span class="line">//*[@属性名=&#x27;属性值&#x27;]</span><br><span class="line">//*[contains(@属性名, &#x27;属性值&#x27;)]</span><br></pre></td></tr></table></figure>
 
 <h4 id="定位单个元素-1"><a href="#定位单个元素-1" class="headerlink" title="定位单个元素"></a>定位单个元素</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">元素定位工具: 使用 SDK 中的 ui 工具</span><br><span class="line"></span><br><span class="line"># xpath语法回顾</span><br><span class="line">//*[@属性名=&#x27;属性值&#x27;]</span><br><span class="line">//*[contains(@属性名, &#x27;属性值&#x27;)]</span><br></pre></td></tr></table></figure>
 
-<p><img src="C:\Users\noirp\AppData\Roaming\Typora\typora-user-images\image-20230323234759313.png" class="lazyload" data-srcset="C:\Users\noirp\AppData\Roaming\Typora\typora-user-images\image-20230323234759313.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230323234759313"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20230323234759313-168776894108430.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20230323234759313-168776894108430.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20230323234759313"></p>
 <h4 id="元素定位-定位一组元素"><a href="#元素定位-定位一组元素" class="headerlink" title="元素定位-定位一组元素"></a>元素定位-定位一组元素</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 通过另外一种写法来定位</span><br><span class="line">driver.find_elements()   # 得到的是 列表, 如果没有找到,返回的也是空列表</span><br><span class="line"></span><br><span class="line">#注意： appium 只能定位到页面展示的元素</span><br></pre></td></tr></table></figure>
 
 <h3 id="x3D-x3D-元素操作-x3D-x3D"><a href="#x3D-x3D-元素操作-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;元素操作&#x3D;&#x3D;"></a>&#x3D;&#x3D;元素操作&#x3D;&#x3D;</h3><h4 id="2-3-1点击-x2F-输入-x2F-清空"><a href="#2-3-1点击-x2F-输入-x2F-清空" class="headerlink" title="2.3.1点击&#x2F;输入&#x2F;清空"></a>2.3.1点击&#x2F;输入&#x2F;清空</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">点击、</span><br><span class="line">el.click()</span><br><span class="line">输入、</span><br><span class="line">el.send_keys(内容)</span><br><span class="line">清空</span><br><span class="line">el.clear()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">补充：</span><br><span class="line">1.默认不能输入中文(Windows),想要输入中文, 需要在启动参数中添加如下内容</span><br><span class="line">   unicodeKeyboard 和  resetKeyboard 两个键值对, 值都是 True</span><br><span class="line">desired_capabilities&#123;</span><br><span class="line">    &quot;unicodeKeyboard&quot;: True,</span><br><span class="line">    &quot;resetKeyboard&quot;: True</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">2. appium-python-client send_keys() 会将输入框中的内容进行清空后，再输入</span><br></pre></td></tr></table></figure>
@@ -2957,19 +2957,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>有一些面试会提到，市面上有些人会使用这个工具</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 安装</span><br><span class="line">pip install weditor==0.6.3</span><br><span class="line"># 启动</span><br><span class="line">weditor</span><br></pre></td></tr></table></figure>
 
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384686931.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384686931.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667384686931"></p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384726482.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384726482.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667384726482"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1667384686931-168776894108431.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1667384686931-168776894108431.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667384686931"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1667384726482-168776894108428.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1667384726482-168776894108428.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667384726482"></p>
 <p>注意：运行代码前，需要关闭weditor</p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384793385.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667384793385.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667384793385"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1667384793385.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1667384793385.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667384793385"></p>
 <p>如果未手动停止，则报如下错误</p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667385026831.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667385026831.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667385026831"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1667385026831-168776894108434.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1667385026831-168776894108434.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667385026831"></p>
 <h2 id="appium自带查询元素信息"><a href="#appium自带查询元素信息" class="headerlink" title="appium自带查询元素信息"></a>appium自带查询元素信息</h2><p>1.启动appium服务器</p>
-<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668753212772.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668753212772.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1668753212772"></p>
+<p> <img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1668753212772-168776894108433.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1668753212772-168776894108433.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1668753212772"></p>
 <p>2.创建New Session Window</p>
-<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668753278658.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1668753278658.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1668753278658"></p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\image-20220612175640905.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\image-20220612175640905.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220612175640905"></p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256012580.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256012580.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673256012580"></p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1666547597252.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1666547597252.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1666547597252"></p>
+<p> <img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1668753278658-168776894108432.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1668753278658-168776894108432.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1668753278658"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20220612175640905.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20220612175640905.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220612175640905"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673256012580-168776894108435.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673256012580-168776894108435.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673256012580"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1666547597252-168776894108436.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1666547597252-168776894108436.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1666547597252"></p>
 <h2 id="5-真机调试"><a href="#5-真机调试" class="headerlink" title="5.真机调试"></a>5.真机调试</h2><h4 id="华为"><a href="#华为" class="headerlink" title="华为"></a>华为</h4><ul>
 <li><p>安装手机助手</p>
 <ul>
@@ -2980,19 +2980,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>根据手机助手进行连接</p>
 <ul>
 <li><p>开启开发者模式</p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256938473.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256938473.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673256938473"></p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256987093.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673256987093.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673256987093"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673256938473-168776894108437.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673256938473-168776894108437.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673256938473"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673256987093-168776894108538.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673256987093-168776894108538.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673256987093"></p>
 </li>
 <li><p>开启adb 和 usb调试模式</p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673257297072.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1673257297072.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673257297072"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673257297072-168776894108539.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673257297072-168776894108539.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673257297072"></p>
 </li>
 </ul>
 </li>
 <li><p>安装手机助手进行调试(和手机品牌有关)</p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667382205885.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667382205885.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667382205885"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1667382205885-168776894108548.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1667382205885-168776894108548.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667382205885"></p>
 </li>
 <li><p>查看是否连接成功</p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667382272018.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day06-app\day06-appium\01-笔记\images\1667382272018.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667382272018"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1667382272018-168776894108540.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1667382272018-168776894108540.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1667382272018"></p>
 </li>
 </ul>
 <h2 id="x3D-x3D-手势操作-x3D-x3D"><a href="#x3D-x3D-手势操作-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;手势操作&#x3D;&#x3D;"></a>&#x3D;&#x3D;手势操作&#x3D;&#x3D;</h2><h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">移动端的手势操作 类似 web 端的鼠标操作</span><br><span class="line"></span><br><span class="line">1. 创建TouchAction对象 </span><br><span class="line">touch_action = TouchAction(driver)</span><br><span class="line">2. 调用高级手势对象提供所想执行的手势方法 </span><br><span class="line">touch_action.手势方法</span><br><span class="line">3. 执行手势 touch_action.perform()</span><br><span class="line"></span><br><span class="line">-----</span><br><span class="line">另外一种写法</span><br><span class="line">TouchAction(driver).手势方法.perform()</span><br></pre></td></tr></table></figure>
@@ -3021,7 +3021,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h3 id="获取和设置网络状态-1"><a href="#获取和设置网络状态-1" class="headerlink" title="获取和设置网络状态"></a>获取和设置网络状态</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 获取网络状态</span><br><span class="line">driver.network_connection </span><br><span class="line"></span><br><span class="line">2. 设置网络状态</span><br><span class="line">driver.set_network_connection(connection_type)</span><br><span class="line">- connection_type: 网络类型(0, 1, 2, 4, 6)</span><br><span class="line"></span><br><span class="line">@property 装饰器，可以将 实例方法作为属性来使用</span><br></pre></td></tr></table></figure>
 
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\day07.assets\image-20220615163524582.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\day07.assets\image-20220615163524582.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220615163524582"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20220615163524582.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/image-20220615163524582.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image-20220615163524582"></p>
 <h3 id="发送键到设备-按键操作"><a href="#发送键到设备-按键操作" class="headerlink" title="发送键到设备(按键操作)"></a>发送键到设备(按键操作)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">driver.press_keycode(keycode)</span><br><span class="line"></span><br><span class="line">常用：</span><br><span class="line">Home 键(返回主页)	3</span><br><span class="line">返回键				  4</span><br><span class="line">音量增加键			24</span><br><span class="line">音量减少键			25</span><br><span class="line">回车键 			  66</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line"># 1.音量大小未显示时，按 音量加和音量减 只会唤醒 音量大小调整界面</span><br><span class="line"># 2.按键过快，会产生无效按键操作</span><br><span class="line"></span><br><span class="line">keycode查询</span><br><span class="line">https://blog.csdn.net/feizhixuan46789/article/details/16801429</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="x3D-x3D-通知栏的操作-x3D-x3D"><a href="#x3D-x3D-通知栏的操作-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;通知栏的操作&#x3D;&#x3D;"></a>&#x3D;&#x3D;通知栏的操作&#x3D;&#x3D;</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">语法：</span><br><span class="line">打开通知栏: driver.open_notifications()</span><br><span class="line"></span><br><span class="line">appium官方并没有为我们提供关闭通知的api，那么 现实生活中怎么关闭，就怎样操作就行，比如，</span><br><span class="line">1.手指从下往 上滑动</span><br><span class="line">2.按返回键</span><br></pre></td></tr></table></figure>
@@ -3056,18 +3056,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <li><p>方式一：在应用-&gt;显示系统进程-&gt;找到Android system webview版本。</p>
 <ul>
 <li><p>不同手机模拟器和真机略有不同，推荐方式二</p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336372197.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336372197.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336372197"></p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336458665.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336458665.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336458665"></p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336539344.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336539344.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336539344"></p>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336572976.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336572976.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336572976"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673336372197-168776894108542.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673336372197-168776894108542.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336372197"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673336458665-168776894108541.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673336458665-168776894108541.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336458665"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673336539344-168776894108543.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673336539344-168776894108543.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336539344"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673336572976-168776894108545.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673336572976-168776894108545.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336572976"></p>
 </li>
 </ul>
 </li>
 <li><p>方式二：使用命令，在dos命令行中输入命令，在手机中查看</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb shell am start -a android.intent.action.VIEW -d https://liulanmi.com/labs/core.html</span><br></pre></td></tr></table></figure>
 
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336637249.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336637249.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336637249"></p>
-<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336678859.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336678859.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336678859"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673336637249-168776894108544.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673336637249-168776894108544.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336637249"></p>
+<p> <img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673336678859-168776894108546.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673336678859-168776894108546.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336678859"></p>
 </li>
 </ul>
 <h5 id="2-下载对应的版本的浏览器内核"><a href="#2-下载对应的版本的浏览器内核" class="headerlink" title="2.下载对应的版本的浏览器内核"></a>2.下载对应的版本的浏览器内核</h5><blockquote>
@@ -3076,17 +3076,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <h5 id="3-根据手机浏览器版本在上面页面中找到对应的版本"><a href="#3-根据手机浏览器版本在上面页面中找到对应的版本" class="headerlink" title="3.根据手机浏览器版本在上面页面中找到对应的版本"></a>3.根据手机浏览器版本在上面页面中找到对应的版本</h5><blockquote>
 <p><a target="_blank" rel="noopener" href="https://cdn.npmmirror.com/binaries/chromedriver/2.42/notes.txt">https://cdn.npmmirror.com/binaries/chromedriver/2.42/notes.txt</a></p>
 </blockquote>
-<p><img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336999029.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673336999029.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336999029"></p>
+<p><img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673336999029-168776894108547.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673336999029-168776894108547.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673336999029"></p>
 <h5 id="4-解压放到固定目录。"><a href="#4-解压放到固定目录。" class="headerlink" title="4.解压放到固定目录。"></a>4.解压放到固定目录。</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 将下载好的手机浏览器版本对应的驱动 chromedriver放置到没有中文的目录，建议不要放在path中</span><br><span class="line">D:\tools\app_tools\chrome\chromedriver.exe</span><br></pre></td></tr></table></figure>
 
-<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337453726.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337453726.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673337453726"></p>
+<p> <img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673337453726-168776894108549.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673337453726-168776894108549.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673337453726"></p>
 <h5 id="5-程序配置”Chromdriver-Binary-Path”目录"><a href="#5-程序配置”Chromdriver-Binary-Path”目录" class="headerlink" title="5.程序配置”Chromdriver Binary Path”目录"></a>5.程序配置”Chromdriver Binary Path”目录</h5><ul>
 <li>打开 Appium-Server Desktop 程序配置”Chromdriver Binary Path”目录为第三部中的全路径。 </li>
 <li>点击 “Start Server”开启Appium Server Desktop</li>
 </ul>
 <p>	</p>
-<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337421210.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337421210.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673337421210"></p>
-<p> <img src="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337549051.png" class="lazyload" data-srcset="E:\RJCS\黑马培训视频\就业班\UI自动化\day07-app\day07-appium\01-笔记\images\1673337549051.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673337549051"></p>
+<p> <img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673337421210-168776894108550.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673337421210-168776894108550.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673337421210"></p>
+<p> <img src="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673337549051-168776894108551.png" class="lazyload" data-srcset="/../images/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/1673337549051-168776894108551.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="1673337549051"></p>
 <h3 id="x3D-x3D-webview-元素定位-x3D-x3D"><a href="#x3D-x3D-webview-元素定位-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;webview  元素定位&#x3D;&#x3D;"></a>&#x3D;&#x3D;webview  元素定位&#x3D;&#x3D;</h3><h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><ol>
 <li>浏览器本身是native的应用。 使用之前的native元素定位、交互即可</li>
 <li>网页部分的内容是HTML页面， 和native部分使用了不同的<strong>上下文</strong>。 做完native部分的交互(地址输入、回车访问)之后。 需要切换到HTML页面。代码如下：</li>
@@ -3099,7 +3099,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ol>
 <h3 id="x3D-x3D-方法API-x3D-x3D"><a href="#x3D-x3D-方法API-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;方法API&#x3D;&#x3D;"></a>&#x3D;&#x3D;方法API&#x3D;&#x3D;</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># 语法:获取所有的上下文,得到是列表</span><br><span class="line">driver.contexts   </span><br><span class="line">[&#x27;NATIVE_APP&#x27;, &#x27;WEBVIEW_com.android.browser&#x27;]</span><br><span class="line"></span><br><span class="line"># 获取当前的上下文对象</span><br><span class="line">driver.context    </span><br><span class="line"></span><br><span class="line"># 切换到指定的上下文对象</span><br><span class="line">driver.switch_to.context(上下文对象)  </span><br><span class="line"></span><br><span class="line"># 备注：操作原生页面，需要切换到原生上下文，如果操作webview 需要切换到webview的上下文</span><br><span class="line"></span><br><span class="line"># 注意：</span><br><span class="line"># 部分版本的浏览器驱动存在问题原因会导致如下报错</span><br><span class="line">selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: invalid locator</span><br><span class="line"> (Session info: chrome=86.0.4240.198)</span><br><span class="line"></span><br><span class="line">请在 desired_capabilities添加如下两个参数</span><br><span class="line">&quot;chromeOptions&quot;: &#123;&#x27;w3c&#x27;: False&#125;</span><br><span class="line"></span><br><span class="line">Chrome和ChromeDriver组合默认在w3c模式下运行,只有手动指定 ChromeDriver运行模式为非w3c模式，才能规避这个bug</span><br></pre></td></tr></table></figure>
 
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
+<h3 id><a href="#" class="headerlink" title></a></h3>
   </div>
   
   
@@ -3123,10 +3123,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-19T19:21:31+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-26T16:42:22+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年6月19日</p>
+    <p>更新于：2023年6月26日</p>
   </a>
 </div>
 
@@ -3152,7 +3152,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/&title=appium常见用法 - Noir's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/06/26/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/&title=appium-基础操作 - Noir's Blog&summary="
           
           >
           
@@ -3164,7 +3164,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/&title=appium常见用法 - Noir's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/06/26/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/&title=appium-基础操作 - Noir's Blog&summary="
           
           >
           
@@ -3176,7 +3176,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/&title=appium常见用法 - Noir's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/06/26/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/&title=appium-基础操作 - Noir's Blog&summary="
           
           >
           
@@ -3209,25 +3209,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/06/26/Linux%E5%91%BD%E4%BB%A4%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Linux常用指令</p>
-          <p class='content'>cd - 切换目录进入上级目录1cd ..
-
-进入当前目录1cd ~
-
-进入上两级目录1cd ../..
-
-进入当前目录1cd .
-
-进入指定目录,例&#x2F;usr&#x2F;local1c...</p>
-        </a>
       
-      
-        <a class='next' href='/2023/06/17/selenium%E5%B8%B8%E8%A7%81%E4%BA%A4%E4%BA%92/'>
-          <p class='title'>selenium常见用法<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>selenium常见用法点击+输入+清空1234561. 元素点击element.click()2. 输入element.send_keys(内容)3. 清除element.clear()
+        <a class='next' href='/2023/06/26/MySQL-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/'>
+          <p class='title'>MySQL-数据库操作<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>数据库操作
+创建数据库
+查询数据库
+改数据库
+删除数据库
+选择数据库
 
-大...</p>
+创建数据库语法格式123CREATE DATABASE [IF NOT EXISTS] &lt;数据库名&gt;[[DEF...</p>
         </a>
       
     </div>
@@ -3246,7 +3238,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/06/26/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -4404,7 +4396,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Noir's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Noir的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Noir's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/自动化测试/","name":"自动化测试"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/06/18/appium常见用法/","name":"appium常见用法"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Noir's Blog","url":"http://example.com/","keywords":"测试,编程","description":"Noir的博客","author":{"@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Noir的博客"},"publisher":{"@type":"Organization","name":"Noir's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"appium常见用法","description":"Noir的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/"},"author":{"@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Noir's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/06/18/appium%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95/","wordCount":0,"datePublished":"2023-06-17T18:24:53.101Z","dateModified":"2023-06-19T11:21:31.561Z","articleSection":"自动化测试","keywords":"自动化,appium","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Noir's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Noir的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Noir's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/自动化测试/","name":"自动化测试"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/06/26/appium-基础操作/","name":"appium-基础操作"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Noir's Blog","url":"http://example.com/","keywords":"测试,编程","description":"Noir的博客","author":{"@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Noir的博客"},"publisher":{"@type":"Organization","name":"Noir's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"appium-基础操作","description":"Noir的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/06/26/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/"},"author":{"@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Noir's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/06/26/appium-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/","wordCount":0,"datePublished":"2023-06-26T08:39:36.877Z","dateModified":"2023-06-26T08:42:22.393Z","articleSection":"自动化测试","keywords":"自动化,appium","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
