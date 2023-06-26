@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/06/26/mysql-增删改/"/>
+  <link rel="canonical" href="http://example.com/2023/06/26/jmeter-基础配置/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -37,21 +37,22 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>MySQL-增删改 - Noir's Blog</title>
-  <meta name="keywords" content="MySQL,测试,编程">
+  <title>JMeter-基础配置 - Noir's Blog</title>
+  <meta name="keywords" content="JMeter,接口测试,测试,编程">
   <meta desc name="description" content="Noir的博客 - Noir - Noir's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL-增删改">
-<meta property="og:url" content="http://example.com/2023/06/26/MySQL-%E5%A2%9E%E5%88%A0%E6%94%B9/index.html">
+<meta property="og:title" content="JMeter-基础配置">
+<meta property="og:url" content="http://example.com/2023/06/26/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Noir&#39;s Blog">
-<meta property="og:description" content="insert 属于DML语句（数据操纵语句）  insert … values语法格式12INSERT INTO &lt;表名&gt; [ &lt;列名1&gt; [ , … &lt;列名n&gt;] ]VALUES (值1) [… , (值n) ];  语法格式说明 &lt;列名&gt;：可以不指定，默认指定表的所有列名 values：字段有多少个，值就要有多少个，且顺序要对应，否则会报错">
+<meta property="og:description" content="官网下载Jmeterhttp:&#x2F;&#x2F;jmeter.apache.org&#x2F;下载最新版本的 JMeter，解压文件到任意目录 安装JDK，配置Java环境就直接看着篇博客就好啦：https:&#x2F;&#x2F;www.cnblogs.com&#x2F;poloyy&#x2F;p&#x2F;12744072.html 注意：应该避免JDK安装路径，Jmeter路径有中文和空格 配置Jmeter环境变量     检查Jmeter配置是否成功cmd敲jm">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-06-25T18:47:24.819Z">
-<meta property="article:modified_time" content="2023-06-25T18:53:49.995Z">
+<meta property="article:published_time" content="2023-06-26T13:02:34.000Z">
+<meta property="article:modified_time" content="2023-06-26T16:19:24.799Z">
 <meta property="article:author" content="Noir">
-<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="JMeter">
+<meta property="article:tag" content="接口测试">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2795,7 +2796,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/26/MySQL-增删改/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/26/JMeter-基础配置/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="Noir's Blog">
   </span>
@@ -2816,7 +2817,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        MySQL-增删改
+        JMeter-基础配置
       </h1>
       <div class='new-meta-box'>
         
@@ -2838,10 +2839,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/MySQL/">MySQL</a>
+    <a class="category-link" href="/categories/JMeter/">JMeter</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/MySQL/" itemprop="url"><span itemprop="name">MySQL</span></a>
+        <a href="/categories/JMeter/" itemprop="url"><span itemprop="name">JMeter</span></a>
       </span>
     
   </div>
@@ -2852,7 +2853,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-06-26T02:47:24+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-06-26T21:02:34+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：2023年6月26日</p>
@@ -2878,60 +2879,192 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <ul>
-<li>insert 属于DML语句（数据操纵语句）</li>
+    <h2 id="官网下载Jmeter"><a href="#官网下载Jmeter" class="headerlink" title="官网下载Jmeter"></a>官网下载Jmeter</h2><p><a target="_blank" rel="noopener" href="http://jmeter.apache.org/%E4%B8%8B%E8%BD%BD%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC%E7%9A%84">http://jmeter.apache.org/下载最新版本的</a> JMeter，解压文件到任意目录</p>
+<h2 id="安装JDK，配置Java环境"><a href="#安装JDK，配置Java环境" class="headerlink" title="安装JDK，配置Java环境"></a>安装JDK，配置Java环境</h2><p>就直接看着篇博客就好啦：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/poloyy/p/12744072.html">https://www.cnblogs.com/poloyy/p/12744072.html</a></p>
+<p><strong>注意：</strong>应该避免JDK安装路径，Jmeter路径有中文和空格</p>
+<h2 id="配置Jmeter环境变量"><a href="#配置Jmeter环境变量" class="headerlink" title="配置Jmeter环境变量"></a>配置Jmeter环境变量</h2><p><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202004/1896874-20200421134630976-1085249815.png"><img src="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200421134630976-1085249815.png" class="lazyload" data-srcset="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200421134630976-1085249815.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></p>
+<p><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202004/1896874-20200421134633640-1530435725.png"><img src="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200421134633640-1530435725.png" class="lazyload" data-srcset="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200421134633640-1530435725.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></p>
+<p><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202004/1896874-20200421134635009-1977602631.png"><img src="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200421134635009-1977602631.png" class="lazyload" data-srcset="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200421134635009-1977602631.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></p>
+<p><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202004/1896874-20200421134636927-1305173140.png"><img src="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200421134636927-1305173140.png" class="lazyload" data-srcset="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200421134636927-1305173140.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></p>
+<p><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202004/1896874-20200421134703790-1047601709.png"><img src="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200421134703790-1047601709.png" class="lazyload" data-srcset="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200421134703790-1047601709.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202004/1896874-20200421134810489-2127115014.png"><img src="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200421134810489-2127115014.png" class="lazyload" data-srcset="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200421134810489-2127115014.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></p>
+<h2 id="检查Jmeter配置是否成功"><a href="#检查Jmeter配置是否成功" class="headerlink" title="检查Jmeter配置是否成功"></a>检查Jmeter配置是否成功</h2><p>cmd敲jmeter或者win+r敲jmeter，能打开jmeter就安装配置成功了</p>
+<p><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202004/1896874-20200421134955174-1281014140.png"><img src="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200421134955174-1281014140.png" class="lazyload" data-srcset="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200421134955174-1281014140.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></p>
+<p><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202004/1896874-20200421135000192-165110633.png"><img src="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200421135000192-165110633.png" class="lazyload" data-srcset="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200421135000192-165110633.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></p>
+<p><strong>上述只敲jmeter的话，cmd命令窗口会一直存在，很不友好</strong></p>
+<p>提醒，如果敲下面命令，可以不显示cmd命令行哦！！！</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jmeterw</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Jmeter支持哪些测试场景？"><a href="#Jmeter支持哪些测试场景？" class="headerlink" title="Jmeter支持哪些测试场景？"></a>Jmeter支持哪些测试场景？</h2><h3 id="Jmeter能够对许多不同的应用程序-x2F-服务器-x2F-协议类型进行负载测试和性能测试"><a href="#Jmeter能够对许多不同的应用程序-x2F-服务器-x2F-协议类型进行负载测试和性能测试" class="headerlink" title="Jmeter能够对许多不同的应用程序&#x2F;服务器&#x2F;协议类型进行负载测试和性能测试"></a>Jmeter能够对许多不同的应用程序&#x2F;服务器&#x2F;协议类型进行负载测试和性能测试</h3><ol>
+<li>Web - HTTP, HTTPS (Java, NodeJS, PHP, ASP.NET, …)</li>
+<li>SOAP &#x2F; REST Webservices</li>
+<li>FTP</li>
+<li>通过JDBC连接数据库（支持各种数据库）</li>
+<li>LDAP</li>
+<li>通过JMS的面向消息的中间件（MOM）</li>
+<li>邮箱协议 - SMTP(S), POP3(S) and IMAP(S)</li>
+<li>本机命令或Shell脚本</li>
+<li>TCP</li>
+<li>Java Objects</li>
+</ol>
+<h2 id="Jmeter有哪些特征？"><a href="#Jmeter有哪些特征？" class="headerlink" title="Jmeter有哪些特征？"></a>Jmeter有哪些特征？</h2><ul>
+<li>功能齐全的测试编辑界面，允许快速记录测试计划（来自浏览器或本机应用程序），构建和调试 <strong>【HTTP代理服务器，类似抓包】</strong></li>
+<li>命令行模式，可以在任何装了Java环境的系统（win、linux、mac）上进行测试<strong>【移植性好】</strong></li>
+<li>提供完整且随时可查看的HTML报告</li>
+<li>可以在大多数流行的响应格式<strong>（HTML、JSON、XML或任何文本格式）</strong>中提取数据，实现关联<strong>【常说的数据关联】</strong></li>
+<li>多线程框架允许通过多个线程进行并发采样，并通过单独的线程组同时对不同的方法进行采样。</li>
+<li>可以对测试结果进行缓存和离线分析、离线重放</li>
 </ul>
-<h3 id="insert-…-values"><a href="#insert-…-values" class="headerlink" title="insert … values"></a>insert … values</h3><h4 id="语法格式"><a href="#语法格式" class="headerlink" title="语法格式"></a>语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO &lt;表名&gt; [ &lt;列名1&gt; [ , … &lt;列名n&gt;] ]</span><br><span class="line">VALUES (值1) [… , (值n) ];</span><br></pre></td></tr></table></figure>
-
-<h4 id="语法格式说明"><a href="#语法格式说明" class="headerlink" title="语法格式说明"></a>语法格式说明</h4><ul>
-<li>&lt;列名&gt;：可以不指定，默认指定表的所有列名</li>
-<li>values：字段有多少个，值就要有多少个，且顺序要对应，否则会报错</li>
+<h2 id="Jmetert的扩展性体现在哪里？"><a href="#Jmetert的扩展性体现在哪里？" class="headerlink" title="Jmetert的扩展性体现在哪里？"></a>Jmetert的扩展性体现在哪里？</h2><ul>
+<li>脚本化的采样器【BeanShell、Groovy】</li>
+<li>随意增删的采样器</li>
+<li>负载统计信息可以增删定时器</li>
+<li>数据分析和可视化插件提供了出色的扩展性和个性化</li>
+<li>jmeter自带方法可以向测试计划提供动态输入或数据处理能力</li>
+<li>通过针对Maven，Gradle和Jenkins的第三方开源库轻松进行持续集成。</li>
 </ul>
-<h3 id="insert-set"><a href="#insert-set" class="headerlink" title="insert .. set"></a>insert .. set</h3><h4 id="语法格式-1"><a href="#语法格式-1" class="headerlink" title="语法格式"></a>语法格式</h4><p>这个用的不多哈，了解为主；</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO &lt;表名&gt;</span><br><span class="line">SET &lt;列名1&gt; = &lt;值1&gt;,</span><br><span class="line">        &lt;列名2&gt; = &lt;值2&gt;,</span><br><span class="line">        …</span><br></pre></td></tr></table></figure>
-
-<h4 id="两种语法格式的区别"><a href="#两种语法格式的区别" class="headerlink" title="两种语法格式的区别"></a>两种语法格式的区别</h4><p> insert .. values 可以插入任意行数据，而 insert … set 每次只能插入一行数据</p>
-<h4 id="例一：不指定字段，添加记录"><a href="#例一：不指定字段，添加记录" class="headerlink" title="例一：不指定字段，添加记录"></a>例一：不指定字段，添加记录</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO emp</span><br><span class="line">VALUES</span><br><span class="line">    ( &quot;20&quot;, &quot;员工1&quot;, 3, 1, 1 );</span><br></pre></td></tr></table></figure>
-
-<h4 id="例二：指定所有字段，添加记录"><a href="#例二：指定所有字段，添加记录" class="headerlink" title="例二：指定所有字段，添加记录"></a>例二：指定所有字段，添加记录</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO emp ( id, NAME, dept_id, leader, is_enable )</span><br><span class="line">VALUES</span><br><span class="line">    ( &quot;20&quot;, &quot;员工1&quot;, 3, 1, 1 );</span><br></pre></td></tr></table></figure>
-
-<p>上面两个栗子添加的记录数据是一样的哦，只是一个指定了所有字段，另一个是不指定任何字段</p>
-<h4 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h4><ul>
-<li>指定多个字段时，字段的顺序可以随意，不需要按照表定义的顺序来写，但要<strong>保证 values 的顺序和字段的顺序相同</strong>！</li>
-<li>指定的字段<strong>不用加</strong>单引号或者双引号，否则会报错</li>
+<h2 id="Jmeter实际使用场景"><a href="#Jmeter实际使用场景" class="headerlink" title="Jmeter实际使用场景"></a>Jmeter实际使用场景</h2><ul>
+<li>接口测试</li>
+<li>压力测试</li>
+<li>分布式压力测试</li>
+<li>测试 Restful 风格的API</li>
 </ul>
-<h4 id="常见错误写法"><a href="#常见错误写法" class="headerlink" title="常见错误写法"></a>常见错误写法</h4><p>特别在写代码的时候，经常需要字符串连接，一不留意就会用引号把字段名括起来，这样是不对的哦！</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO emp ( &#x27;id&#x27;, &#x27;name&#x27; )</span><br><span class="line">VALUES</span><br><span class="line">    ( &quot;20&quot;, &quot;员工1&quot;);</span><br></pre></td></tr></table></figure>
-
-<h4 id="例三：复制表数据来插入"><a href="#例三：复制表数据来插入" class="headerlink" title="例三：复制表数据来插入"></a>例三：复制表数据来插入</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO emp ( id, NAME, dept_id, leader, is_enable ) SELECT</span><br><span class="line">15,</span><br><span class="line">NAME,</span><br><span class="line">dept_id,</span><br><span class="line">leader,</span><br><span class="line">is_enable </span><br><span class="line">FROM</span><br><span class="line">    emp </span><br><span class="line">WHERE</span><br><span class="line">    id = 1;</span><br></pre></td></tr></table></figure>
-
-<h4 id="主要的语法格式"><a href="#主要的语法格式" class="headerlink" title="主要的语法格式"></a>主要的语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into &lt;表名&gt; [&lt;字段名&gt;,&lt;字段名&gt;..] select ....</span><br></pre></td></tr></table></figure>
-
-<p><strong>注意：</strong>如果是复制表数据的话，<strong>不用加 values()</strong> ！</p>
-<h2 id="改-update"><a href="#改-update" class="headerlink" title="改 - update"></a>改 - update</h2><p>update 也是DML语句哦（数据操作语言）</p>
-<h4 id="语法格式-2"><a href="#语法格式-2" class="headerlink" title="语法格式"></a>语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UPDATE &lt;表名&gt; SET 字段1=值1 [,字段2=值2… ] [WHERE 子句 ] [LIMIT 子句]</span><br></pre></td></tr></table></figure>
-
-<h4 id="语法格式说明-1"><a href="#语法格式说明-1" class="headerlink" title="语法格式说明"></a>语法格式说明</h4><ul>
-<li>多指定多个字段，需要用 , 隔开</li>
-<li>如果修改的字段有默认值，可以用 default 来设置字段的值，如： name &#x3D; default ，这样就会把字段的值修改成默认值</li>
-<li>where 就不用多说了，一般 update 数据都会<strong>指定条件</strong></li>
-<li>添加 limit 是为了限制被修改的行数，加不加都行</li>
+<h2 id="Jmeter安装目录说明"><a href="#Jmeter安装目录说明" class="headerlink" title="Jmeter安装目录说明"></a>Jmeter安装目录说明</h2><p><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202004/1896874-20200422224200758-446810268.png"><img src="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200422224200758-446810268.png" class="lazyload" data-srcset="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200422224200758-446810268.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></p>
+<table>
+<thead>
+<tr>
+<th>文件夹</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bin</td>
+<td>包含启动、配置等相关命令自己写的脚本默认另存为该目录下</td>
+</tr>
+<tr>
+<td>docs</td>
+<td>官方接口文档，二次开发需要了解的一些接口</td>
+</tr>
+<tr>
+<td>extras</td>
+<td>辅助库，持续集成会用到（后面讲）</td>
+</tr>
+<tr>
+<td>lib</td>
+<td>存放各种 Jmeter 核心库的源码 jar 包存放自己二次开发的 jar包</td>
+</tr>
+<tr>
+<td>lib\ext</td>
+<td>官方提供的第三方插件</td>
+</tr>
+<tr>
+<td>license</td>
+<td>包含 non-ASF 软件的许可证</td>
+</tr>
+<tr>
+<td>printable_docs</td>
+<td>离线的帮助文档，可以查看函数等内容</td>
+</tr>
+<tr>
+<td>LICENSE</td>
+<td>JMeter 许可说明</td>
+</tr>
+<tr>
+<td>NOTICE</td>
+<td>JMeter 简单信息说明</td>
+</tr>
+<tr>
+<td>README.md</td>
+<td>JMeter 官方基本介绍</td>
+</tr>
+</tbody></table>
+<h3 id="重点看看bin目录"><a href="#重点看看bin目录" class="headerlink" title="重点看看bin目录"></a>重点看看bin目录</h3><p><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202004/1896874-20200422225631837-454288564.png"><img src="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200422225631837-454288564.png" class="lazyload" data-srcset="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200422225631837-454288564.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>jmeter.properties</td>
+<td>JMeter 核心配置文件，各种配置基本在这完成</td>
+</tr>
+<tr>
+<td>log4j.conf</td>
+<td>JMeter 日志配置管理</td>
+</tr>
+<tr>
+<td>jmeter.log</td>
+<td>JMeter 运行日志记录，什么输出信息、警告、报错都在这里进行了记录</td>
+</tr>
+<tr>
+<td>jmeter.bat</td>
+<td>windows 下 jmeter 的<strong>启动</strong>文件，<strong>带</strong>cmd窗口</td>
+</tr>
+<tr>
+<td>jmeterw.cmd</td>
+<td>windows 下 jmeter 的<strong>启动</strong>文件，<strong>不带</strong>cmd窗口</td>
+</tr>
+<tr>
+<td>shutdown.cmd</td>
+<td>windows 下 jmeter 的<strong>关闭</strong>文件</td>
+</tr>
+<tr>
+<td>stoptest.cmd</td>
+<td>windows 下 jmeter 停止测试的文件</td>
+</tr>
+<tr>
+<td>jmeter-server.bat</td>
+<td>windows 下 jmeter 服务器模式的启动文件</td>
+</tr>
+<tr>
+<td>jmeter-server</td>
+<td>mac 或者 Liunx 分布式压测使用的启动文件</td>
+</tr>
+</tbody></table>
+<h2 id="Jmeter面板介绍"><a href="#Jmeter面板介绍" class="headerlink" title="Jmeter面板介绍"></a>Jmeter面板介绍</h2><p><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202004/1896874-20200425095521117-1271559523.png"><img src="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200425095521117-1271559523.png" class="lazyload" data-srcset="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200425095521117-1271559523.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></p>
+<p><strong>讲一下常用的菜单栏</strong></p>
+<h3 id="分布式运行相关的，后面再展开讲解哦"><a href="#分布式运行相关的，后面再展开讲解哦" class="headerlink" title="分布式运行相关的，后面再展开讲解哦"></a>分布式运行相关的，后面再展开讲解哦</h3><p><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202004/1896874-20200425102038185-1305530759.png"><img src="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200425102038185-1305530759.png" class="lazyload" data-srcset="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200425102038185-1305530759.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></p>
+<h3 id="选项，可以打开日志，修改语言，还有管理插件哦！"><a href="#选项，可以打开日志，修改语言，还有管理插件哦！" class="headerlink" title="选项，可以打开日志，修改语言，还有管理插件哦！"></a>选项，可以打开日志，修改语言，还有管理插件哦！</h3><p><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202004/1896874-20200425102042872-1094187611.png"><img src="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200425102042872-1094187611.png" class="lazyload" data-srcset="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200425102042872-1094187611.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></p>
+<h3 id="工具，主要看函数助手"><a href="#工具，主要看函数助手" class="headerlink" title="工具，主要看函数助手"></a>工具，主要看函数助手</h3><p> <a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202004/1896874-20200425102044778-1812471518.png"><img src="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200425102044778-1812471518.png" class="lazyload" data-srcset="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200425102044778-1812471518.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></p>
+<p> <strong>再讲下，常用的图标</strong></p>
+<p> <a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202004/1896874-20200425102500096-1182484082.png"><img src="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200425102500096-1182484082.png" class="lazyload" data-srcset="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200425102500096-1182484082.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></p>
+<p> <strong>从左往右依次是</strong></p>
+<ul>
+<li>新建测试计划</li>
+<li>选择测试计划模板创建一个新的测试计划</li>
+<li>打开jmeter脚本</li>
+<li>保存jmeter脚本</li>
+<li>剪切</li>
+<li>复制（鸡肋，不如ctrl+c）</li>
+<li>粘贴</li>
+<li>展开目录树</li>
+<li>收起目录树</li>
+<li>禁用或启用元件</li>
+<li>本机开始运行当前测试计划</li>
+<li>立即开始在本机运行当前测试计划</li>
+<li>停止</li>
+<li>关闭</li>
+<li>清除</li>
+<li>清除全部</li>
+<li>查找</li>
+<li>清除查找</li>
+<li>函数助手对话框</li>
+<li>帮助</li>
 </ul>
-<h4 id="修改单个字段"><a href="#修改单个字段" class="headerlink" title="修改单个字段"></a>修改单个字段</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">UPDATE emp </span><br><span class="line">SET is_enable = 0 </span><br><span class="line">WHERE</span><br><span class="line">    id = 1</span><br></pre></td></tr></table></figure>
-
-<h4 id="修改多个字段"><a href="#修改多个字段" class="headerlink" title="修改多个字段"></a>修改多个字段</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">UPDATE emp </span><br><span class="line">SET is_enable = 0,</span><br><span class="line">NAME = &quot;修改的名字&quot;,</span><br><span class="line">dept_id = 2 </span><br><span class="line">WHERE</span><br><span class="line">    id = 1</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="删-delete"><a href="#删-delete" class="headerlink" title="删 - delete"></a>删 - delete</h2><h4 id="语法格式-3"><a href="#语法格式-3" class="headerlink" title="语法格式"></a>语法格式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM &lt;表名&gt; [WHERE 子句] [LIMIT 子句]</span><br></pre></td></tr></table></figure>
-
-<h4 id="语法格式说明-2"><a href="#语法格式说明-2" class="headerlink" title="语法格式说明"></a>语法格式说明</h4><ul>
-<li>where 就不用多说了，一般 delete 数据都会<strong>指定条件</strong></li>
-<li>添加 limit 是为了限制被删除的行数，加不加都行</li>
+<h2 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h2><ul>
+<li>如果是黄色感叹号则是正常的，如果是红色数字的代表有问题<strong>【显示的数字是多少呢，warnings&#x2F;errors 数量就是多少】</strong></li>
+<li>点击可以查看日志<strong>【这个日志是Jmeter工具使用加载信息的日志，并不是测试脚本运行的日志】</strong></li>
 </ul>
-<h4 id="删除表中的全部数据"><a href="#删除表中的全部数据" class="headerlink" title="删除表中的全部数据"></a>删除表中的全部数据</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from emp;</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://img2020.cnblogs.com/blog/1896874/202004/1896874-20200426105144727-1175118119.png"><img src="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200426105144727-1175118119.png" class="lazyload" data-srcset="/../images/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/1896874-20200426105144727-1175118119.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img"></a></p>
+<h2 id="查看错误报告"><a href="#查看错误报告" class="headerlink" title="查看错误报告"></a>查看错误报告</h2><p>jmeter会在 jmeter.log 文件中记录warn和error信息，而 jmeter.log 在bin目录下</p>
+<h3 id="关键点"><a href="#关键点" class="headerlink" title="关键点"></a>关键点</h3><ul>
+<li>倘若测试脚本的执行结果并不是你想要的，可以尝试在 jmeter.log 中找一找，比如：调用函数但语法错误</li>
+<li>当然，Sampler的错误结果一般是不会记录到 jmeter.log ，比如：请求404</li>
+</ul>
 
-<h4 id="根据条件删除表中的数据"><a href="#根据条件删除表中的数据" class="headerlink" title="根据条件删除表中的数据"></a>根据条件删除表中的数据</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">DELETE </span><br><span class="line">FROM</span><br><span class="line">    emp </span><br><span class="line">WHERE</span><br><span class="line">    is_enable = 0 </span><br><span class="line">    OR is_enable IS NULL;</span><br></pre></td></tr></table></figure>
   </div>
   
   
@@ -2955,10 +3088,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-26T02:53:49+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-06-27T00:19:24+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2023年6月26日</p>
+    <p>更新于：2023年6月27日</p>
   </a>
 </div>
 
@@ -2969,8 +3102,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MySQL/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>MySQL</p></a></div>
-  <span hidden itemprop="keywords">MySQL</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/JMeter/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>JMeter</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>接口测试</p></a></div>
+  <span hidden itemprop="keywords">JMeter 接口测试</span>
   
 
 
@@ -2984,7 +3117,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/06/26/MySQL-%E5%A2%9E%E5%88%A0%E6%94%B9/&title=MySQL-增删改 - Noir's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/06/26/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/&title=JMeter-基础配置 - Noir's Blog&summary="
           
           >
           
@@ -2996,7 +3129,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/06/26/MySQL-%E5%A2%9E%E5%88%A0%E6%94%B9/&title=MySQL-增删改 - Noir's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/06/26/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/&title=JMeter-基础配置 - Noir's Blog&summary="
           
           >
           
@@ -3008,7 +3141,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/06/26/MySQL-%E5%A2%9E%E5%88%A0%E6%94%B9/&title=MySQL-增删改 - Noir's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/06/26/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/&title=JMeter-基础配置 - Noir's Blog&summary="
           
           >
           
@@ -3041,23 +3174,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/06/26/MySQL-%E6%9F%A5%E8%AF%A2%E6%8C%87%E4%BB%A4/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>MySQL-查询指令</p>
-          <p class='content'>select的语法格式12345678910SELECT&#123;* | &lt;字段列名&gt;&#125;[FROM &lt;表 1&gt;, &lt;表 2&gt;…[WHERE &lt...</p>
-        </a>
       
-      
-        <a class='next' href='/2023/06/26/Linux%E5%91%BD%E4%BB%A4%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/'>
-          <p class='title'>Linux常用指令<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>cd - 切换目录进入上级目录1cd ..
+        <a class='next' href='/2023/06/26/ADB-%E5%91%BD%E4%BB%A4/'>
+          <p class='title'>ADB-命令<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>adb 基本语法1adb [-d|-e|-s &lt;serialNumber&gt;] &lt;command&gt;
 
-进入当前目录1cd ~
-
-进入上两级目录1cd ../..
-
-进入当前目录1cd .
-
-进入指定目录,例&#x2F;usr&#x2F;local1c...</p>
+命令行参数
+-d：指定当前唯一通过 USB 连接的 Android 设...</p>
         </a>
       
     </div>
@@ -3076,7 +3199,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/06/26/MySQL-%E5%A2%9E%E5%88%A0%E6%94%B9/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/06/26/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -3118,7 +3241,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#insert-%E2%80%A6-values"><span class="toc-text">insert … values</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F"><span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E"><span class="toc-text">语法格式说明</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#insert-set"><span class="toc-text">insert .. set</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-1"><span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">两种语法格式的区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E4%B8%80%EF%BC%9A%E4%B8%8D%E6%8C%87%E5%AE%9A%E5%AD%97%E6%AE%B5%EF%BC%8C%E6%B7%BB%E5%8A%A0%E8%AE%B0%E5%BD%95"><span class="toc-text">例一：不指定字段，添加记录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E4%BA%8C%EF%BC%9A%E6%8C%87%E5%AE%9A%E6%89%80%E6%9C%89%E5%AD%97%E6%AE%B5%EF%BC%8C%E6%B7%BB%E5%8A%A0%E8%AE%B0%E5%BD%95"><span class="toc-text">例二：指定所有字段，添加记录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%86%99%E6%B3%95"><span class="toc-text">常见错误写法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E4%B8%89%EF%BC%9A%E5%A4%8D%E5%88%B6%E8%A1%A8%E6%95%B0%E6%8D%AE%E6%9D%A5%E6%8F%92%E5%85%A5"><span class="toc-text">例三：复制表数据来插入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E7%9A%84%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F"><span class="toc-text">主要的语法格式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B9-update"><span class="toc-text">改 - update</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-2"><span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E-1"><span class="toc-text">语法格式说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%8D%95%E4%B8%AA%E5%AD%97%E6%AE%B5"><span class="toc-text">修改单个字段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%A4%9A%E4%B8%AA%E5%AD%97%E6%AE%B5"><span class="toc-text">修改多个字段</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0-delete"><span class="toc-text">删 - delete</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F-3"><span class="toc-text">语法格式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E-2"><span class="toc-text">语法格式说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E8%A1%A8%E4%B8%AD%E7%9A%84%E5%85%A8%E9%83%A8%E6%95%B0%E6%8D%AE"><span class="toc-text">删除表中的全部数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AE%E6%9D%A1%E4%BB%B6%E5%88%A0%E9%99%A4%E8%A1%A8%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-text">根据条件删除表中的数据</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BDJmeter"><span class="toc-text">官网下载Jmeter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85JDK%EF%BC%8C%E9%85%8D%E7%BD%AEJava%E7%8E%AF%E5%A2%83"><span class="toc-text">安装JDK，配置Java环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEJmeter%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">配置Jmeter环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5Jmeter%E9%85%8D%E7%BD%AE%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F"><span class="toc-text">检查Jmeter配置是否成功</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Jmeter%E6%94%AF%E6%8C%81%E5%93%AA%E4%BA%9B%E6%B5%8B%E8%AF%95%E5%9C%BA%E6%99%AF%EF%BC%9F"><span class="toc-text">Jmeter支持哪些测试场景？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Jmeter%E8%83%BD%E5%A4%9F%E5%AF%B9%E8%AE%B8%E5%A4%9A%E4%B8%8D%E5%90%8C%E7%9A%84%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F-x2F-%E6%9C%8D%E5%8A%A1%E5%99%A8-x2F-%E5%8D%8F%E8%AE%AE%E7%B1%BB%E5%9E%8B%E8%BF%9B%E8%A1%8C%E8%B4%9F%E8%BD%BD%E6%B5%8B%E8%AF%95%E5%92%8C%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95"><span class="toc-text">Jmeter能够对许多不同的应用程序&#x2F;服务器&#x2F;协议类型进行负载测试和性能测试</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Jmeter%E6%9C%89%E5%93%AA%E4%BA%9B%E7%89%B9%E5%BE%81%EF%BC%9F"><span class="toc-text">Jmeter有哪些特征？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Jmetert%E7%9A%84%E6%89%A9%E5%B1%95%E6%80%A7%E4%BD%93%E7%8E%B0%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%9F"><span class="toc-text">Jmetert的扩展性体现在哪里？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Jmeter%E5%AE%9E%E9%99%85%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">Jmeter实际使用场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Jmeter%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95%E8%AF%B4%E6%98%8E"><span class="toc-text">Jmeter安装目录说明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E7%82%B9%E7%9C%8B%E7%9C%8Bbin%E7%9B%AE%E5%BD%95"><span class="toc-text">重点看看bin目录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Jmeter%E9%9D%A2%E6%9D%BF%E4%BB%8B%E7%BB%8D"><span class="toc-text">Jmeter面板介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E8%BF%90%E8%A1%8C%E7%9B%B8%E5%85%B3%E7%9A%84%EF%BC%8C%E5%90%8E%E9%9D%A2%E5%86%8D%E5%B1%95%E5%BC%80%E8%AE%B2%E8%A7%A3%E5%93%A6"><span class="toc-text">分布式运行相关的，后面再展开讲解哦</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E9%A1%B9%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%89%93%E5%BC%80%E6%97%A5%E5%BF%97%EF%BC%8C%E4%BF%AE%E6%94%B9%E8%AF%AD%E8%A8%80%EF%BC%8C%E8%BF%98%E6%9C%89%E7%AE%A1%E7%90%86%E6%8F%92%E4%BB%B6%E5%93%A6%EF%BC%81"><span class="toc-text">选项，可以打开日志，修改语言，还有管理插件哦！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%EF%BC%8C%E4%B8%BB%E8%A6%81%E7%9C%8B%E5%87%BD%E6%95%B0%E5%8A%A9%E6%89%8B"><span class="toc-text">工具，主要看函数助手</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97"><span class="toc-text">查看日志</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E9%94%99%E8%AF%AF%E6%8A%A5%E5%91%8A"><span class="toc-text">查看错误报告</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E7%82%B9"><span class="toc-text">关键点</span></a></li></ol></li></ol>
   </div>
 </section>
 
@@ -4234,7 +4357,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Noir's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Noir的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Noir's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/MySQL/","name":"MySQL"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/06/26/MySQL-增删改/","name":"MySQL-增删改"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Noir's Blog","url":"http://example.com/","keywords":"测试,编程","description":"Noir的博客","author":{"@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Noir的博客"},"publisher":{"@type":"Organization","name":"Noir's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"MySQL-增删改","description":"Noir的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/06/26/MySQL-%E5%A2%9E%E5%88%A0%E6%94%B9/"},"author":{"@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Noir's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/06/26/MySQL-%E5%A2%9E%E5%88%A0%E6%94%B9/","wordCount":0,"datePublished":"2023-06-25T18:47:24.819Z","dateModified":"2023-06-25T18:53:49.995Z","articleSection":"MySQL","keywords":"MySQL","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Noir's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"Noir的博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Noir's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/JMeter/","name":"JMeter"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/06/26/JMeter-基础配置/","name":"JMeter-基础配置"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Noir's Blog","url":"http://example.com/","keywords":"测试,编程","description":"Noir的博客","author":{"@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"Noir的博客"},"publisher":{"@type":"Organization","name":"Noir's Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"JMeter-基础配置","description":"Noir的博客","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/06/26/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/"},"author":{"@type":"Person","name":"Noir","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Noir's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/06/26/JMeter-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/","wordCount":0,"datePublished":"2023-06-26T13:02:34.000Z","dateModified":"2023-06-26T16:19:24.799Z","articleSection":"JMeter","keywords":"JMeter,接口测试","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
